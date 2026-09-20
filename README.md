@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/source-Monkey%20Magic%20Free%20Course-d97706?style=for-the-badge" alt="source" />
-  <img src="https://img.shields.io/badge/format-Grok%20Skill-111827?style=for-the-badge" alt="format" />
+  <img src="https://img.shields.io/badge/format-Agent%20Skill-111827?style=for-the-badge" alt="format" />
   <img src="https://img.shields.io/badge/use-LLM%20video%20scripts-0f766e?style=for-the-badge" alt="use" />
 </p>
 
@@ -145,35 +145,27 @@ Raunaq Sahni tells stories for a living. If this skill helps you, watch the work
 
 ## Install
 
-### Grok / agent skill folder
-
-Copy this repository into your skills directory so the name matches the frontmatter:
+Vendor-neutral. The only contract is a folder named `youtube-storytelling` that contains `SKILL.md`. Any coding agent or chat model that can read local files can run it.
 
 ```bash
 git clone https://github.com/SandeshKale/Monkey-Magic-Storytelling-Skills.git youtube-storytelling
 ```
 
-On a Grok user-skills machine the live copy already lives at:
+Keep the folder name identical to the `name` field in `SKILL.md` (`youtube-storytelling`).
 
-```text
-/home/workdir/.grok/skills/youtube-storytelling/
-```
-
-The skill `name` in `SKILL.md` is `youtube-storytelling`. Keep the folder name identical.
-
-### Drop into Cursor, Claude Code, or any agent that reads `SKILL.md`
-
-Point the agent at this repo. Tell it:
+Point the agent at the folder and say:
 
 > Load `SKILL.md`. Use the Monkey Magic storytelling skill. Do not invent events.
 
-### Use with another LLM or a video model
+### Load order for any model
 
-1. Load `SKILL.md` + the one `references/0N-*.md` that matches the ask.
+1. `SKILL.md` plus the one `references/0N-*.md` that matches the ask.
 2. Fill `assets/beat-sheet.md` from the user’s **facts only**.
 3. If the output will be spoken or generated as video, also load `references/llm-video-pipeline.md`.
 4. If the output is not English, load `references/translation-guide.md`.
 5. Run `references/audit-checklist.md` before you hand anything back.
+
+Do not assume a host path, a branded skill runner, or a sibling design skill. Those are optional.
 
 ---
 
