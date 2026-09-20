@@ -2,9 +2,11 @@
 name: youtube-storytelling
 description: Plan, script, localize, and package YouTube long-form videos and Shorts using the Monkey Magic free storytelling course. Use when the user wants a YouTube script, vlog structure, hook, title and thumbnail pack, Shorts loop, video brief for an LLM or video model, translation of a storytelling framework, retention architecture, rasa map, three-act beat sheet, or help turning a real incident into a story instead of an anecdote.
 license: MIT
+compatibility: Any agent or LLM that can load a SKILL.md file and read linked markdown
 metadata:
   type: workflow
-  version: "1.0"
+  version: "1.1"
+  runtime: llm-agnostic
   source_playlist: https://www.youtube.com/playlist?list=PLG3pPBnwP3-Y
   source_channel: Monkey Magic ((conversations))
   instructor: Raunaq Sahni
@@ -12,7 +14,7 @@ metadata:
 
 # YouTube Storytelling
 
-Turn a real incident, idea, or brief into a YouTube video package an LLM or video model can shoot, voice, or animate. Encode the Monkey Magic free course as operational rules, not film-school theory.
+Turn a real incident, idea, or brief into a YouTube video package any LLM or video model can shoot, voice, or animate. Encode the Monkey Magic free course as operational rules, not film-school theory. Do not assume a particular host, runtime, or sibling skill pack.
 
 Source course (attribute, do not plagiarize voice or claim authorship) — [references/source-and-attribution.md](references/source-and-attribution.md).
 
@@ -137,6 +139,6 @@ When the user only wants a translation of the framework, output a clean glossary
 ## What this skill does not do
 
 - Does not generate fake diary events or manufactured trauma.
-- Does not replace visual-craft for thumbnails, posters, or motion.
+- Does not draw finished thumbnails, posters, or motion. Hand those to a design tool or a human editor after the title and mismatch sentence are locked.
 - Does not publish to YouTube.
 - Does not copy Monkey Magic scripts, voice, or journeys. Use the method. Invent nothing that belongs to Raunaq Sahni's life.

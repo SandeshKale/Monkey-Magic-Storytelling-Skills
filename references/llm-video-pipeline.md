@@ -2,7 +2,7 @@
 
 Use this when the user wants footage, an avatar, a dubbed cut, or a prompt pack another model can shoot.
 
-This skill writes story. It does not replace visual-craft for finished frames.
+This skill writes story. It does not render finished frames, thumbnails, or motion.
 
 ## Package the model can ingest
 
@@ -45,6 +45,6 @@ Translate the spoken lines with the translation guide. Keep shot clocks identica
 
 Beat sheet with clocks, a select list ("use the real train audio here"), and a do-not-use list. Editors kill truth when they add stock cry or stock cheer. Say so.
 
-## Visual skill handoff
+## Design handoff
 
-Thumbnails, posters, and motion bumpers go through visual-craft after this skill locks the title and the mismatch sentence.
+After this skill locks the title and the mismatch sentence, pass those two lines to whatever draws the thumbnail, poster, or bumper — another skill, a design model, or a human editor. Do not invent pixels here.
