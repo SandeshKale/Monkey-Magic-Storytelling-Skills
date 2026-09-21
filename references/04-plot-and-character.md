@@ -12,6 +12,8 @@ Money Heist season one is a strong plot. Later seasons lose people when characte
 
 People click the next video for the person. MrBeast-scale production copied by a faceless studio underperforms because the audience did not walk eleven years with that studio. MKBHD's robots matter because viewers watched the bedroom-to-warehouse climb.
 
+The channel and creator examples here are the instructor's illustrations, not verified facts. Do not repeat them as facts in a user's script.
+
 The creator is the protagonist. State the character's public goal the way MrBeast does ("best YouTube videos on earth") so the audience can root for progress.
 
 ## 70 / 30

@@ -26,4 +26,4 @@ A new channel has no earned attachment yet. Do not wait ten years. Earn the firs
 
 ## Script rule
 
-For a vlog, list three things the creator is willing to show that they would rather hide. Use one. Never invent a fourth.
+For a vlog, ask the creator once for up to three shortcomings they are genuinely willing to show. They choose. Never press, and never suggest a trauma. Use one. Never invent one, and never use someone else's.

@@ -8,7 +8,9 @@ An incident is a story only if the character does not leave with the same mindse
 
 Physical surroundings may also change. That is optional. Mindset change is not.
 
-## Worked contrast (teaching pattern, do not copy facts)
+## Worked contrast (the instructor's teaching illustrations)
+
+These are course examples, not the user's material. Never present the bike, helmet, or comedy-set details as the user's facts, and do not reuse them in a package unless the user supplied them.
 
 Not a story — "I rode my bike to the studio and saw a crash." That is news.
 
@@ -34,4 +36,4 @@ Before writing dialogue, write
 `Event —`
 `End belief —`
 
-If start and end match, it is not a story yet.
+Each line is a ledger fact (F#), a `STAGE`, or a `GAP`. If start and end match, it is not a story yet. If the event has not happened yet, the end belief is a `GAP` to be filled after the shoot (see provenance-and-inputs).

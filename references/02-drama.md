@@ -11,9 +11,9 @@ A rich man eating in a five-star hotel is not dramatic. A man from a slum eating
 
 Degree can be low. Art films and quiet YouTube videos still contain mismatch. They just do not turn people into snakes. Match the degree to the world you have established.
 
-## How to manufacture drama without lying
+## How to find or stage drama without lying
 
-Do not invent a crash. Relocate the real character.
+Do not invent a crash. Relocate the real character. Each idea below is a production suggestion the creator would have to actually do, so it is `STAGE` until they approve and do it. It must be legal, consented, and survivable (see safety-and-consent). Never write one as if it already happened.
 
 - Put the city kid on a village well.
 - Put the tech reviewer in a house with no electricity.
@@ -31,4 +31,4 @@ For every major beat, write
 `We put them in —`
 `What they do not know how to do here —`
 
-If belongs-in and put-them-in are the same room, the beat is flat. Cut or relocate.
+If belongs-in and put-them-in are the same room, the beat is flat. Cut or relocate. Tag the beat `F#` if it happened and `STAGE` if it is a plan.

@@ -19,11 +19,13 @@ The stronger the antagonist, the greater the hero. Ravana is a scholar with a go
 4. Someone inside the team betrays.
 5. Body or weather turns against them.
 
-YouTube videos of 12–18 minutes need 3–6 of these stacked, not one.
+Stack to the runtime tier in the canonical numbers table in SKILL.md (long 3–6, mid 2–3, Short 1), not one.
+
+These are patterns, not events. Use only conflicts that occurred or that the creator will really face. Do not invent a betrayer or a doubter.
 
 ## Object and situation antagonists
 
-Parents who block a singing dream are an antagonistic force. An unfit body walking into MMA is an antagonistic force. A wall seat on a 4-day train is an antagonistic force. Name it.
+Parents who block a singing dream are an antagonistic force. An unfit body walking into MMA is an antagonistic force. A wall seat on a 4-day train is an antagonistic force. Name it. If the antagonist is a real private person, follow the people rules in safety-and-consent and prefer the role or system over the name.
 
 ## Script rule
 
