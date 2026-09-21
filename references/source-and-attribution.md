@@ -9,6 +9,10 @@
 - Published as a free public course, July 2026 upload of sessions originally taught earlier
 - Language of source — spoken Hindi with English terms; this skill restates the method in operational English so it can be translated
 
+## Course size
+
+The playlist lists 13 videos: one course invitation (lesson 0) and twelve lessons. This skill has a module for each of the twelve. Lesson 0 has no module. Checked 2026-09-21.
+
 ## Lesson index
 
 | # | Lesson | Video |
@@ -34,6 +38,14 @@ When a user asks where the method comes from, name the free Monkey Magic storyte
 Do not reproduce lecture transcripts verbatim. Restate rules, then apply them to the user's material.
 
 Do not reuse Raunaq's personal journeys (Narmada parikrama, longest-train ride, Delhi-to-London, 100 days of dreaming, helmet story, Harsh Gujral anecdote) as if they belong to the user. Those are teaching examples only.
+
+## Illustrations are not facts
+
+Every creator, film, and product named in the course (and in the modules) is the instructor's teaching illustration. Claims about named third parties, such as what a channel's audience does or why a series held up, are the instructor's opinions. Do not repeat them as facts in a user's script. Nothing in this repository has been reviewed or endorsed by the instructor.
+
+## Teaching-example contamination list
+
+These details belong to the course. They must not appear in a user's package unless the user supplied them: Narmada parikrama, longest-train ride, Delhi-to-London, 100 days of dreaming, the helmet crash, the comedy set and the couple who stormed the stage, Harsh Gujral, the ice-cream statue, the sensory-deprivation challenge with a father, the PG Wi-Fi extender, the ration-shop lunch, the Tesla Solar Roof zero-bill opening, the iPhone in a dustbin, and pizza in a sleeper coach. `scripts/lint_package.py` warns on these words.
 
 ## What was generalized
 

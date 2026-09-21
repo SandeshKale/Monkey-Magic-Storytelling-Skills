@@ -22,6 +22,10 @@ A series needs a public long goal and a visible arc across episodes. Each episod
 
 Process shows steps. Story shows why the steps cost something. Add Y and mismatch to a process video rather than replacing the process.
 
+## Not a story at all
+
+Tutorials, reviews, explainers, news items, livestream highlights, and training videos are not stories. Run light mode from edge-cases. Do not force a hero's journey onto them. Add a story wrapper only if a real one exists.
+
 ## Object-led
 
 The product or place is treated as a character in the wrong room. Still needs a human voice with a Y.
