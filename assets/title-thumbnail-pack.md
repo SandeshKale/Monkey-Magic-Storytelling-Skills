@@ -2,9 +2,10 @@
 
 Idea noun —
 Mismatch —
-Number or duration (if true) —
+Number or duration (only if true) —
+Mode — retrospective / prospective (prospective titles name the challenge, never an outcome)
 
-## Titles (payoff must exist in the cut)
+## Titles (payable by footage that exists or will exist; 100 characters or fewer)
 1.
 2.
 3.
@@ -12,7 +13,10 @@ Number or duration (if true) —
 5.
 
 ## Kill list
-vlog, must watch, you won't believe, part 1 (unless it is actually a series with a public goal)
+vlog, must watch, you won't believe, part 1 (unless it is actually a series with a public goal). Apply the local equivalents in other languages.
+
+## Claim check
+Every claim in every title, and the source (F# or evidence the creator holds) —
 
 ## Thumbnail
 Visible mismatch —

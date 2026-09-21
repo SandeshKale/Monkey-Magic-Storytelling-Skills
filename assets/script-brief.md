@@ -1,11 +1,12 @@
 # Video package
 
-## Titles
+## Assumptions used
+
+
+## Titles (3–5, 100 characters or fewer)
 1.
 2.
 3.
-4.
-5.
 
 ## Thumbnail brief
 
@@ -13,10 +14,12 @@
 ## Spine
 
 
-## Why
+## Why (by 0:45)
 
 
 ## Spoken script
+
+Mark gaps as [GAP: what is needed]. Mark plans as [STAGE: … — creator to approve].
 
 ### Hook (0–20s)
 
@@ -33,13 +36,21 @@
 ### Change and cut
 
 
-## B-roll and sound
+## B-roll and sound (describe sounds, do not name copyrighted tracks)
 
 
 ## End screen (after the story)
 
 
-## Forbidden
+## No-go list and forbidden
 
 
 ## Localization notes
+
+
+## Open items
+- GAPs:
+- STAGE awaiting approval:
+- Disclosures (paid, generated, reenacted):
+- Permissions (people, places):
+- Ledger conflicts:

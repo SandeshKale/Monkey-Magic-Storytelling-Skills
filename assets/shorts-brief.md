@@ -4,6 +4,7 @@ Aspect — 9:16
 Target seconds —
 Language —
 Sibling long-form (if any) —
+New facts — none allowed. Everything here is in the long-form or the ledger.
 
 ## First frame (readable with sound off)
 
@@ -19,7 +20,7 @@ Sibling long-form (if any) —
 ## Last frame (the answer)
 
 
-## Spoken lines (max ~12 words each)
+## Spoken lines (12 words or fewer each)
 1.
 2.
 3.
@@ -28,7 +29,7 @@ Sibling long-form (if any) —
 ## Loop test
 Would a stranger rewind once? yes / no
 
-## Title on YouTube Shorts
+## Title on YouTube Shorts (100 characters or fewer)
 
 
-## Forbidden
+## No-go list and forbidden

@@ -1,5 +1,7 @@
 # Rasa map
 
+Tier — Short 2 · mid 3+ · long 4–6 rasas
+
 Dominant rasa —
 Supporting rasas —
 Missing on purpose —
@@ -14,6 +16,8 @@ Missing on purpose —
 | human |  |  |  |  |
 | climax |  |  |  |  |
 | cut |  |  |  |  |
+
+The emotion must come from the material. Do not script one the footage does not contain.
 
 EEI mix — entertainment / education / inspiration
 If one column is empty, say why.
