@@ -1,0 +1,32 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate skill (frontmatter, links, drift, evals)
+        run: python scripts/validate_skill.py
+      - name: Good examples must pass the lint
+        run: |
+          python scripts/lint_package.py examples/worked-example.md
+          python scripts/lint_package.py examples/worked-short.md
+      - name: Failing example must fail the lint
+        run: |
+          if python scripts/lint_package.py examples/failing-draft.md; then
+            echo "failing-draft.md unexpectedly passed"; exit 1
+          fi
+      - name: Blank canvases must not pass as finished packages
+        run: |
+          for f in assets/script-brief.md assets/beat-sheet.md assets/shorts-brief.md; do
+            if python scripts/lint_package.py "$f" >/dev/null; then echo "$f passed blank"; exit 1; fi
+          done
+      - name: Build the package zip
+        run: python scripts/validate_skill.py --zip
