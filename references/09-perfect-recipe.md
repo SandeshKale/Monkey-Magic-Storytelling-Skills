@@ -15,7 +15,7 @@ A good YouTube video, in platform terms, has CTR + retention + engagement. If th
 7. Stack 3–6 conflicts. Each one is a mismatch or a blocked goal.
 8. Move from idea to person. Share a vulnerability once the viewer is already on the train.
 9. Build an awkward beat, then let kindness or competence resolve it (catharsis). Replay the peak if it earned it.
-10. Show the transformation in a concrete image (pizza eaten alone, then shared).
+10. Show the transformation in a concrete image (pizza eaten alone, then shared). It must be real footage or a clearly labeled reenactment.
 11. End on an honest line. Short. Then end screen.
 
 ## Hybrid path (default)
@@ -24,7 +24,7 @@ Minute 0–3 live in the idea. Minute 3 onward let the person take the frame. Vi
 
 ## Length
 
-A 15–18 minute hybrid can hold six conflicts. A 7-minute video can hold three. Do not pad.
+A 15–18 minute hybrid can hold six conflicts. A 7-minute video can hold three. Do not pad. See the tiers in the canonical numbers table.
 
 ## Script rule
 

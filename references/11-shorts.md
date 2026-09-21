@@ -6,7 +6,7 @@ Shorts are not long-form chopped at 60 seconds. They are a full story with no id
 
 Discovery. High retention. A door into the long-form on the same channel. A Short that lives on a different personality than the main videos trains the wrong audience.
 
-Target intended retention 75–80 percent or better. Views follow retention on this surface.
+Target intended retention 75–80 percent or better. This is the course's heuristic, not a platform guarantee. Views follow retention on this surface.
 
 ## Spine
 
@@ -16,6 +16,7 @@ Target intended retention 75–80 percent or better. Views follow retention on t
 4. One human crumb (a sip of water, a wait, a grin) so there is a person, not only a premise.
 5. Payoff + optional mid-wait subscribe line that does not break the loop.
 6. Cut on the answer. No ride home.
+7. No new facts. Everything in the Short appears in the long-form or the user's ledger. Spoken lines stay at 12 words or fewer.
 
 ## Devices that hold a loop
 

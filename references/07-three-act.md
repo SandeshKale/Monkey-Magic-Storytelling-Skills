@@ -36,12 +36,12 @@ Do not fabricate extra tension after the change is visible.
 
 | Clock | Beat |
 |---|---|
-| 0:00–0:30 | Visual hook, no or few words |
-| 0:30–1:15 | Inciting incident + why |
-| 1:15–2:00 | Goal, stakes, first mismatch |
+| 0:00–0:20 | Cold open. Pictures and sound, at most one spoken sentence |
+| 0:20–0:45 | Inciting incident + why (Why lands by 0:45, aim for 0:30) |
+| 0:45–2:00 | Goal, stakes, first mismatch. First conflict by 2:00 |
 | 2:00–10:00 | Stacked conflicts, rasa shifts, point of no return |
 | 10:00–13:00 | Climax |
 | 13:00–14:30 | Change visible, honest line, cut |
 | last 20s | End screen only after the story is over |
 
-Shorter videos compress the same spine. They do not delete the change.
+The opening contract (cold open, Why by 0:45, first conflict by 2:00) stays fixed at any runtime. Shorter videos compress the middle of the same spine. They do not delete the change.

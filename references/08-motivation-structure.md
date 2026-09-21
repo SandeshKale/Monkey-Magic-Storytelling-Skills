@@ -1,6 +1,6 @@
 # 08 Motivation and YouTube structure
 
-Fiction can spend Act 1 building a cupboard under the stairs. YouTube cannot. Most clickers leave in the first 30 seconds. Open on the inciting incident and the why.
+Fiction can spend Act 1 building a cupboard under the stairs. YouTube cannot. Most clickers leave in the first 30 seconds. Open on the inciting incident and the why. In this skill the Why must land by 0:45 and should land by 0:30.
 
 ## Why (Y)
 
@@ -25,8 +25,8 @@ Weak-open process — "Today I will build the tallest ice-cream statue." Scale i
 
 Better — a sensory-deprivation challenge that starts from a true habit ("I stare at a screen ten hours a day, so I will sit with nothing") and a father in the room. Mismatch + why + personality.
 
-When rewriting a user's process video, add Y and mismatch. Do not add a dead relative the user does not have.
+When rewriting a user's process video, add a Y and a mismatch that the user's facts support. If they do not support one, leave a `GAP`. Do not add a dead relative the user does not have.
 
 ## Script rule
 
-First spoken paragraph must contain Y or the draft fails the audit. "I made this because the algorithm" is not Y.
+First spoken paragraph must contain Y or the draft fails the audit. "I made this because the algorithm" is not Y. For a synthetic host, Y is the project's present-tense motive, not a fabricated past.

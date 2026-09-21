@@ -18,8 +18,10 @@ Structure, drama, rasa, titles — all secondary. If the content is not true, pe
 2. Which emotion is performed rather than felt?
 3. Which stake exists only for the camera?
 4. What is the creator unwilling to show, and did we respect that?
+5. Which number, name, place, or quote has no ledger id?
+6. Which claim needs a disclosure (paid, generated, reenacted)?
 
-If (1) or (2) or (3) fires, rewrite. If (4) was violated, delete that beat.
+If (1), (2), (3), or (5) fires, rewrite or replace it with a `GAP`. If (4) was violated, delete that beat. If (6) fires, add it to Open items. See provenance-and-inputs.
 
 ## Script rule
 
