@@ -23,8 +23,8 @@ Keep these English keys stable in every language pack. Translate the gloss, not 
 | Point of no return | The decision after which going home is no longer an option. |
 | Climax | Peak emotion, do-or-die. On YouTube this is often the last third, then cut. |
 | Resolution | Visible change. Then stop. Do not narrate the ride home. |
-| Why / Y | The personal motive for making this video, spoken in the opening. Not "for views." |
-| Rasa / Navras | Nine classical performance emotions from the Natyashastra. A video needs several, not one. |
+| Why / Y | The personal motive for making this video, spoken in the first spoken paragraph and by 0:45. Not "for views." |
+| Rasa / Navras | Nine classical emotions from the Natyashastra tradition, the flavour the audience tastes. A video needs several, not one (Short 2, mid 3+, long 4–6). |
 | EEI | Entertainment + Education + Inspiration. A standout video mixes at least two, ideally three. |
 | Idea-based video | Premise does the clicking (world's longest train, $1 vs $1M). |
 | Personalized vlog | Character does the clicking. Works only while real drama exists in the life. |
@@ -32,6 +32,16 @@ Keep these English keys stable in every language pack. Translate the gloss, not 
 | CTR | Click-through rate from impression to view. Title + thumbnail job. |
 | Retention | How much of the video a clicker watches. Structure + drama + truth job. |
 | Engagement | Comments, likes, replies. Algorithm reads this as "people cared." |
-| Hook | First 3–30 seconds that stop the scroll or the suggested-video bounce. |
+| Hook | The cold open (0:00–0:20) and first spoken line that stop the scroll or the suggested-video bounce. |
 | Object-as-character | An iPhone in a dustbin, a poor man in a five-star hotel. Mismatch creates drama without a human villain. |
 | Truth | The non-negotiable. Structure without truth does not connect. |
+| Bhava | The emotion a performer shows. It evokes the rasa the audience tastes. |
+| FACT | A claim supplied by the user and listed in the fact ledger, written as its id (F1, F2, …). The only kind of claim that may be narrated as having happened. |
+| STAGE | A mismatch or scene the creator has not yet done, proposed as a plan. Needs creator approval and a safety line. |
+| GAP | A needed fact that is missing. Left as a visible `[GAP: …]`, never guessed. |
+| Fact ledger | The numbered list of user-supplied facts a package is built from. |
+| Opening contract | Cold open by 0:20, Why by 0:45 (aim 0:30), first conflict by 2:00. |
+| Retrospective / Prospective | Retrospective: it already happened, so narrate facts. Prospective: the shoot is ahead, so deliver a shooting plan with the ending left as a prompt. |
+| Light mode | Applying only the opening contract, truth, and safety to non-narrative videos such as tutorials, reviews, and news. |
+| No-go list | What the creator will not show or fake. Respected in every beat. |
+| Open items | The closing block of a package: every GAP, unapproved STAGE, ledger conflict, and required disclosure. |
