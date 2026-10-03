@@ -17,16 +17,16 @@ STYLE = (
     "their shape and size. No morphing, no warped faces or hands, no extra fingers, no text, subtitles, logos or "
     "watermarks anywhere in frame, no readable signs or lettering (signs and billboards are blank glowing panels), "
     "no slow-motion unless stated, no background music. Cuts between shots are instant hard cuts: never dissolves, "
-    "cross-fades or double exposures."
+    "cross-fades or double exposures. Rain falls only outdoors; interiors are completely dry."
 )
 
 LOCKS = {
     "K": (
-        "KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, short black hair with a neat "
-        "left side parting, clean-shaven with faint stubble shadow, slim round titanium-framed glasses with perfectly "
-        "clear, untinted lenses (never sunglasses, never coloured lenses), charcoal-grey "
-        "bomber jacket with sleeves pushed to the forearms over a slate-blue crew-neck shirt, dark navy slim trousers, "
-        "black minimalist sneakers, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only "
+        "KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top "
+        "with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly "
+        "clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey "
+        "bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, "
+        "black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only "
         "this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), "
         "small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face."
     ),
@@ -67,12 +67,12 @@ LOCKS = {
 }
 
 VOICES = {
-    "K": "KABIR: warm, slightly husky light baritone (fundamental about 120 Hz), 32-year-old educated urban Indian man, crisp articulation, quick measured pace, dry understated humour, voice tightens and rises slightly under stress.",
-    "A": "ARC: soft, airy, androgynous-feminine mid-range voice (about 195 Hz), a gentle smile in the tone, calm unhurried pace, a very faint digital shimmer on S sounds, never robotic or monotone.",
-    "Z": "ZOYA: husky, raspy contralto-mezzo woman (about 210 Hz), 29, fast rhythmic Mumbai street-Hindi cadence, playful sarcasm, laughs easily.",
-    "I": "DR. IYER: low, resonant, slow older contralto woman (about 170 Hz), 67, slightly breathy with age, deliberate pauses, every sentence lands softly.",
-    "S": "SETHI: deep, smooth bass male voice (about 90 Hz), 54, very slow controlled pace, never raises his voice, polite menace, slight gravel at the end of sentences.",
-    "N": "NULL: Kabir's own voice pitched down about two semitones, hollow, a short reversed-reverb tail on every phrase, flat calm, same cadence as Kabir.",
+    "K": "KABIR: a young man's voice, warm medium-low baritone, 32 years old, educated urban Indian, crisp articulation, quick measured pace, dry understated humour, tightens and rises slightly under stress.",
+    "A": "ARC: clearly a woman's voice, soft and warm, medium-high pitch (definitely not a deep or male voice), calm unhurried pace, a faint smile in the tone, a very subtle digital shimmer, never robotic or monotone.",
+    "Z": "ZOYA: a young woman's voice, husky and raspy, medium pitch, 29, fast rhythmic Mumbai street-Hindi cadence, playful sarcasm, laughs easily.",
+    "I": "DR. IYER: an older woman's voice, 67, low and resonant, slow, slightly breathy with age, deliberate pauses, every sentence lands softly.",
+    "S": "SETHI: a middle-aged man's voice, 54, very deep smooth bass, much lower than Kabir's, very slow and controlled, never raises his voice, polite menace, slight gravel at the end of sentences.",
+    "N": "NULL: Kabir's own male voice pitched lower, hollow, with a short reversed-reverb tail on every phrase, flat calm, same cadence as Kabir.",
 }
 
 NAMES = {"K": "Kabir", "A": "ARC", "Z": "Zoya", "I": "Dr. Iyer", "S": "Sethi", "N": "NULL"}
@@ -541,10 +541,49 @@ clip("S10 Change", ["K", "Z"],
 
 assert len(C) == 39, len(C)
 
+# ----------------------------------------------------------------------------
+# CLIP 01 RESHOOTS: single-shot generations to replace the weak parts of take 2.
+# Generate each one alone, then I cut them together (hard cuts) in the edit.
+# ----------------------------------------------------------------------------
+R = [
+    dict(tag="01-B", title="Hospital ward insert (use about 3 s)", chars=[],
+         start="No start image needed (text-to-video).",
+         shot="ONE continuous locked-off shot, no cuts. Interior of a hospital ward at night. A patient monitor on a wall arm shows a green heart-rate trace and "
+              "a few plain numbers, with a ventilator hose beside it; no patient face is visible. For the first second the room is lit cool white. At about 1.0 s the "
+              "main lights drop out and only dim red emergency strips along the wall remain; the monitor trace stutters for a moment, then steadies. Everything stays "
+              "still afterwards. Completely dry interior.",
+         camera="Locked-off tripod shot, 35mm, slight shallow depth of field.",
+         physics="Lights drop out at a single moment with a short fade of the lamp filaments and screens; the monitor stays powered on its battery. Red strip light casts correct red on nearby surfaces.",
+         sfx="Room hum cuts out at the blackout, a heartbeat-monitor beep that skips once then steadies, a faint distant alarm. No voices. No music.",
+         dialogue=[]),
+    dict(tag="01-C", title="Kabir close-up with the pencil (use about 3 s)", chars=["K"],
+         start="Use the right-hand face close-up of REF-K as the start image (crop it to 16:9), so the face matches the approved sheet.",
+         shot="ONE continuous shot, no cuts. Extreme close-up of Kabir's face looking straight into the camera, calm and focused, in a dry dim room with a blurred "
+              "plain wall behind him. His round glasses have perfectly clear lenses that reflect a soft warm amber glow. In his right hand, held in front of his chest, "
+              "he holds ONE yellow-and-black mechanical pencil and clicks the top with his thumb three times, with a short beat between each click, his eyes unchanged. "
+              "There is NO pencil behind his ear in this shot; the pencil in his hand is the only one. No rain, no water, no particles in the air.",
+         camera="Locked-off 85mm close-up, very shallow depth of field, a barely perceptible slow push-in.",
+         physics="The pencil tip extends a few millimetres with each click and retracts correctly. Amber reflection on the lenses stays fixed relative to the glasses. Breathing is subtle.",
+         sfx="Near-silent room tone, then three crisp, clearly audible mechanical pencil clicks with a short pause between each. No voices. No music.",
+         dialogue=[]),
+    dict(tag="01-D", title="Speaker and ARC's line (use about 4 s)", chars=["A"],
+         start="No start image needed, or use the last frame of take 2's final street shot if you like that location.",
+         shot="ONE continuous locked-off shot, no cuts. A rain-wet night street seen from a low angle. In sharp focus in the foreground, a round weatherproof PA loudspeaker "
+              "with a flat perforated-metal grille is bolted to a dark lamp post (it is a loudspeaker, not a microphone). Behind it, out of focus: a bus and blank warm "
+              "glowing sign panels with no lettering. Rain falls steadily outdoors. At about 1.0 s the voice speaks from the loudspeaker, and its grille shows no movement. "
+              "The shot holds still for about 1.5 s after the line, then cuts to black in the last 0.4 s.",
+         camera="Locked-off tripod shot, 50mm, shallow depth of field on the loudspeaker.",
+         physics="Rain falls straight and consistently and ripples puddles. The voice is a little tinny and has slight echo from the street, as a real outdoor speaker would sound.",
+         sfx="Steady rain, distant city hum, faint electrical crackle from the speaker just before the voice. The spoken line must be clearly audible, with no music.",
+         dialogue=[("A", "कबीर… मुझे तुम्हारे हाथ चाहिए।", "Kabir… mujhe tumhare haath chahiye.", "Kabir… I need your hands.")]),
+]
+
+
+
 
 
 SHORT = {
-    "K": "Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, slim round titanium glasses with clear untinted lenses, charcoal bomber jacket over slate-blue shirt, one yellow-black pencil (in hand or behind left ear, never both).",
+    "K": "Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, oval face, soft jawline, thick tousled black hair, light stubble, thin gunmetal round glasses with clear untinted lenses, mid-grey bomber jacket over muted-blue T-shirt, one yellow-black pencil (in hand or behind left ear, never both).",
     "Z": "Zoya: Indian woman, 29, wiry, high ponytail with left side shaved, silver hoop earring, faded oil-stained orange jacket, black fingerless gloves, amber goggles on forehead.",
     "I": "Dr. Iyer: Indian woman, 67, long silver braid over right shoulder, round wire glasses, olive chest waders over indigo handloom saree, headlamp, brass lantern.",
     "S": "Sethi: Indian man, 54, tall, grey-streaked hair, trimmed grey beard, amber glowing ring around left iris, long steel-grey high-collar coat, black gloves.",
@@ -553,12 +592,12 @@ SHORT = {
     "D": "Dabba: battered orange cargo drone, four ducted fans, open cockpit, tiffin carriers strapped to its side.",
 }
 SHORT_VOICE = {
-    "K": "Kabir: warm light baritone, ~120 Hz, quick, dry humour.",
-    "A": "ARC: soft airy androgynous-feminine mid voice, ~195 Hz, gentle smile.",
-    "Z": "Zoya: husky raspy mezzo woman, ~210 Hz, fast, playful.",
-    "I": "Dr. Iyer: low slow resonant older woman, ~170 Hz.",
-    "S": "Sethi: deep smooth bass, ~90 Hz, slow, quiet menace.",
-    "N": "NULL: Kabir's voice pitched down, hollow, reversed-reverb tails.",
+    "K": "Kabir: young man, warm medium-low baritone, quick, dry humour.",
+    "A": "ARC: clearly a woman's voice, soft, warm, medium-high pitch, not deep, not male.",
+    "Z": "Zoya: young woman, husky raspy medium pitch, fast, playful.",
+    "I": "Dr. Iyer: older woman, low, slow, resonant.",
+    "S": "Sethi: middle-aged man, very deep bass, slow, quiet menace.",
+    "N": "NULL: Kabir's male voice pitched lower, hollow, reversed-reverb tails.",
 }
 SHORT_STYLE = ("Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, "
                "teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.")
@@ -666,6 +705,16 @@ def main():
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "video-prompts.md")
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(out) + "\n")
+    rp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "clip-01-reshoots.md")
+    rl = ["# CLIP 01 reshoots: three single-shot generations\n",
+          "Take 2 of clip 1 is kept for its first 7 seconds (the city blackout). These three prompts replace the rest. Generate each on its own, then send them to me.\n"]
+    for r in R:
+        rr = dict(scene=r["title"], chars=r["chars"], shot=r["shot"], camera=r["camera"], physics=r["physics"], sfx=r["sfx"], dialogue=r["dialogue"])
+        rl.append(f"## {r['tag']}: {r['title']}\n")
+        rl.append(f"**Start frame:** {r['start']}\n")
+        rl.append("```\n" + build_prompt(rr) + "\n```\n")
+    with open(rp, "w", encoding="utf-8") as f:
+        f.write("\n".join(rl) + "\n")
     cp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "video-prompts-compact.md")
     lines = ["# THE UNCHECKED DOOR: compact prompts (use if Grok limits prompt length)\n",
              "Same 39 clips as video-prompts.md, with shorter locks. Still use the reference stills and last-frame chaining.\n"]
