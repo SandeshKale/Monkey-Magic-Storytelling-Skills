@@ -546,7 +546,7 @@ assert len(C) == 39, len(C)
 # Generate each one alone, then I cut them together (hard cuts) in the edit.
 # ----------------------------------------------------------------------------
 R = [
-    dict(tag="01-B", secs=5, title="Hospital ward insert (use about 3 s)", chars=[],
+    dict(tag="01-B", title="Hospital ward insert (use about 3 s)", chars=[],
          start="No start image needed (text-to-video).",
          shot="ONE continuous locked-off shot, no cuts. Interior of a hospital ward at night. A patient monitor on a wall arm shows a green heart-rate trace and "
               "a few plain numbers, with a ventilator hose beside it; no patient face is visible. For the first second the room is lit cool white. At about 1.0 s the "
@@ -620,7 +620,7 @@ LAB = ("the same minimalist glass-walled AI safety lab on a high floor: floor-to
 V2 = [
     dict(tag="01-A", title="Aerial blackout (ALREADY HAVE IT)", reuse=True, chars=[], vo=False, use="0.0 to 6.4 s of your earlier take 2 (the city goes dark row by row; red lights stay on the towers).",
          start="", shot="", camera="", physics="", sfx="", dialogue=[]),
-    dict(tag="01-B", title="Kabir watches the dark city (use about 4 s)", chars=["K"], vo=False, use="Use about 4 s, cut straight after the third click.",
+    dict(tag="01-B", secs=5, title="Kabir watches the dark city (use about 4 s)", chars=["K"], vo=False, use="Use about 4 s, cut straight after the third click.",
          start="LOC-2 as the first frame (the lab).",
          shot=f"ONE continuous shot, no cuts. Interior of {LAB}, at 3:07 a.m. Kabir stands at the floor-to-ceiling window, seen from behind and slightly from the side, looking out at the "
               "city, which is completely dark apart from dim red aviation lights on the towers. Rain runs down the outside of the glass only. His faint reflection is visible in the glass. "
@@ -630,7 +630,7 @@ V2 = [
          physics="Rain runs down the outside of the glass under gravity and the red tower lights refract through the droplets. The room is dry. His reflection moves exactly with him.",
          sfx="Muted rain through thick glass, a low electrical hum that fades down, three crisp clearly audible pencil clicks. No voices. No music.",
          dialogue=[]),
-    dict(tag="01-C", title="The monitors turn amber and ARC speaks (use about 5 s)", chars=["K", "A"], vo=False, use="Use the whole shot to the black at the end.",
+    dict(tag="01-C", secs=6, title="The monitors turn amber and ARC speaks (use about 5 s)", chars=["K", "A"], vo=False, use="Use the whole shot to the black at the end.",
          start="Use the right-hand face close-up of REF-K as the start image (crop it to 16:9).",
          shot=f"ONE continuous shot, no cuts. Medium close-up of Kabir's face inside {LAB}, the dark city blurred behind him through the window with a few red tower lights. He turns his "
               "head toward the camera. As he turns, the cool blue light from the monitors around him smoothly shifts to warm amber over about 1.5 seconds, and the amber glow spreads over his face and "
@@ -711,7 +711,7 @@ def build_prompt(c):
                 f'{i + 1}. {NAMES[sp]} says in natural conversational Hindi (not dubbed-sounding): "{dev}" (pronounced: {rom})'
                 for i, (sp, dev, rom, _en) in enumerate(c["dialogue"]))
         parts.append("VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance" + ("" if c.get("vo") else ", lip-synced") + "):\n" + v)
-        parts.append(f"DIALOGUE (spoken in Hindi, in this order, spread naturally across the {c.get('secs', 15)} seconds, no overlap unless stated):\n" + lines)
+        parts.append(f"DIALOGUE (spoken in Hindi, in this order, spread naturally across the {c.get('secs') or 15} seconds, no overlap unless stated):\n" + lines)
     else:
         parts.append("DIALOGUE: none.")
     parts.append("STYLE: " + STYLE)

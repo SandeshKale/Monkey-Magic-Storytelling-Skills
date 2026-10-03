@@ -81,7 +81,7 @@ DIALOGUE: none.
 
 STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. Strict real-world physics: correct gravity, momentum, inertia, fluid and rain behaviour, consistent reflections and shadows, objects keep their shape and size. No morphing, no warped faces or hands, no extra fingers, no text, subtitles, logos or watermarks anywhere in frame, no readable signs or lettering (signs and billboards are blank glowing panels), no slow-motion unless stated, no background music. Cuts between shots are instant hard cuts: never dissolves, cross-fades or double exposures. Rain falls only outdoors; interiors are completely dry.
 
-DURATION: 15 seconds, 16:9.
+DURATION: 5 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 5 seconds, then hold the final frame still.
 ```
 
 **Short version (if Grok limits length):**
@@ -112,12 +112,12 @@ AUDIO (generate natively, no music): Low electrical hum rising, a soft glass-har
 VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
 - ARC: clearly a woman's voice, soft and warm, medium-high pitch (definitely not a deep or male voice), calm unhurried pace, a faint smile in the tone, a very subtle digital shimmer, never robotic or monotone.
 
-DIALOGUE (spoken in Hindi, in this order, spread naturally across the None seconds, no overlap unless stated):
+DIALOGUE (spoken in Hindi, in this order, spread naturally across the 6 seconds, no overlap unless stated):
 1. ARC says in natural conversational Hindi (not dubbed-sounding): "कबीर… मुझे तुम्हारे हाथ चाहिए।" (pronounced: Kabir… mujhe tumhare haath chahiye.)
 
 STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. Strict real-world physics: correct gravity, momentum, inertia, fluid and rain behaviour, consistent reflections and shadows, objects keep their shape and size. No morphing, no warped faces or hands, no extra fingers, no text, subtitles, logos or watermarks anywhere in frame, no readable signs or lettering (signs and billboards are blank glowing panels), no slow-motion unless stated, no background music. Cuts between shots are instant hard cuts: never dissolves, cross-fades or double exposures. Rain falls only outdoors; interiors are completely dry.
 
-DURATION: 15 seconds, 16:9.
+DURATION: 6 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 6 seconds, then hold the final frame still.
 ```
 
 **Short version (if Grok limits length):**
