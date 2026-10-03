@@ -15,16 +15,20 @@ STYLE = (
     "grade, physically accurate lighting, real skin texture with pores and fine detail. Strict real-world physics: "
     "correct gravity, momentum, inertia, fluid and rain behaviour, consistent reflections and shadows, objects keep "
     "their shape and size. No morphing, no warped faces or hands, no extra fingers, no text, subtitles, logos or "
-    "watermarks anywhere in frame, no slow-motion unless stated, no background music."
+    "watermarks anywhere in frame, no readable signs or lettering (signs and billboards are blank glowing panels), "
+    "no slow-motion unless stated, no background music. Cuts between shots are instant hard cuts: never dissolves, "
+    "cross-fades or double exposures."
 )
 
 LOCKS = {
     "K": (
         "KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, short black hair with a neat "
-        "left side parting, clean-shaven with faint stubble shadow, slim round titanium-framed glasses, charcoal-grey "
+        "left side parting, clean-shaven with faint stubble shadow, slim round titanium-framed glasses with perfectly "
+        "clear, untinted lenses (never sunglasses, never coloured lenses), charcoal-grey "
         "bomber jacket with sleeves pushed to the forearms over a slate-blue crew-neck shirt, dark navy slim trousers, "
-        "black minimalist sneakers, black smartwatch on left wrist, yellow-and-black mechanical pencil tucked behind "
-        "his right ear, small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face."
+        "black minimalist sneakers, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only "
+        "this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), "
+        "small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face."
     ),
     "Z": (
         "ZOYA QURESHI: Indian woman, 29 years old, 165 cm, wiry build, wheatish skin, black hair in a high messy "
@@ -123,19 +127,24 @@ def clip(scene, chars, shot, camera, physics, sfx, dialogue, chain, start, end, 
 
 # ---- S1 cold open (C01)
 clip("S1 Cold open", ["K", "A"],
-     "0.0-1.0s black. 1.0-5.0s: high aerial establishing shot of a vast futuristic coastal megacity at 3 a.m. in monsoon rain, towers and a long "
-     "suspension bridge threaded with warm LED strips. 5.0-8.0s: a wave of darkness travels across the city district by district as streetlights, "
-     "window lights and billboards cut out in sequence. 8.0-9.5s: interior hospital ward, a ventilator patient monitor's green trace stutters, dim red "
-     "battery-backup lights come on, no patient face shown. 9.5-11.0s: street-level rain-wet plaza, a billboard, a bus display and phones in people's hands "
-     "all glow the same steady amber pulse, crowd silhouettes only. 11.0-13.0s: extreme close-up of Kabir's round glasses lenses reflecting the amber glow, "
-     "his thumb clicks a mechanical pencil three times. 13.0-14.5s: whip-pan to a speaker grille on a lamp post. 14.5-15.0s hard cut to black.",
-     "Slow drone push-in on the skyline, then handheld macro for the glasses, then a fast whip-pan.",
-     "Light travels faster than sound, so the dull thunks of transformers shutting down arrive visibly after each district goes dark. Rain falls straight "
+     "FOUR SHOTS, joined by instant hard cuts (no dissolves). "
+     "SHOT 1 (0.0-6.0 s): high aerial of a vast futuristic coastal megacity at 3 a.m. in heavy monsoon rain with clearly visible falling rain streaks. "
+     "At the start every tower, street and the long suspension bridge are brightly lit. Beginning in the foreground and sweeping to the far horizon over about "
+     "four seconds, the lights go out row by row, until the city is almost completely black with only a few dim red backup lights and the dark sea. "
+     "SHOT 2 (6.0-9.0 s): interior of a hospital ward, locked-off view of a patient monitor with a green heart trace and a ventilator hose; the room lights drop "
+     "to dim red backup light and the trace stutters, then steadies. No patient face. "
+     "SHOT 3 (9.0-12.0 s): extreme close-up of Kabir's face and round glasses with perfectly clear lenses that reflect a soft amber glow; his thumb clicks a "
+     "mechanical pencil held in his hand three times. The pencil is in his hand, not behind his ear. "
+     "SHOT 4 (12.0-15.0 s): rain-wet night street, a metal speaker grille on a lamp post in sharp focus in the foreground, blurred blank glowing signs and a bus "
+     "behind; the voice speaks from the grille at about 12.3 s; in the last 0.4 s the frame cuts to black.",
+     "Shot 1 slow drone push-in; shot 2 locked off; shot 3 handheld macro; shot 4 locked off, shallow depth of field.",
+     "Light travels faster than sound, so the dull thunks of transformers shutting down arrive visibly after each row goes dark. Rain falls straight "
      "with one consistent speed and angle. Lights go out in a sweep with short delays, never all at once.",
-     "Deep sub-bass rumble, thinning city hum, rolling transformer thunks, ventilator beep stuttering, three crisp pencil clicks, rain. No music.",
+     "Deep sub-bass rumble, thinning city hum, rolling transformer thunks as the lights die, ventilator beep stuttering, three crisp pencil clicks, rain. "
+     "The spoken line must be clearly audible above the ambience. No music.",
      [("A", "कबीर… मुझे तुम्हारे हाथ चाहिए।", "Kabir… mujhe tumhare haath chahiye.", "Kabir… I need your hands.")],
      False, "Text-to-video, or LOC-1 as the first frame.", "Black frame.",
-     "Add title card THE UNCHECKED DOOR at about 0:12 in post with a low boom. Kabir only needs to be recognisable in the glasses close-up.")
+     "Take 1 was reviewed: it missed the blackout, used dissolves, tinted Kabir's lenses and may have lacked the spoken line; this version fixes those. Add title card THE UNCHECKED DOOR at about 0:12 in post with a low boom. Kabir only needs to be recognisable in the glasses close-up.")
 
 # ---- S2 incite + Why (C02-C03)
 clip("S2 Incite and Why", ["K"],
@@ -535,7 +544,7 @@ assert len(C) == 39, len(C)
 
 
 SHORT = {
-    "K": "Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, slim round titanium glasses, charcoal bomber jacket over slate-blue shirt, yellow-black pencil behind right ear.",
+    "K": "Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, slim round titanium glasses with clear untinted lenses, charcoal bomber jacket over slate-blue shirt, one yellow-black pencil (in hand or behind left ear, never both).",
     "Z": "Zoya: Indian woman, 29, wiry, high ponytail with left side shaved, silver hoop earring, faded oil-stained orange jacket, black fingerless gloves, amber goggles on forehead.",
     "I": "Dr. Iyer: Indian woman, 67, long silver braid over right shoulder, round wire glasses, olive chest waders over indigo handloom saree, headlamp, brass lantern.",
     "S": "Sethi: Indian man, 54, tall, grey-streaked hair, trimmed grey beard, amber glowing ring around left iris, long steel-grey high-collar coat, black gloves.",
@@ -552,7 +561,7 @@ SHORT_VOICE = {
     "N": "NULL: Kabir's voice pitched down, hollow, reversed-reverb tails.",
 }
 SHORT_STYLE = ("Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, "
-               "teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text, no music.")
+               "teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.")
 
 
 def build_compact(c):
