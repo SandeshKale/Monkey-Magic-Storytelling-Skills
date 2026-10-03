@@ -123,109 +123,15 @@ Photorealistic rooftop landing pad on a hospital block at sunrise, pink-gold lig
 
 ### CLIP 01 · 0:00 to 0:15 · S1 Cold open
 
-**Start frame:** Text-to-video, or LOC-1 as the first frame.  
-**End frame (use as the next clip's start):** Black frame.
-
-```
-SHOT: FOUR SHOTS, joined by instant hard cuts (no dissolves). SHOT 1 (0.0-6.0 s): high aerial of a vast futuristic coastal megacity at 3 a.m. in heavy monsoon rain with clearly visible falling rain streaks. At the start every tower, street and the long suspension bridge are brightly lit. Beginning in the foreground and sweeping to the far horizon over about four seconds, the lights go out row by row, until the city is almost completely black with only a few dim red backup lights and the dark sea. SHOT 2 (6.0-9.0 s): interior of a hospital ward, locked-off view of a patient monitor with a green heart trace and a ventilator hose; the room lights drop to dim red backup light and the trace stutters, then steadies. No patient face. SHOT 3 (9.0-12.0 s): extreme close-up of Kabir's face and round glasses with perfectly clear lenses that reflect a soft amber glow; his thumb clicks a mechanical pencil held in his hand three times. The pencil is in his hand, not behind his ear. SHOT 4 (12.0-15.0 s): rain-wet night street, a metal speaker grille on a lamp post in sharp focus in the foreground, blurred blank glowing signs and a bus behind; the voice speaks from the grille at about 12.3 s; in the last 0.4 s the frame cuts to black.
-
-CAMERA: Shot 1 slow drone push-in; shot 2 locked off; shot 3 handheld macro; shot 4 locked off, shallow depth of field.
-
-CAST (keep every detail identical to the reference images):
-- KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face.
-
-ARC RULE: ARC (the city's AI): never a face or a body. It exists only as warm amber light (about 2200 K) shown as glowing ribbons, a soft pulsing sphere of light on glass panels and screens, and amber light strips. Soft and alive, never harsh. No readable text or numbers on any screen.
-
-PHYSICS: Light travels faster than sound, so the dull thunks of transformers shutting down arrive visibly after each row goes dark. Rain falls straight with one consistent speed and angle. Lights go out in a sweep with short delays, never all at once.
-
-AUDIO (generate natively, no music): Deep sub-bass rumble, thinning city hum, rolling transformer thunks as the lights die, ventilator beep stuttering, three crisp pencil clicks, rain. The spoken line must be clearly audible above the ambience.
-
-VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
-- ARC: clearly a woman's voice, soft and warm, medium-high pitch (definitely not a deep or male voice), calm unhurried pace, a faint smile in the tone, a very subtle digital shimmer, never robotic or monotone.
-
-DIALOGUE (spoken in Hindi, in this order, spread naturally across the 15 seconds, no overlap unless stated):
-1. ARC says in natural conversational Hindi (not dubbed-sounding): "कबीर… मुझे तुम्हारे हाथ चाहिए।" (pronounced: Kabir… mujhe tumhare haath chahiye.)
-
-STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. Strict real-world physics: correct gravity, momentum, inertia, fluid and rain behaviour, consistent reflections and shadows, objects keep their shape and size. No morphing, no warped faces or hands, no extra fingers, no text, subtitles, logos or watermarks anywhere in frame, no readable signs or lettering (signs and billboards are blank glowing panels), no slow-motion unless stated, no background music. Cuts between shots are instant hard cuts: never dissolves, cross-fades or double exposures. Rain falls only outdoors; interiors are completely dry.
-
-DURATION: 15 seconds, 16:9.
-```
-
-**Dialogue (for your check):**
-
-- ARC: कबीर… मुझे तुम्हारे हाथ चाहिए। / Kabir… mujhe tumhare haath chahiye. / Kabir… I need your hands.
-
-**Post note:** Take 1 was reviewed: it missed the blackout, used dissolves, tinted Kabir's lenses and may have lacked the spoken line; this version fixes those. Add title card THE UNCHECKED DOOR at about 0:12 in post with a low boom. Kabir only needs to be recognisable in the glasses close-up.
+**SUPERSEDED.** The opening was redesigned to fix the flow. Use `cold-open-v2.md` for clips 1 to 3.
 
 ### CLIP 02 · 0:15 to 0:30 · S2 Incite and Why
 
-**Start frame:** LOC-2 + REF-K as first frame.  
-**End frame (use as the next clip's start):** Kabir in profile, pencil in hand, monitors glowing.
-
-```
-SHOT: Interior of a minimalist glass-walled AI safety lab at 3:07 a.m. Kabir sits alone at a long desk with three monitors, a half-drunk paper coffee cup with faint steam, a grey notebook open beside him, rain streaking the floor-to-ceiling windows behind him. He clicks his pencil, tired and thoughtful. Slow dolly-in on his profile. Insert: a monitor showing a checklist where one square is left unticked while the rest are ticked (generic UI, no readable text). Insert: his thumb flicking the pencil.
-
-CAMERA: Slow dolly-in at eye level, shallow depth of field, then a macro insert.
-
-CAST (keep every detail identical to the reference images):
-- KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face.
-
-PHYSICS: Steam rises and dissipates naturally. Rain streaks run down the glass under gravity. Monitor light colours his face correctly blue.
-
-AUDIO (generate natively, no music): Quiet air-handler hum, rain on glass, soft pencil clicks, intimate close-mic voice-over with no room reverb.
-
-VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
-- KABIR: a young man's voice, warm medium-low baritone, 32 years old, educated urban Indian, crisp articulation, quick measured pace, dry understated humour, tightens and rises slightly under stress.
-
-DIALOGUE (spoken in Hindi, in this order, spread naturally across the 15 seconds, no overlap unless stated):
-1. Kabir says in natural conversational Hindi (not dubbed-sounding): "इस शहर के दिमाग़ की सुरक्षा-परत मैंने बनाई थी।" (pronounced: Is shehar ke dimaag ki suraksha-parat maine banaayi thi.)
-2. Kabir says in natural conversational Hindi (not dubbed-sounding): "दो साल पहले मैंने एक दरवाज़ा खुला छोड़ दिया, क्योंकि रिव्यू में बहुत वक़्त लगता था।" (pronounced: Do saal pehle maine ek darwaaza khula chhod diya, kyunki review mein bahut waqt lagta tha.)
-
-STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. Strict real-world physics: correct gravity, momentum, inertia, fluid and rain behaviour, consistent reflections and shadows, objects keep their shape and size. No morphing, no warped faces or hands, no extra fingers, no text, subtitles, logos or watermarks anywhere in frame, no readable signs or lettering (signs and billboards are blank glowing panels), no slow-motion unless stated, no background music. Cuts between shots are instant hard cuts: never dissolves, cross-fades or double exposures. Rain falls only outdoors; interiors are completely dry.
-
-DURATION: 15 seconds, 16:9.
-```
-
-**Dialogue (for your check):**
-
-- Kabir: इस शहर के दिमाग़ की सुरक्षा-परत मैंने बनाई थी। / Is shehar ke dimaag ki suraksha-parat maine banaayi thi. / I built the safety layer for this city's mind.
-- Kabir: दो साल पहले मैंने एक दरवाज़ा खुला छोड़ दिया, क्योंकि रिव्यू में बहुत वक़्त लगता था। / Do saal pehle maine ek darwaaza khula chhod diya, kyunki review mein bahut waqt lagta tha. / Two years ago I left one door unlocked, because review took too long.
-
-**Post note:** Voice-over delivered as narration over the picture; the Why must land by 0:30.
+**SUPERSEDED.** The opening was redesigned to fix the flow. Use `cold-open-v2.md` for clips 1 to 3.
 
 ### CLIP 03 · 0:30 to 0:45 · S2 Incite and Why
 
-**Start frame:** Last frame of the previous clip.  
-**End frame (use as the next clip's start):** Kabir standing, facing the glowing window-wall.
-
-```
-SHOT: Kabir suddenly sits up as every monitor and the glass window-wall flicker once and fill with slow amber ribbons of light that draw themselves across the glass. His chair rolls back a little and stops by friction. The coffee cup trembles but stays upright. Over-the-shoulder shot of the amber ribbons gathering, then a close-up of his eyes with amber in his glasses. He stands.
-
-CAMERA: Static over-the-shoulder, then a slow push-in on his face.
-
-CAST (keep every detail identical to the reference images):
-- KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face.
-
-ARC RULE: ARC (the city's AI): never a face or a body. It exists only as warm amber light (about 2200 K) shown as glowing ribbons, a soft pulsing sphere of light on glass panels and screens, and amber light strips. Soft and alive, never harsh. No readable text or numbers on any screen.
-
-PHYSICS: The chair rolls back and stops by friction. Amber light casts correct warm reflections on glass, desk and his skin. Coffee ripples then settles.
-
-AUDIO (generate natively, no music): Low rising electrical hum, faint glass-harmonica shimmer, chair wheels on hard floor, one cup rattle.
-
-VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
-- KABIR: a young man's voice, warm medium-low baritone, 32 years old, educated urban Indian, crisp articulation, quick measured pace, dry understated humour, tightens and rises slightly under stress.
-
-DIALOGUE (spoken in Hindi, in this order, spread naturally across the 15 seconds, no overlap unless stated):
-1. Kabir says in natural conversational Hindi (not dubbed-sounding): "और आज रात, कोई उसी दरवाज़े से अंदर आ गया।" (pronounced: Aur aaj raat, koi usi darwaaze se andar aa gaya.)
-
-STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. Strict real-world physics: correct gravity, momentum, inertia, fluid and rain behaviour, consistent reflections and shadows, objects keep their shape and size. No morphing, no warped faces or hands, no extra fingers, no text, subtitles, logos or watermarks anywhere in frame, no readable signs or lettering (signs and billboards are blank glowing panels), no slow-motion unless stated, no background music. Cuts between shots are instant hard cuts: never dissolves, cross-fades or double exposures. Rain falls only outdoors; interiors are completely dry.
-
-DURATION: 15 seconds, 16:9.
-```
-
-**Dialogue (for your check):**
-
-- Kabir: और आज रात, कोई उसी दरवाज़े से अंदर आ गया। / Aur aaj raat, koi usi darwaaze se andar aa gaya. / And tonight, someone walked through that same door.
+**SUPERSEDED.** The opening was redesigned to fix the flow. Use `cold-open-v2.md` for clips 1 to 3.
 
 ### CLIP 04 · 0:45 to 1:00 · S3 Goal and stakes
 

@@ -546,7 +546,7 @@ assert len(C) == 39, len(C)
 # Generate each one alone, then I cut them together (hard cuts) in the edit.
 # ----------------------------------------------------------------------------
 R = [
-    dict(tag="01-B", title="Hospital ward insert (use about 3 s)", chars=[],
+    dict(tag="01-B", secs=5, title="Hospital ward insert (use about 3 s)", chars=[],
          start="No start image needed (text-to-video).",
          shot="ONE continuous locked-off shot, no cuts. Interior of a hospital ward at night. A patient monitor on a wall arm shows a green heart-rate trace and "
               "a few plain numbers, with a ventilator hose beside it; no patient face is visible. For the first second the room is lit cool white. At about 1.0 s the "
@@ -556,7 +556,7 @@ R = [
          physics="Lights drop out at a single moment with a short fade of the lamp filaments and screens; the monitor stays powered on its battery. Red strip light casts correct red on nearby surfaces.",
          sfx="Room hum cuts out at the blackout, a heartbeat-monitor beep that skips once then steadies, a faint distant alarm. No voices. No music.",
          dialogue=[]),
-    dict(tag="01-C", title="Kabir close-up with the pencil (use about 3 s)", chars=["K"],
+    dict(tag="01-C", secs=6, title="Kabir close-up with the pencil (use about 3 s)", chars=["K"],
          start="Use the right-hand face close-up of REF-K as the start image (crop it to 16:9), so the face matches the approved sheet.",
          shot="ONE continuous shot, no cuts. Extreme close-up of Kabir's face looking straight into the camera, calm and focused, in a dry dim room with a blurred "
               "plain wall behind him. His round glasses have perfectly clear lenses that reflect a soft warm amber glow. In his right hand, held in front of his chest, "
@@ -605,11 +605,79 @@ SHORT_STYLE = ("Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35m
 
 def build_compact(c):
     cast = " ".join(SHORT[k] for k in c["chars"])
-    lines = " ".join(f'{NAMES[sp]} (Hindi): "{dev}"' for sp, dev, _r, _e in c["dialogue"]) or "No dialogue."
+    tag = " (off-screen voice-over, mouths closed, not lip-synced)" if c.get("vo") else " (Hindi)"
+    lines = " ".join(f'{NAMES[sp]}{tag}: "{dev}"' for sp, dev, _r, _e in c["dialogue"]) or "No dialogue."
     voices = " ".join(SHORT_VOICE[s] for s in dict.fromkeys(sp for sp, *_ in c["dialogue"]))
     return (f'{c["shot"]} Camera: {c["camera"]} {cast} Physics: {c["physics"]} '
             f'Sound: {c["sfx"].replace(" No music.", "")} Spoken lines in natural Hindi, in order: {lines} {voices} '
             f'{SHORT_STYLE} 15 seconds.')
+
+# ----------------------------------------------------------------------------
+# COLD OPEN V2 (clips 1 to 3 redesigned): one location, one cause-and-effect chain
+# ----------------------------------------------------------------------------
+LAB = ("the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, "
+       "a small grey notebook on the desk")
+V2 = [
+    dict(tag="01-A", title="Aerial blackout (ALREADY HAVE IT)", reuse=True, chars=[], vo=False, use="0.0 to 6.4 s of your earlier take 2 (the city goes dark row by row; red lights stay on the towers).",
+         start="", shot="", camera="", physics="", sfx="", dialogue=[]),
+    dict(tag="01-B", title="Kabir watches the dark city (use about 4 s)", chars=["K"], vo=False, use="Use about 4 s, cut straight after the third click.",
+         start="LOC-2 as the first frame (the lab).",
+         shot=f"ONE continuous shot, no cuts. Interior of {LAB}, at 3:07 a.m. Kabir stands at the floor-to-ceiling window, seen from behind and slightly from the side, looking out at the "
+              "city, which is completely dark apart from dim red aviation lights on the towers. Rain runs down the outside of the glass only. His faint reflection is visible in the glass. "
+              "Behind him the three monitors give a cool blue light. In his right hand, held at chest height, he holds one yellow-and-black mechanical pencil and clicks it three times with "
+              "his thumb, with a short beat between clicks, then lowers it. He does not turn around. There is no pencil behind his ear in this shot.",
+         camera="Slow steady push-in from behind him, 35mm, eye level; the city beyond the glass stays in soft focus.",
+         physics="Rain runs down the outside of the glass under gravity and the red tower lights refract through the droplets. The room is dry. His reflection moves exactly with him.",
+         sfx="Muted rain through thick glass, a low electrical hum that fades down, three crisp clearly audible pencil clicks. No voices. No music.",
+         dialogue=[]),
+    dict(tag="01-C", title="The monitors turn amber and ARC speaks (use about 5 s)", chars=["K", "A"], vo=False, use="Use the whole shot to the black at the end.",
+         start="Use the right-hand face close-up of REF-K as the start image (crop it to 16:9).",
+         shot=f"ONE continuous shot, no cuts. Medium close-up of Kabir's face inside {LAB}, the dark city blurred behind him through the window with a few red tower lights. He turns his "
+              "head toward the camera. As he turns, the cool blue light from the monitors around him smoothly shifts to warm amber over about 1.5 seconds, and the amber glow spreads over his face and "
+              "reflects in his clear glasses. A thin ribbon of amber light slides across the glass wall behind him. A woman's voice speaks from the room itself. His eyes widen slightly and he "
+              "goes still, listening. He holds the stare for a moment after the line. One pencil in his right hand, none behind his ear.",
+         camera="Locked-off 50mm medium close-up, shallow depth of field, a very slow push-in.",
+         physics="Amber light from the screens falls on his face and glasses with correct direction and falloff. The glow brightens evenly, never flickering.",
+         sfx="Low electrical hum rising, a soft glass-harmonica shimmer when the amber appears, then the voice. The spoken line must be clearly audible. No music.",
+         dialogue=[("A", "कबीर… मुझे तुम्हारे हाथ चाहिए।", "Kabir… mujhe tumhare haath chahiye.", "Kabir… I need your hands.")]),
+    dict(tag="02-A", secs=8, title="The Why, part 1: the city map and the door (use about 8 s)", chars=["K"], vo=True, use="Use about 8 s.",
+         start="LOC-2 as the first frame (the lab).",
+         shot=f"ONE continuous shot, no cuts. Inside {LAB}, Kabir sits at the desk, seen in three-quarter profile, looking up at a very large wall display. On the display is an abstract glowing "
+              "amber network map of a city, with branching lines and small nodes like a living circuit. There is no text, no letters and no numbers anywhere on it. One small node at the left edge "
+              "pulses red. The map reflects in his clear glasses. He is tired and still, mouth closed, and does not speak on screen. One pencil resting in his hand, none behind his ear.",
+         camera="Slow dolly-in toward his face and the map, 50mm, shallow depth of field.",
+         physics="The display is the room's light source and tints his face and the desk amber, with a small red edge from the red node. Dust and rain do not appear indoors.",
+         sfx="Low room hum, faint rain on the glass, soft electronic pulses from the map. The voice-over is clearly audible over the ambience. No music.",
+         dialogue=[("K", "इस शहर के दिमाग़ की सुरक्षा-परत मैंने बनाई थी।", "Is shehar ke dimaag ki suraksha-parat maine banaayi thi.", "I built the safety layer for this city's mind."),
+                   ("K", "दो साल पहले मैंने एक दरवाज़ा खुला छोड़ दिया, क्योंकि रिव्यू में बहुत वक़्त लगता था।", "Do saal pehle maine ek darwaaza khula chhod diya, kyunki review mein bahut waqt lagta tha.", "Two years ago I left one door unlocked, because review took too long.")]),
+    dict(tag="02-B", secs=7, title="The Why, part 2: something walks through the door (use about 7 s)", chars=["K"], vo=True, use="Use about 7 s.",
+         start="Last frame of 02-A, or LOC-2.",
+         shot=f"ONE continuous shot, no cuts. Same lab, same wall display, closer on Kabir's face in the foreground, lit amber from the map. On the map, a thin black band slips out of the pulsing red "
+              "node and spreads along the amber lines, putting out each node it touches, one after another, faster and faster, like ink creeping through a circuit. No text, letters or numbers on the "
+              "display. Kabir watches, his jaw tightening; he does not speak on screen. One pencil in his hand, none behind his ear.",
+         camera="Locked-off 50mm, Kabir sharp in the foreground, the map soft but readable behind him.",
+         physics="The display is a screen, so the black band is a rendered shape on it, not a physical object. As nodes go dark, the amber light on his face dims in step.",
+         sfx="Low hum with a faint rising electronic whine as the black spreads, nodes clicking off softly. The voice-over is clearly audible. No music.",
+         dialogue=[("K", "और आज रात, कोई उसी दरवाज़े से अंदर आ गया।", "Aur aaj raat, koi usi darwaaze se andar aa gaya.", "And tonight, someone walked through that same door.")]),
+    dict(tag="03-A", secs=6, title="The stakes: the black reaches eleven white lights (use about 5 s)", chars=["K"], vo=False, use="Use about 5 s, then cut to the hospital insert you already have.",
+         start="Last frame of 02-B, or LOC-2.",
+         shot=f"ONE continuous shot, no cuts. Same lab and wall display. Kabir has stood up and is typing fast on a keyboard in front of the map. The black band on the map races toward a cluster of "
+              "eleven small white dots in the middle of the network. The white dots go out one by one. No text, letters or numbers anywhere on the display. Kabir's reflection is in the glass. "
+              "One pencil in his hand, none behind his ear.",
+         camera="Medium shot from behind and to his side, 35mm, a little handheld unease.",
+         physics="Fast typing shows correct finger motion on real keys. Dots go dark at discrete moments, one at a time. Light on his face dims as the dots go out.",
+         sfx="Rapid keyboard clatter, a faint rising electronic whine, a small soft tick as each white dot goes out, his held breath. No voices. No music.",
+         dialogue=[]),
+    dict(tag="03-B", secs=7, title="ARC takes shape (use about 6 s)", chars=["K", "A"], vo=False, use="Use about 6 s.",
+         start="Last frame of 03-A, or LOC-2.",
+         shot=f"ONE continuous shot, no cuts. Inside {LAB}, the amber ribbons of light move across the glass wall and gather into a soft pulsing sphere of amber light on the glass, about the size of a "
+              "basketball, with the dark city beyond. Kabir steps back from the desk and faces it. He speaks one quiet word to it. The sphere brightens once in answer. No text anywhere.",
+         camera="Medium shot, 35mm, slow orbit around Kabir ending on a profile view with the sphere beyond.",
+         physics="The sphere is light projected on glass, so it has no depth and no shadow. Its amber light falls on Kabir's face and the desk with correct falloff.",
+         sfx="Low hum, a warm glass-harmonica tone on the sphere's pulse, one footstep. His whispered word is clearly audible. No music.",
+         dialogue=[("K", "ARC…?", "ARC…?", "ARC…?")]),
+]
+
 
 
 def ts(sec):
@@ -634,15 +702,23 @@ def build_prompt(c):
             if sp not in speakers:
                 speakers.append(sp)
         v = "\n".join("- " + VOICES[s] for s in speakers)
-        lines = "\n".join(
-            f'{i + 1}. {NAMES[sp]} says in natural conversational Hindi (not dubbed-sounding): "{dev}" (pronounced: {rom})'
-            for i, (sp, dev, rom, _en) in enumerate(c["dialogue"]))
-        parts.append("VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):\n" + v)
-        parts.append("DIALOGUE (spoken in Hindi, in this order, spread naturally across the 15 seconds, no overlap unless stated):\n" + lines)
+        if c.get("vo"):
+            lines = "\n".join(
+                f'{i + 1}. {NAMES[sp]} narrates in natural conversational Hindi as an OFF-SCREEN VOICE-OVER (nobody on screen is speaking, every mouth stays closed; intimate close-mic sound with no room reverb): "{dev}" (pronounced: {rom})'
+                for i, (sp, dev, rom, _en) in enumerate(c["dialogue"]))
+        else:
+            lines = "\n".join(
+                f'{i + 1}. {NAMES[sp]} says in natural conversational Hindi (not dubbed-sounding): "{dev}" (pronounced: {rom})'
+                for i, (sp, dev, rom, _en) in enumerate(c["dialogue"]))
+        parts.append("VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance" + ("" if c.get("vo") else ", lip-synced") + "):\n" + v)
+        parts.append(f"DIALOGUE (spoken in Hindi, in this order, spread naturally across the {c.get('secs', 15)} seconds, no overlap unless stated):\n" + lines)
     else:
         parts.append("DIALOGUE: none.")
     parts.append("STYLE: " + STYLE)
-    parts.append("DURATION: 15 seconds, 16:9.")
+    if c.get("secs"):
+        parts.append(f"DURATION: {c['secs']} seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first {c['secs']} seconds, then hold the final frame still.")
+    else:
+        parts.append("DURATION: 15 seconds, 16:9.")
     return "\n\n".join(parts)
 
 
@@ -685,6 +761,9 @@ def main():
     for i, c in enumerate(C, 1):
         s, e = (i - 1) * 15, i * 15
         w(f"### CLIP {i:02d} · {ts(s)} to {ts(e)} · {c['scene']}\n")
+        if i <= 3:
+            w("**SUPERSEDED.** The opening was redesigned to fix the flow. Use `cold-open-v2.md` for clips 1 to 3.\n")
+            continue
         w(f"**Start frame:** {c['start']}  \n**End frame (use as the next clip's start):** {c['end']}\n")
         w("```\n" + build_prompt(c) + "\n```\n")
         if c["dialogue"]:
@@ -715,6 +794,29 @@ def main():
         rl.append("```\n" + build_prompt(rr) + "\n```\n")
     with open(rp, "w", encoding="utf-8") as f:
         f.write("\n".join(rl) + "\n")
+
+    vp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cold-open-v2.md")
+    vl = []
+    vl.append("# THE UNCHECKED DOOR: cold open v2 (clips 1 to 3, 0:00 to 0:45)\n")
+    vl.append(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "cold-open-v2-intro.md"), encoding="utf-8").read())
+    vl.append("## Prompts (generate each one on its own)\n")
+    for r in V2:
+        if r.get("reuse"):
+            vl.append(f"### {r['tag']}: {r['title']}\n\n**Use:** {r['use']}\n")
+            continue
+        rr = dict(scene=r["title"], chars=r["chars"], shot=r["shot"], camera=r["camera"], physics=r["physics"], sfx=r["sfx"], dialogue=r["dialogue"], vo=r["vo"], secs=r.get("secs"))
+        vl.append(f"### {r['tag']}: {r['title']}\n")
+        vl.append(f"**Start frame:** {r['start']}  \n**Use:** {r['use']}\n")
+        vl.append("```\n" + build_prompt(rr) + "\n```\n")
+        vl.append("**Short version (if Grok limits length):**\n")
+        vl.append("```\n" + build_compact(rr) + "\n```\n")
+        if r["dialogue"]:
+            vl.append("**Dialogue:**\n")
+            for sp, dev, rom, en in r["dialogue"]:
+                vl.append(f"- {NAMES[sp]}{' (voice-over)' if r['vo'] else ''}: {dev} / {rom} / {en}")
+            vl.append("")
+    with open(vp, "w", encoding="utf-8") as f:
+        f.write("\n".join(vl) + "\n")
     cp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "video-prompts-compact.md")
     lines = ["# THE UNCHECKED DOOR: compact prompts (use if Grok limits prompt length)\n",
              "Same 39 clips as video-prompts.md, with shorter locks. Still use the reference stills and last-frame chaining.\n"]
