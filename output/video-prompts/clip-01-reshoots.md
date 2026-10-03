@@ -63,7 +63,7 @@ PHYSICS: Rain falls straight and consistently and ripples puddles. The voice is 
 
 AUDIO (generate natively, no music): Steady rain, distant city hum, faint electrical crackle from the speaker just before the voice. The spoken line must be clearly audible, with no music.
 
-VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
+VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance):
 - ARC: clearly a woman's voice, soft and warm, medium-high pitch (definitely not a deep or male voice), calm unhurried pace, a faint smile in the tone, a very subtle digital shimmer, never robotic or monotone.
 
 DIALOGUE (spoken in Hindi, in this order, spread naturally across the 15 seconds, no overlap unless stated):

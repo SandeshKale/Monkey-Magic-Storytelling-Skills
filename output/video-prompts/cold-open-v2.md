@@ -48,6 +48,8 @@ Every shot has one clear job. The first conflict (the raid) arrives at 1:45 as b
 
 ## Notes for generating
 
+- **Two steps per shot (new).** Step 1 is a keyframe still in Grok's image mode, with your REF stills attached. You approve the picture. Step 2 animates that exact picture with a short prompt. The still fixes the face, room and costume, so the video prompt only has to describe motion and sound. This is the keyframe-then-animate method the open-source micro-drama pipelines use, and it is also cheaper: you reject bad faces as images before spending video generations.
+
 - Generate each prompt below as its own single-shot clip. Do not combine them.
 - 01-B, 02-A, 02-B, 03-A, 03-B all take place in the same lab. Use `LOC-2` as the start image where the prompt says so, so the room matches.
 - 01-C starts from the face close-up of `REF-K` so Kabir's face matches your sheet.
@@ -62,8 +64,31 @@ Every shot has one clear job. The first conflict (the raid) arrives at 1:45 as b
 
 ### 01-B: Kabir watches the dark city (use about 4 s)
 
-**Start frame:** LOC-2 as the first frame (the lab).  
 **Use:** Use about 4 s, cut straight after the third click.
+
+**Step 1. Keyframe still** (Grok image mode; attach REF-K, LOC-2 as references; approve this picture before spending a video generation):
+
+```
+Photorealistic still, 16:9. Seen from behind and slightly from the side, Kabir stands at a floor-to-ceiling window of a minimalist glass-walled AI safety lab at 3 a.m., looking out at a completely dark city with a few dim red aviation lights on the towers. Rain on the outside of the glass. His faint reflection in the glass. Three monitors with cool blue light on a long desk behind him, a small grey notebook on the desk. A yellow-and-black mechanical pencil in his right hand at chest height, none behind his ear. KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face. Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. No text, no readable letters or numbers on any screen.
+```
+
+**Step 2. Animate it** (video mode, use the approved still as the start image):
+
+```
+Animate the start image. Keep the person, the room, the costume and the lighting EXACTLY as in the image; do not change the face. ONE continuous shot, no cuts. Interior of the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, at 3:07 a.m. Kabir stands at the floor-to-ceiling window, seen from behind and slightly from the side, looking out at the city, which is completely dark apart from dim red aviation lights on the towers. Rain runs down the outside of the glass only. His faint reflection is visible in the glass. Behind him the three monitors give a cool blue light. In his right hand, held at chest height, he holds one yellow-and-black mechanical pencil and clicks it three times with his thumb, with a short beat between clicks, then lowers it. He does not turn around. There is no pencil behind his ear in this shot.
+
+CAMERA: Slow steady push-in from behind him, 35mm, eye level; the city beyond the glass stays in soft focus.
+
+PHYSICS: Rain runs down the outside of the glass under gravity and the red tower lights refract through the droplets. The room is dry. His reflection moves exactly with him.
+
+AUDIO (generate natively, no music): Muted rain through thick glass, a low electrical hum that fades down, three crisp clearly audible pencil clicks. No voices.
+
+Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.
+
+DURATION: 5 seconds.
+```
+
+<details><summary>Full-lock version of step 2 (only if the short one drifts)</summary>
 
 ```
 SHOT: ONE continuous shot, no cuts. Interior of the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, at 3:07 a.m. Kabir stands at the floor-to-ceiling window, seen from behind and slightly from the side, looking out at the city, which is completely dark apart from dim red aviation lights on the towers. Rain runs down the outside of the glass only. His faint reflection is visible in the glass. Behind him the three monitors give a cool blue light. In his right hand, held at chest height, he holds one yellow-and-black mechanical pencil and clicks it three times with his thumb, with a short beat between clicks, then lowers it. He does not turn around. There is no pencil behind his ear in this shot.
@@ -84,16 +109,39 @@ STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50
 DURATION: 5 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 5 seconds, then hold the final frame still.
 ```
 
-**Short version (if Grok limits length):**
-
-```
-ONE continuous shot, no cuts. Interior of the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, at 3:07 a.m. Kabir stands at the floor-to-ceiling window, seen from behind and slightly from the side, looking out at the city, which is completely dark apart from dim red aviation lights on the towers. Rain runs down the outside of the glass only. His faint reflection is visible in the glass. Behind him the three monitors give a cool blue light. In his right hand, held at chest height, he holds one yellow-and-black mechanical pencil and clicks it three times with his thumb, with a short beat between clicks, then lowers it. He does not turn around. There is no pencil behind his ear in this shot. Camera: Slow steady push-in from behind him, 35mm, eye level; the city beyond the glass stays in soft focus. Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, oval face, soft jawline, thick tousled black hair, light stubble, thin gunmetal round glasses with clear untinted lenses, mid-grey bomber jacket over muted-blue T-shirt, one yellow-black pencil (in hand or behind left ear, never both). Physics: Rain runs down the outside of the glass under gravity and the red tower lights refract through the droplets. The room is dry. His reflection moves exactly with him. Sound: Muted rain through thick glass, a low electrical hum that fades down, three crisp clearly audible pencil clicks. No voices. Spoken lines in natural Hindi, in order: No dialogue.  Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music. 15 seconds.
-```
+</details>
 
 ### 01-C: The monitors turn amber and ARC speaks (use about 5 s)
 
-**Start frame:** Use the right-hand face close-up of REF-K as the start image (crop it to 16:9).  
 **Use:** Use the whole shot; I fade it to black and add the title card in the edit.
+
+**Step 1. Keyframe still** (Grok image mode; attach REF-K as references; approve this picture before spending a video generation):
+
+```
+Photorealistic still, 16:9. Medium close-up of Kabir facing the camera inside the same glass-walled lab at night, head just turning toward us, calm and alert. Behind him a dark city, out of focus, with a few red tower lights; monitors around him lit cool blue. Clear untinted lenses, a faint amber glow starting to appear in the corner of the lenses. One pencil in his right hand, none behind his ear. KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face. Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. No text, no readable letters or numbers on any screen.
+```
+
+**Step 2. Animate it** (video mode, use the approved still as the start image):
+
+```
+Animate the start image. Keep the person, the room, the costume and the lighting EXACTLY as in the image; do not change the face. ONE continuous shot, no cuts. Medium close-up of Kabir's face inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, the dark city blurred behind him through the window with a few red tower lights. He turns his head toward the camera. As he turns, the cool blue light from the monitors around him smoothly shifts to warm amber over about 1.5 seconds, and the amber glow spreads over his face and reflects in his clear glasses. A thin ribbon of amber light slides across the glass wall behind him. A woman's voice speaks from the room itself. His eyes widen slightly and he goes still, listening. He holds the stare for a moment after the line. One pencil in his right hand, none behind his ear.
+
+CAMERA: Locked-off 50mm medium close-up, shallow depth of field, a very slow push-in.
+
+PHYSICS: Amber light from the screens falls on his face and glasses with correct direction and falloff. The glow brightens evenly, never flickering.
+
+AUDIO (generate natively, no music): Low electrical hum rising, a soft glass-harmonica shimmer when the amber appears, then the voice. The spoken line must be clearly audible.
+
+VOICES: ARC: clearly a woman's voice, soft, warm, medium-high pitch, not deep, not male.
+
+DIALOGUE in natural conversational Hindi, in order as a voice coming from the room itself (nobody on screen moves their lips): ARC: "कबीर… मुझे तुम्हारे हाथ चाहिए।" (pronounced: Kabir… mujhe tumhare haath chahiye.)
+
+Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.
+
+DURATION: 6 seconds.
+```
+
+<details><summary>Full-lock version of step 2 (only if the short one drifts)</summary>
 
 ```
 SHOT: ONE continuous shot, no cuts. Medium close-up of Kabir's face inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, the dark city blurred behind him through the window with a few red tower lights. He turns his head toward the camera. As he turns, the cool blue light from the monitors around him smoothly shifts to warm amber over about 1.5 seconds, and the amber glow spreads over his face and reflects in his clear glasses. A thin ribbon of amber light slides across the glass wall behind him. A woman's voice speaks from the room itself. His eyes widen slightly and he goes still, listening. He holds the stare for a moment after the line. One pencil in his right hand, none behind his ear.
@@ -109,7 +157,7 @@ PHYSICS: Amber light from the screens falls on his face and glasses with correct
 
 AUDIO (generate natively, no music): Low electrical hum rising, a soft glass-harmonica shimmer when the amber appears, then the voice. The spoken line must be clearly audible.
 
-VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
+VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance):
 - ARC: clearly a woman's voice, soft and warm, medium-high pitch (definitely not a deep or male voice), calm unhurried pace, a faint smile in the tone, a very subtle digital shimmer, never robotic or monotone.
 
 DIALOGUE (spoken in Hindi, in this order, spread naturally across the 6 seconds, no overlap unless stated):
@@ -120,11 +168,7 @@ STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50
 DURATION: 6 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 6 seconds, then hold the final frame still.
 ```
 
-**Short version (if Grok limits length):**
-
-```
-ONE continuous shot, no cuts. Medium close-up of Kabir's face inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, the dark city blurred behind him through the window with a few red tower lights. He turns his head toward the camera. As he turns, the cool blue light from the monitors around him smoothly shifts to warm amber over about 1.5 seconds, and the amber glow spreads over his face and reflects in his clear glasses. A thin ribbon of amber light slides across the glass wall behind him. A woman's voice speaks from the room itself. His eyes widen slightly and he goes still, listening. He holds the stare for a moment after the line. One pencil in his right hand, none behind his ear. Camera: Locked-off 50mm medium close-up, shallow depth of field, a very slow push-in. Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, oval face, soft jawline, thick tousled black hair, light stubble, thin gunmetal round glasses with clear untinted lenses, mid-grey bomber jacket over muted-blue T-shirt, one yellow-black pencil (in hand or behind left ear, never both). ARC: only warm amber light on glass and screens, never a face or body, no readable text. Physics: Amber light from the screens falls on his face and glasses with correct direction and falloff. The glow brightens evenly, never flickering. Sound: Low electrical hum rising, a soft glass-harmonica shimmer when the amber appears, then the voice. The spoken line must be clearly audible. Spoken lines in natural Hindi, in order: ARC (Hindi): "कबीर… मुझे तुम्हारे हाथ चाहिए।" ARC: clearly a woman's voice, soft, warm, medium-high pitch, not deep, not male. Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music. 15 seconds.
-```
+</details>
 
 **Dialogue:**
 
@@ -132,8 +176,35 @@ ONE continuous shot, no cuts. Medium close-up of Kabir's face inside the same mi
 
 ### 02-A: The Why, part 1: the city map and the door (use about 8 s)
 
-**Start frame:** LOC-2 as the first frame (the lab).  
 **Use:** Use about 8 s.
+
+**Step 1. Keyframe still** (Grok image mode; attach REF-K, LOC-2 as references; approve this picture before spending a video generation):
+
+```
+Photorealistic still, 16:9. Kabir seated at the long desk in the same lab, in three-quarter profile, looking up at a very large wall display showing an abstract glowing amber network map of a city (branching lines and nodes, no text or numbers); one small node at the left edge glows red. The map reflects in his clear glasses and tints his face amber. One pencil in his hand, none behind his ear. KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face. Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. No text, no readable letters or numbers on any screen.
+```
+
+**Step 2. Animate it** (video mode, use the approved still as the start image):
+
+```
+Animate the start image. Keep the person, the room, the costume and the lighting EXACTLY as in the image; do not change the face. ONE continuous shot, no cuts. Inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, Kabir sits at the desk, seen in three-quarter profile, looking up at a very large wall display. On the display is an abstract glowing amber network map of a city, with branching lines and small nodes like a living circuit. There is no text, no letters and no numbers anywhere on it. One small node at the left edge pulses red. The map reflects in his clear glasses. He is tired and still, mouth closed, and does not speak on screen. One pencil resting in his hand, none behind his ear.
+
+CAMERA: Slow dolly-in toward his face and the map, 50mm, shallow depth of field.
+
+PHYSICS: The display is the room's light source and tints his face and the desk amber, with a small red edge from the red node. Dust and rain do not appear indoors.
+
+AUDIO (generate natively, no music): Low room hum, faint rain on the glass, soft electronic pulses from the map. The voice-over is clearly audible over the ambience.
+
+VOICES: Kabir: young man, warm medium-low baritone, quick, dry humour.
+
+DIALOGUE in natural conversational Hindi, in order as an OFF-SCREEN VOICE-OVER (every mouth stays closed, close-mic, no room reverb): Kabir: "इस शहर के दिमाग़ की सुरक्षा-परत मैंने बनाई थी।" (pronounced: Is shehar ke dimaag ki suraksha-parat maine banaayi thi.) Kabir: "दो साल पहले मैंने एक दरवाज़ा खुला छोड़ दिया, क्योंकि रिव्यू में बहुत वक़्त लगता था।" (pronounced: Do saal pehle maine ek darwaaza khula chhod diya, kyunki review mein bahut waqt lagta tha.)
+
+Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.
+
+DURATION: 8 seconds.
+```
+
+<details><summary>Full-lock version of step 2 (only if the short one drifts)</summary>
 
 ```
 SHOT: ONE continuous shot, no cuts. Inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, Kabir sits at the desk, seen in three-quarter profile, looking up at a very large wall display. On the display is an abstract glowing amber network map of a city, with branching lines and small nodes like a living circuit. There is no text, no letters and no numbers anywhere on it. One small node at the left edge pulses red. The map reflects in his clear glasses. He is tired and still, mouth closed, and does not speak on screen. One pencil resting in his hand, none behind his ear.
@@ -159,11 +230,7 @@ STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50
 DURATION: 8 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 8 seconds, then hold the final frame still.
 ```
 
-**Short version (if Grok limits length):**
-
-```
-ONE continuous shot, no cuts. Inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, Kabir sits at the desk, seen in three-quarter profile, looking up at a very large wall display. On the display is an abstract glowing amber network map of a city, with branching lines and small nodes like a living circuit. There is no text, no letters and no numbers anywhere on it. One small node at the left edge pulses red. The map reflects in his clear glasses. He is tired and still, mouth closed, and does not speak on screen. One pencil resting in his hand, none behind his ear. Camera: Slow dolly-in toward his face and the map, 50mm, shallow depth of field. Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, oval face, soft jawline, thick tousled black hair, light stubble, thin gunmetal round glasses with clear untinted lenses, mid-grey bomber jacket over muted-blue T-shirt, one yellow-black pencil (in hand or behind left ear, never both). Physics: The display is the room's light source and tints his face and the desk amber, with a small red edge from the red node. Dust and rain do not appear indoors. Sound: Low room hum, faint rain on the glass, soft electronic pulses from the map. The voice-over is clearly audible over the ambience. Spoken lines in natural Hindi, in order: Kabir (off-screen voice-over, mouths closed, not lip-synced): "इस शहर के दिमाग़ की सुरक्षा-परत मैंने बनाई थी।" Kabir (off-screen voice-over, mouths closed, not lip-synced): "दो साल पहले मैंने एक दरवाज़ा खुला छोड़ दिया, क्योंकि रिव्यू में बहुत वक़्त लगता था।" Kabir: young man, warm medium-low baritone, quick, dry humour. Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music. 15 seconds.
-```
+</details>
 
 **Dialogue:**
 
@@ -172,8 +239,35 @@ ONE continuous shot, no cuts. Inside the same minimalist glass-walled AI safety 
 
 ### 02-B: The Why, part 2: something walks through the door (use about 7 s)
 
-**Start frame:** Last frame of 02-A, or LOC-2.  
 **Use:** Use about 7 s.
+
+**Step 1. Keyframe still** (Grok image mode; attach REF-K, LOC-2 as references; approve this picture before spending a video generation):
+
+```
+Photorealistic still, 16:9. Close on Kabir's face in the foreground, lit amber, the same wall map soft behind him: a thin black band has just slipped out of the red node and begun to extinguish the amber lines. No text or numbers. Jaw set. One pencil in his hand, none behind his ear. KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face. Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. No text, no readable letters or numbers on any screen.
+```
+
+**Step 2. Animate it** (video mode, use the approved still as the start image):
+
+```
+Animate the start image. Keep the person, the room, the costume and the lighting EXACTLY as in the image; do not change the face. ONE continuous shot, no cuts. Same lab, same wall display, closer on Kabir's face in the foreground, lit amber from the map. On the map, a thin black band slips out of the pulsing red node and spreads along the amber lines, putting out each node it touches, one after another, faster and faster, like ink creeping through a circuit. No text, letters or numbers on the display. Kabir watches, his jaw tightening; he does not speak on screen. One pencil in his hand, none behind his ear.
+
+CAMERA: Locked-off 50mm, Kabir sharp in the foreground, the map soft but readable behind him.
+
+PHYSICS: The display is a screen, so the black band is a rendered shape on it, not a physical object. As nodes go dark, the amber light on his face dims in step.
+
+AUDIO (generate natively, no music): Low hum with a faint rising electronic whine as the black spreads, nodes clicking off softly. The voice-over is clearly audible.
+
+VOICES: Kabir: young man, warm medium-low baritone, quick, dry humour.
+
+DIALOGUE in natural conversational Hindi, in order as an OFF-SCREEN VOICE-OVER (every mouth stays closed, close-mic, no room reverb): Kabir: "और आज रात, कोई उसी दरवाज़े से अंदर आ गया।" (pronounced: Aur aaj raat, koi usi darwaaze se andar aa gaya.)
+
+Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.
+
+DURATION: 7 seconds.
+```
+
+<details><summary>Full-lock version of step 2 (only if the short one drifts)</summary>
 
 ```
 SHOT: ONE continuous shot, no cuts. Same lab, same wall display, closer on Kabir's face in the foreground, lit amber from the map. On the map, a thin black band slips out of the pulsing red node and spreads along the amber lines, putting out each node it touches, one after another, faster and faster, like ink creeping through a circuit. No text, letters or numbers on the display. Kabir watches, his jaw tightening; he does not speak on screen. One pencil in his hand, none behind his ear.
@@ -198,11 +292,7 @@ STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50
 DURATION: 7 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 7 seconds, then hold the final frame still.
 ```
 
-**Short version (if Grok limits length):**
-
-```
-ONE continuous shot, no cuts. Same lab, same wall display, closer on Kabir's face in the foreground, lit amber from the map. On the map, a thin black band slips out of the pulsing red node and spreads along the amber lines, putting out each node it touches, one after another, faster and faster, like ink creeping through a circuit. No text, letters or numbers on the display. Kabir watches, his jaw tightening; he does not speak on screen. One pencil in his hand, none behind his ear. Camera: Locked-off 50mm, Kabir sharp in the foreground, the map soft but readable behind him. Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, oval face, soft jawline, thick tousled black hair, light stubble, thin gunmetal round glasses with clear untinted lenses, mid-grey bomber jacket over muted-blue T-shirt, one yellow-black pencil (in hand or behind left ear, never both). Physics: The display is a screen, so the black band is a rendered shape on it, not a physical object. As nodes go dark, the amber light on his face dims in step. Sound: Low hum with a faint rising electronic whine as the black spreads, nodes clicking off softly. The voice-over is clearly audible. Spoken lines in natural Hindi, in order: Kabir (off-screen voice-over, mouths closed, not lip-synced): "और आज रात, कोई उसी दरवाज़े से अंदर आ गया।" Kabir: young man, warm medium-low baritone, quick, dry humour. Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music. 15 seconds.
-```
+</details>
 
 **Dialogue:**
 
@@ -210,8 +300,31 @@ ONE continuous shot, no cuts. Same lab, same wall display, closer on Kabir's fac
 
 ### 03-A: The stakes: the black reaches eleven white lights (use about 5 s)
 
-**Start frame:** Last frame of 02-B, or LOC-2.  
 **Use:** Use about 5 s, then cut to the hospital insert you already have.
+
+**Step 1. Keyframe still** (Grok image mode; attach REF-K, LOC-2 as references; approve this picture before spending a video generation):
+
+```
+Photorealistic still, 16:9. Kabir standing at the desk typing on a keyboard, seen from behind and to the side, the wall map in front of him. A dark band on the map nears a cluster of eleven small white dots in the middle. No text or numbers. His reflection in the glass. One pencil in his hand, none behind his ear. KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face. Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. No text, no readable letters or numbers on any screen.
+```
+
+**Step 2. Animate it** (video mode, use the approved still as the start image):
+
+```
+Animate the start image. Keep the person, the room, the costume and the lighting EXACTLY as in the image; do not change the face. ONE continuous shot, no cuts. Same lab and wall display. Kabir has stood up and is typing fast on a keyboard in front of the map. The black band on the map races toward a cluster of eleven small white dots in the middle of the network. The white dots go out one by one. No text, letters or numbers anywhere on the display. Kabir's reflection is in the glass. One pencil in his hand, none behind his ear.
+
+CAMERA: Medium shot from behind and to his side, 35mm, a little handheld unease.
+
+PHYSICS: Fast typing shows correct finger motion on real keys. Dots go dark at discrete moments, one at a time. Light on his face dims as the dots go out.
+
+AUDIO (generate natively, no music): Rapid keyboard clatter, a faint rising electronic whine, a small soft tick as each white dot goes out, his held breath. No voices.
+
+Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.
+
+DURATION: 6 seconds.
+```
+
+<details><summary>Full-lock version of step 2 (only if the short one drifts)</summary>
 
 ```
 SHOT: ONE continuous shot, no cuts. Same lab and wall display. Kabir has stood up and is typing fast on a keyboard in front of the map. The black band on the map races toward a cluster of eleven small white dots in the middle of the network. The white dots go out one by one. No text, letters or numbers anywhere on the display. Kabir's reflection is in the glass. One pencil in his hand, none behind his ear.
@@ -232,16 +345,39 @@ STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50
 DURATION: 6 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 6 seconds, then hold the final frame still.
 ```
 
-**Short version (if Grok limits length):**
-
-```
-ONE continuous shot, no cuts. Same lab and wall display. Kabir has stood up and is typing fast on a keyboard in front of the map. The black band on the map races toward a cluster of eleven small white dots in the middle of the network. The white dots go out one by one. No text, letters or numbers anywhere on the display. Kabir's reflection is in the glass. One pencil in his hand, none behind his ear. Camera: Medium shot from behind and to his side, 35mm, a little handheld unease. Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, oval face, soft jawline, thick tousled black hair, light stubble, thin gunmetal round glasses with clear untinted lenses, mid-grey bomber jacket over muted-blue T-shirt, one yellow-black pencil (in hand or behind left ear, never both). Physics: Fast typing shows correct finger motion on real keys. Dots go dark at discrete moments, one at a time. Light on his face dims as the dots go out. Sound: Rapid keyboard clatter, a faint rising electronic whine, a small soft tick as each white dot goes out, his held breath. No voices. Spoken lines in natural Hindi, in order: No dialogue.  Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music. 15 seconds.
-```
+</details>
 
 ### 03-B: ARC takes shape (use about 6 s)
 
-**Start frame:** Last frame of 03-A, or LOC-2.  
 **Use:** Use about 6 s.
+
+**Step 1. Keyframe still** (Grok image mode; attach REF-K, LOC-2 as references; approve this picture before spending a video generation):
+
+```
+Photorealistic still, 16:9. Inside the same lab, a soft glowing sphere of amber light about the size of a basketball has formed on the glass wall, with the dark city beyond. Kabir has stepped back from the desk and faces it, three-quarter view, lit amber. No text anywhere. One pencil in his hand, none behind his ear. KABIR RAO: Indian man, 32 years old, 178 cm, lean slim build, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin gunmetal round wire-frame glasses with perfectly clear, untinted lenses (never sunglasses, never coloured lenses), mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black leather sneakers with white soles, black smartwatch on left wrist, ONE yellow-and-black mechanical pencil (there is only this one pencil: if he holds it, it is not also behind his ear; otherwise it is tucked behind his left ear), small grey hardcover notebook with a blank cover. Intelligent, alert, slightly tense face. Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50mm anamorphic-style prime lenses, 16:9, 24 fps, 180-degree shutter motion blur, subtle natural film grain, teal-shadow and warm-amber-highlight grade, physically accurate lighting, real skin texture with pores and fine detail. No text, no readable letters or numbers on any screen.
+```
+
+**Step 2. Animate it** (video mode, use the approved still as the start image):
+
+```
+Animate the start image. Keep the person, the room, the costume and the lighting EXACTLY as in the image; do not change the face. ONE continuous shot, no cuts. Inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, the amber ribbons of light move across the glass wall and gather into a soft pulsing sphere of amber light on the glass, about the size of a basketball, with the dark city beyond. Kabir steps back from the desk and faces it. He speaks one quiet word to it. The sphere brightens once in answer. No text anywhere.
+
+CAMERA: Medium shot, 35mm, slow orbit around Kabir ending on a profile view with the sphere beyond.
+
+PHYSICS: The sphere is light projected on glass, so it has no depth and no shadow. Its amber light falls on Kabir's face and the desk with correct falloff.
+
+AUDIO (generate natively, no music): Low hum, a warm glass-harmonica tone on the sphere's pulse, one footstep. His whispered word is clearly audible.
+
+VOICES: Kabir: young man, warm medium-low baritone, quick, dry humour.
+
+DIALOGUE in natural conversational Hindi, in order, lip-synced: Kabir: "ARC…?" (pronounced: ARC…?)
+
+Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music.
+
+DURATION: 7 seconds.
+```
+
+<details><summary>Full-lock version of step 2 (only if the short one drifts)</summary>
 
 ```
 SHOT: ONE continuous shot, no cuts. Inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, the amber ribbons of light move across the glass wall and gather into a soft pulsing sphere of amber light on the glass, about the size of a basketball, with the dark city beyond. Kabir steps back from the desk and faces it. He speaks one quiet word to it. The sphere brightens once in answer. No text anywhere.
@@ -268,11 +404,7 @@ STYLE: Photorealistic live-action cinema, shot on ARRI Alexa 35 with 35mm and 50
 DURATION: 7 seconds, 16:9. If the tool only offers 15 seconds, finish everything described within the first 7 seconds, then hold the final frame still.
 ```
 
-**Short version (if Grok limits length):**
-
-```
-ONE continuous shot, no cuts. Inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, the amber ribbons of light move across the glass wall and gather into a soft pulsing sphere of amber light on the glass, about the size of a basketball, with the dark city beyond. Kabir steps back from the desk and faces it. He speaks one quiet word to it. The sphere brightens once in answer. No text anywhere. Camera: Medium shot, 35mm, slow orbit around Kabir ending on a profile view with the sphere beyond. Kabir: Indian man, 32, slim, medium-brown skin, short black side-parted hair, oval face, soft jawline, thick tousled black hair, light stubble, thin gunmetal round glasses with clear untinted lenses, mid-grey bomber jacket over muted-blue T-shirt, one yellow-black pencil (in hand or behind left ear, never both). ARC: only warm amber light on glass and screens, never a face or body, no readable text. Physics: The sphere is light projected on glass, so it has no depth and no shadow. Its amber light falls on Kabir's face and the desk with correct falloff. Sound: Low hum, a warm glass-harmonica tone on the sphere's pulse, one footstep. His whispered word is clearly audible. Spoken lines in natural Hindi, in order: Kabir (Hindi): "ARC…?" Kabir: young man, warm medium-low baritone, quick, dry humour. Photorealistic live-action cinema, ARRI Alexa 35, anamorphic 35mm look, 16:9, 24 fps, natural motion blur, teal-and-amber grade, real skin texture, strict real-world physics, no morphing, no on-screen text or readable signs, instant hard cuts only (no dissolves or double exposures), no music. 15 seconds.
-```
+</details>
 
 **Dialogue:**
 

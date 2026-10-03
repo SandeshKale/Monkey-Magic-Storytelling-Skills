@@ -46,6 +46,8 @@ Every shot has one clear job. The first conflict (the raid) arrives at 1:45 as b
 
 ## Notes for generating
 
+- **Two steps per shot (new).** Step 1 is a keyframe still in Grok's image mode, with your REF stills attached. You approve the picture. Step 2 animates that exact picture with a short prompt. The still fixes the face, room and costume, so the video prompt only has to describe motion and sound. This is the keyframe-then-animate method the open-source micro-drama pipelines use, and it is also cheaper: you reject bad faces as images before spending video generations.
+
 - Generate each prompt below as its own single-shot clip. Do not combine them.
 - 01-B, 02-A, 02-B, 03-A, 03-B all take place in the same lab. Use `LOC-2` as the start image where the prompt says so, so the room matches.
 - 01-C starts from the face close-up of `REF-K` so Kabir's face matches your sheet.

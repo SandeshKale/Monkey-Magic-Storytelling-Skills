@@ -679,6 +679,33 @@ V2 = [
 ]
 
 
+# Step 1 for each new shot: a still "keyframe" generated first (image mode, with the REF stills attached), then animated.
+FRAMES = {
+    "01-B": "Photorealistic still, 16:9. Seen from behind and slightly from the side, Kabir stands at a floor-to-ceiling window of a minimalist glass-walled AI safety lab at 3 a.m., looking out at a completely dark city with a few dim red aviation lights on the towers. Rain on the outside of the glass. His faint reflection in the glass. Three monitors with cool blue light on a long desk behind him, a small grey notebook on the desk. A yellow-and-black mechanical pencil in his right hand at chest height, none behind his ear.",
+    "01-C": "Photorealistic still, 16:9. Medium close-up of Kabir facing the camera inside the same glass-walled lab at night, head just turning toward us, calm and alert. Behind him a dark city, out of focus, with a few red tower lights; monitors around him lit cool blue. Clear untinted lenses, a faint amber glow starting to appear in the corner of the lenses. One pencil in his right hand, none behind his ear.",
+    "02-A": "Photorealistic still, 16:9. Kabir seated at the long desk in the same lab, in three-quarter profile, looking up at a very large wall display showing an abstract glowing amber network map of a city (branching lines and nodes, no text or numbers); one small node at the left edge glows red. The map reflects in his clear glasses and tints his face amber. One pencil in his hand, none behind his ear.",
+    "02-B": "Photorealistic still, 16:9. Close on Kabir's face in the foreground, lit amber, the same wall map soft behind him: a thin black band has just slipped out of the red node and begun to extinguish the amber lines. No text or numbers. Jaw set. One pencil in his hand, none behind his ear.",
+    "03-A": "Photorealistic still, 16:9. Kabir standing at the desk typing on a keyboard, seen from behind and to the side, the wall map in front of him. A dark band on the map nears a cluster of eleven small white dots in the middle. No text or numbers. His reflection in the glass. One pencil in his hand, none behind his ear.",
+    "03-B": "Photorealistic still, 16:9. Inside the same lab, a soft glowing sphere of amber light about the size of a basketball has formed on the glass wall, with the dark city beyond. Kabir has stepped back from the desk and faces it, three-quarter view, lit amber. No text anywhere. One pencil in his hand, none behind his ear.",
+}
+
+
+def build_animate(c):
+    """Shorter prompt for step 2: the keyframe already fixes face, room and costume."""
+    parts = ["Animate the start image. Keep the person, the room, the costume and the lighting EXACTLY as in the image; do not change the face. " + c["shot"],
+             "CAMERA: " + c["camera"], "PHYSICS: " + c["physics"], "AUDIO (generate natively, no music): " + c["sfx"].replace(" No music.", "")]
+    if c["dialogue"]:
+        speakers = list(dict.fromkeys(sp for sp, *_ in c["dialogue"]))
+        parts.append("VOICES: " + " ".join(SHORT_VOICE[x] for x in speakers))
+        only_arc = all(sp == "A" for sp, *_ in c["dialogue"])
+        tag = (" as an OFF-SCREEN VOICE-OVER (every mouth stays closed, close-mic, no room reverb)" if c.get("vo")
+               else " as a voice coming from the room itself (nobody on screen moves their lips)" if only_arc else ", lip-synced")
+        parts.append("DIALOGUE in natural conversational Hindi, in order" + tag + ": " + " ".join(f'{NAMES[sp]}: "{dev}" (pronounced: {rom})' for sp, dev, rom, _e in c["dialogue"]))
+    parts.append(SHORT_STYLE)
+    parts.append(f"DURATION: {c.get('secs') or 15} seconds.")
+    return "\n\n".join(parts)
+
+
 
 def ts(sec):
     return f"{sec // 60}:{sec % 60:02d}"
@@ -710,7 +737,7 @@ def build_prompt(c):
             lines = "\n".join(
                 f'{i + 1}. {NAMES[sp]} says in natural conversational Hindi (not dubbed-sounding): "{dev}" (pronounced: {rom})'
                 for i, (sp, dev, rom, _en) in enumerate(c["dialogue"]))
-        parts.append("VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance" + ("" if c.get("vo") else ", lip-synced") + "):\n" + v)
+        parts.append("VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance" + ("" if (c.get("vo") or all(sp == "A" for sp, *_ in c["dialogue"])) else ", lip-synced") + "):\n" + v)
         parts.append(f"DIALOGUE (spoken in Hindi, in this order, spread naturally across the {c.get('secs') or 15} seconds, no overlap unless stated):\n" + lines)
     else:
         parts.append("DIALOGUE: none.")
@@ -806,10 +833,15 @@ def main():
             continue
         rr = dict(scene=r["title"], chars=r["chars"], shot=r["shot"], camera=r["camera"], physics=r["physics"], sfx=r["sfx"], dialogue=r["dialogue"], vo=r["vo"], secs=r.get("secs"))
         vl.append(f"### {r['tag']}: {r['title']}\n")
-        vl.append(f"**Start frame:** {r['start']}  \n**Use:** {r['use']}\n")
+        vl.append(f"**Use:** {r['use']}\n")
+        vl.append("**Step 1. Keyframe still** (Grok image mode; attach REF-K"
+                  + (", LOC-2" if r['tag'] != '01-C' else "") + " as references; approve this picture before spending a video generation):\n")
+        vl.append("```\n" + FRAMES[r['tag']] + " " + LOCKS["K"] + " " + STYLE.split(" Strict real-world")[0].rstrip(".") + ". No text, no readable letters or numbers on any screen.\n```\n")
+        vl.append("**Step 2. Animate it** (video mode, use the approved still as the start image):\n")
+        vl.append("```\n" + build_animate(rr) + "\n```\n")
+        vl.append("<details><summary>Full-lock version of step 2 (only if the short one drifts)</summary>\n")
         vl.append("```\n" + build_prompt(rr) + "\n```\n")
-        vl.append("**Short version (if Grok limits length):**\n")
-        vl.append("```\n" + build_compact(rr) + "\n```\n")
+        vl.append("</details>\n")
         if r["dialogue"]:
             vl.append("**Dialogue:**\n")
             for sp, dev, rom, en in r["dialogue"]:

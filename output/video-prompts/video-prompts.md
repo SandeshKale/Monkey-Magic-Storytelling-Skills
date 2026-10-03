@@ -388,7 +388,7 @@ PHYSICS: The nets follow ballistic arcs and fall under gravity when they hit the
 
 AUDIO (generate natively, no music): Net-launcher thumps, net slap on metal, tinny diegetic lounge muzak cut mid-note, elevator rush of air, braking hum, rain on tin, a grunt.
 
-VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
+VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance):
 - ARC: clearly a woman's voice, soft and warm, medium-high pitch (definitely not a deep or male voice), calm unhurried pace, a faint smile in the tone, a very subtle digital shimmer, never robotic or monotone.
 
 DIALOGUE (spoken in Hindi, in this order, spread naturally across the 15 seconds, no overlap unless stated):
@@ -1336,7 +1336,7 @@ PHYSICS: Kabir's legs sag with a real body response to relief. Light is warm, st
 
 AUDIO (generate natively, no music): Warm resolving tone, a long exhale, cord falling, the squad's equipment clacking down, quiet hum.
 
-VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance, lip-synced):
+VOICES (each speaker must keep a clearly different pitch and timbre; natural breaths, small pauses, real emotional nuance):
 - ARC: clearly a woman's voice, soft and warm, medium-high pitch (definitely not a deep or male voice), calm unhurried pace, a faint smile in the tone, a very subtle digital shimmer, never robotic or monotone.
 
 DIALOGUE (spoken in Hindi, in this order, spread naturally across the 15 seconds, no overlap unless stated):
