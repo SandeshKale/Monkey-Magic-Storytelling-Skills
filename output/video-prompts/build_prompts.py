@@ -630,7 +630,7 @@ V2 = [
          physics="Rain runs down the outside of the glass under gravity and the red tower lights refract through the droplets. The room is dry. His reflection moves exactly with him.",
          sfx="Muted rain through thick glass, a low electrical hum that fades down, three crisp clearly audible pencil clicks. No voices. No music.",
          dialogue=[]),
-    dict(tag="01-C", secs=6, title="The monitors turn amber and ARC speaks (use about 5 s)", chars=["K", "A"], vo=False, use="Use the whole shot to the black at the end.",
+    dict(tag="01-C", secs=6, title="The monitors turn amber and ARC speaks (use about 5 s)", chars=["K", "A"], vo=False, use="Use the whole shot; I fade it to black and add the title card in the edit.",
          start="Use the right-hand face close-up of REF-K as the start image (crop it to 16:9).",
          shot=f"ONE continuous shot, no cuts. Medium close-up of Kabir's face inside {LAB}, the dark city blurred behind him through the window with a few red tower lights. He turns his "
               "head toward the camera. As he turns, the cool blue light from the monitors around him smoothly shifts to warm amber over about 1.5 seconds, and the amber glow spreads over his face and "

@@ -93,7 +93,7 @@ ONE continuous shot, no cuts. Interior of the same minimalist glass-walled AI sa
 ### 01-C: The monitors turn amber and ARC speaks (use about 5 s)
 
 **Start frame:** Use the right-hand face close-up of REF-K as the start image (crop it to 16:9).  
-**Use:** Use the whole shot to the black at the end.
+**Use:** Use the whole shot; I fade it to black and add the title card in the edit.
 
 ```
 SHOT: ONE continuous shot, no cuts. Medium close-up of Kabir's face inside the same minimalist glass-walled AI safety lab on a high floor: floor-to-ceiling windows along one wall, a long desk with three monitors, a small grey notebook on the desk, the dark city blurred behind him through the window with a few red tower lights. He turns his head toward the camera. As he turns, the cool blue light from the monitors around him smoothly shifts to warm amber over about 1.5 seconds, and the amber glow spreads over his face and reflects in his clear glasses. A thin ribbon of amber light slides across the glass wall behind him. A woman's voice speaks from the room itself. His eyes widen slightly and he goes still, listening. He holds the stare for a moment after the line. One pencil in his right hand, none behind his ear.
