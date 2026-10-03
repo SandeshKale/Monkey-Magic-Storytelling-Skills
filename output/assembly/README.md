@@ -10,3 +10,16 @@
 | 11.1 to 15.0 s | reshoot 01-D (speaker) | ARC's line is the generated audio; fades to black |
 
 Upscaled 1280x720 to 1920x1080 (Lanczos). Loudness about -16 LUFS. No title card yet.
+
+## clip-01_grok-cut_v3.mp4 (current best clip 1)
+
+Built from one Grok generation (`clip-01-final-grok-prompt.md`). Grok joined its three shots with two dissolves, so the cut keeps only clean frames:
+
+| Timeline | Source (s) | Shot |
+|---|---|---|
+| 0.0 to 4.5 | 0.0 to 4.5 | City goes dark |
+| 4.5 to 7.3 | 5.4 to 8.2 | Hospital ward, red emergency light |
+| 7.3 to 13.3 | 9.0 to 15.04 | Kabir, ARC's line at about 10.3 to 12.3 |
+| 13.3 to 15.0 | last frame held | Title card with a low boom |
+
+Added in post: the location super, the title card, the boom. Upscaled 1280x720 to 1920x1080.
