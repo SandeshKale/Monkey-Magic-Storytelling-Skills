@@ -23,3 +23,8 @@ Built from one Grok generation (`clip-01-final-grok-prompt.md`). Grok joined its
 | 13.3 to 15.0 | last frame held | Title card with a low boom |
 
 Added in post: the location super, the title card, the boom. Upscaled 1280x720 to 1920x1080.
+
+## clip-02_grok-cut_v1.mp4
+
+One Grok generation (`clip-02-final-grok-prompt.md`). Shot 1 to shot 2 was a dissolve (about 4.85 to 5.2 s), so the video hard-cuts at 4.8 s to a held first clean frame of shot 2 (0.5 s, slight push) and then continues in sync. Audio was not cut. Shot 2 to shot 3 at about 11.2 s was already a hard cut.
+Grok produced the voice-over only, with digital silence between lines, so a rain bed, 50 Hz hum, soft map pulses, a rising whine and node clicks were added in post. Upscaled to 1080p. Loudness about -16 LUFS.
