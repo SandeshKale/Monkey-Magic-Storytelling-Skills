@@ -287,7 +287,7 @@ DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple 
 
 ### KEYFRAME (image mode)
 ```
-Close-up of SUSHMA's face at the dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, lit from below by the glow of a phone screen held just below frame, reading glasses on her nose, her eyes moving along the screen, lips slightly parted. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, no necklace, flour on her hands. Objects held correctly with real hand grips and correct anatomy (five fingers, natural joints); a phone at the ear on calls; screens facing the person using them. Expression subtle and naturalistic, not exaggerated. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Close-up of SUSHMA's face at the dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, lit from below by the glow of a phone screen held just below frame, reading glasses ON HER NOSE (not pushed up on her head, for the whole shot), her eyes moving along the screen, lips slightly parted. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, no necklace, flour on her hands. Objects held correctly with real hand grips and correct anatomy (five fingers, natural joints); a phone at the ear on calls; screens facing the person using them. Expression subtle and naturalistic, not exaggerated. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
 ### ANIMATE (video mode, 6 s)
@@ -296,7 +296,7 @@ Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts
 
 PEOPLE: Sushma: Indian woman, 58, greying bun, small red bindi, reading glasses on her head, gold nose stud, sage-green saree over a deep teal blouse, floury hands.
 
-WHAT MOVES: 0.0 to 1.2 s: she reads, eyes moving, lips moving silently. 1.2 s: she stops, her brow drawing together. 1.4 to 3.0 s: she says one slow line quietly, lips matching, doubt in her voice, mouth only slightly open. 3.2 to 4.2 s: a sharp voice on the phone (not heard in this clip) makes her give a small start: her shoulders tighten and her eyes flick up; no big flinch. 4.2 to 5.0 s: she looks back at the screen, undecided.
+WHAT MOVES: Her reading glasses stay on her nose for the whole shot; they never go up onto her head. 0.0 to 1.2 s: she reads, eyes moving, lips moving silently. 1.2 s: she stops, her brow drawing together. 1.4 to 3.0 s: she says one slow line quietly, lips matching, doubt in her voice, mouth only slightly open. 3.2 to 4.2 s: a sharp voice on the phone (not heard in this clip) makes her give a small start: her shoulders tighten and her eyes flick up; no big flinch. 4.2 to 5.0 s: she looks back at the screen, undecided.
 
 CAMERA: Handheld close-up with a slow push-in; the phone glow lights her face.
 
@@ -652,7 +652,7 @@ DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple 
 **Dialogue for your check**
 
 
-**Post note:** Freeze at 0:57 and hold; caption कौन-सा कबीर? and EP 2 →; cut to black at 0:59.5. I add the UI text and the call banner. The faint 'मम्मी...' is cut from voice session A.
+**Post note:** Freeze at 0:57 and hold; KEEP the call banner and the ₹40,000 payment card on screen through the freeze so both choices stay visible; caption कौन-सा कबीर? and EP 2 → above them; cut to black at 0:59.5. I add the UI text and the call banner. The faint 'मम्मी...' is cut from voice session A.
 
 ## CLIP INS-9: PROP (still for clip 09)
 
