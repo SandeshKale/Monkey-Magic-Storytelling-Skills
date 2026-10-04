@@ -91,7 +91,7 @@ CLIPS = [
   dia=[("S","तेरा फोन भी आ रहा है।","Tera phone bhi aa raha hai.","Your phone is calling too.",0.9),("C","पुलिस है! मत उठाओ, मम्मी!","Police hai! Mat uthao, Mummy!","It's the police! Don't answer, Mummy!",2.4)],
   refs="CS-SUSHMA, LOC-PUNE", post="Overlay the call banner: a photo of a young man with round glasses and the contact name."),
  dict(id="08", t="0:35 to 0:40", beat="FRICTION", loc="BLR", chars=["K","R"],
-  kf=f"Handheld two-shot in {BLR}. KABIR stands at his desk with a phone pressed to his ear, tense. RIYA stands beside him with a laptop tucked under her arm, frowning. Rain on the window behind them.",
+  kf=f"Handheld two-shot in {BLR}. KABIR stands at his desk with a phone pressed to his ear, tense. RIYA stands beside him with a laptop tucked under her arm, frowning. Rain on the window behind them. A yellow-and-black pencil lies on the desk.",
   act="0.0 to 1.2 s: a ring tone is heard from his phone; he waits, tapping the desk with his free hand. 1.2 to 1.8 s: a busy beep; he lowers the phone. 1.8 to 2.6 s: he says one line. 2.6 to 4.2 s: Riya frowns, thinking, and says one line. 4.2 to 5.0 s: Kabir's eyes widen as it lands.",
   cam="Handheld two-shot, slight push-in on Kabir at the end.",
   phys="The phone ring and busy beep are heard from the handset, not the room. Kabir's breathing is audible.",
@@ -99,7 +99,7 @@ CLIPS = [
   dia=[("K","बिज़ी जा रहा है।","Busy ja raha hai.","It's going busy.",1.8),("R","तुमने क्लोनिंग का डेमो दिया था ना?","Tumne cloning ka demo diya tha na?","You gave that cloning demo, didn't you?",2.6)],
   refs="CS-KABIR, CS-RIYA, LOC-BLR", post=""),
  dict(id="09", t="0:40 to 0:45", beat="SPIKE", loc="BLR", chars=["K","R"],
-  kf=f"Over-the-shoulder shot in {BLR}. RIYA has placed an open laptop on the desk, turned toward KABIR, who leans over it. The laptop screen is a plain, blank, bright white-blue rectangle that lights Kabir's face; nothing is shown on it.",
+  kf=f"Over-the-shoulder shot in {BLR}. RIYA has placed an open laptop on the desk, turned toward KABIR, who leans over it. The laptop screen is a plain, blank, bright white-blue rectangle that lights Kabir's face; nothing is shown on it. A yellow-and-black pencil lies on the desk beside the keyboard.",
   act="0.0 to 0.8 s: Kabir leans in over the screen. 0.8 to 2.6 s: Riya says one line, pointing at the screen. 2.8 to 4.0 s: Kabir slowly raises his hand and covers his mouth, and whispers one short line through his fingers. 4.0 to 5.0 s: he straightens, his face pale.",
   cam="Over-the-shoulder medium close-up on Kabir's face, the screen glow on it, slow push-in.",
   phys="The laptop screen is the main light source and lights his face from below, with a blue-white cast. Hand movements are natural.",
@@ -108,12 +108,12 @@ CLIPS = [
   refs="CS-KABIR, CS-RIYA, LOC-BLR", post="IMPORTANT: composite the stage-talk insert (INS-9) onto the laptop screen in post, with its voice low under the lines. The mute-test moment depends on it."),
  dict(id="10", t="0:45 to 0:50", beat="SPIKE", loc="BLR", chars=["K"],
   kf=f"Side-on shot in {BLR}. KABIR has just stood up from his desk, his chair mid-spin, a phone pressed to his ear, in the aisle between rows of desks, the aisle leading to a glass door at the end. Motion in his whole body.",
-  act="0.0 to 0.7 s: the chair spins and bangs the desk, and his pencil clatters to the floor. 0.7 to 3.8 s: he sprints along the aisle toward the glass door, jacket flying, phone at his ear; between 1.0 and 2.5 s he shouts one line into the phone, out of breath. 3.8 to 5.0 s: he hits the glass door with his shoulder and pushes through.",
+  act="0.0 to 0.7 s: as he stands, his arm knocks the yellow-and-black pencil off the desk (it lies there in the earlier shots) and it clatters to the floor; the chair spins and bangs the desk. 0.7 to 3.8 s: he sprints along the aisle toward the glass door, jacket flying, phone at his ear; between 1.0 and 2.5 s he shouts one line into the phone, out of breath. 3.8 to 5.0 s: he hits the glass door with his shoulder and pushes through.",
   cam="Handheld MEDIUM tracking shot from the side at his pace (his head and upper body fill the frame, not a wide shot), slightly low angle, with real camera shake.",
   phys="Running looks natural: weight shifts, arms drive, jacket and hair flow with the motion. The chair spins to a stop. The pencil bounces once.",
   aud="Fast footsteps on the floor, panting, the chair bang, the pencil clatter, the glass door thud, a ringing tone from the phone.",
   dia=[("K","मम्मी, मत भेजना!","Mummy, mat bhejna!","Mummy, don't send it!",1.0)],
-  refs="CS-KABIR, LOC-BLR", post=""),
+  refs="CS-KABIR, LOC-BLR", post="Fallback if the sprint looks broken at this resolution: he stands, grabs his jacket from the chair and strides fast out of frame with the phone at his ear, same line, same timing. Add office ambience and footsteps in post."),
  dict(id="11", t="0:50 to 0:56, then a freeze to 1:00 made in post", beat="FRICTION + BUTTON", loc="PUNE", chars=["S"],
   kf=f"Extreme close-up of a phone in SUSHMA's trembling hands at the table in {PUNE}. The screen shows a payment screen with a big plain green button at the bottom and an incoming-call banner with a plain green button at the top (no readable text). Her thumb hovers above the lower button. Her tearful face is soft behind the phone.",
   act="0.0 to 1.0 s: her thumb hovers, trembling; the call banner flashes at the top. 1.0 to 3.0 s: she listens to a sobbing voice on the phone (not heard in this clip); tears run down her face. 3.0 to 4.0 s: she whispers one short line, lips matching, barely audible. 4.0 to 5.0 s: her thumb drifts slowly between the upper and lower buttons; a tear drops onto the back of her hand. 5.0 to 6.0 s: the thumb stops, hovering, completely still.",
@@ -181,16 +181,16 @@ def animate(c):
             f"PEOPLE: {who}\n\nWHAT MOVES: {c['act']}\n\nCAMERA: {c['cam']}\n\nPHYSICS: {c['phys']}\n\n"
             f"LIP SYNC: {lips}\n\nVOICES (clearly different from each other):\n{voices}\n\n"
             f"DIALOGUE in natural conversational Hindi, in this order, no overlap:\n{dl}\nEach line must be clearly audible.\n\n"
-            f"AUDIO: {c['aud']}\n\nSTYLE: {style}\n\nDURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.")
+            f"AUDIO: {c['aud']}\n\nSTYLE: {style}\n\nDURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.")
 
 
 def main():
     o = []
     w = o.append
-    w("# AWAAZ Episode 1: clip prompts, adapted to the Grok free plan\n")
-    w("""**Free plan limits (as reported):** 6 seconds maximum per video, 400x736 resolution, only a few generations a day.
+    w("# AWAAZ Episode 1: clip prompts (6-second clips, about 400x736)\n")
+    w("""**Output limits (paid Grok account, as reported):** videos still render at 6 seconds and about 400x736. Generations are no longer rationed.
 
-## What changed for the free plan
+## What changed for 6-second clips
 - **Every clip is generated at 6 seconds and trimmed to 5 in the edit.** The extra second absorbs timing drift (the first approved take had its spoken word about 0.3 s late).
 - **Clips 11 and 12 are now one 6-second generation.** The final freeze is made in post from its last frame. Episode 1 is **11 clips**, not 12.
 - **The stage-talk insert (INS-9) is a still image, not a video.** I put it on the laptop screen with a slow push-in.
@@ -198,8 +198,8 @@ def main():
 - **Low resolution:** every prompt asks for large faces and hands, simple backgrounds and no tiny details. I upscale to 1080x1920 in the edit (Lanczos with light sharpening and film grain). It will look soft on a big screen and fine on a phone.
 - **Clip 10 (the sprint) is reframed** as a medium tracking shot, because a wide shot falls apart at 400 pixels.
 
-## Generation budget (14 generations, plus images)
-| Day | Generations | What |
+## Order of work (14 generations, plus images)
+| Step | Generations | What |
 |---|---|---|
 | 1 | VS-A, VS-B, VS-C | The three voice sessions (audio only is used). |
 | 2 | Clip 02, clip 03, clip 04 | Clip 01 is already approved. |
@@ -207,7 +207,7 @@ def main():
 | 4 | Clip 08, clip 09, clip 10 | Clip 09 needs the INS-9 still first. |
 | 5 | Clip 11 | Then I assemble the episode. |
 
-Retakes are not counted. If you only get 2 or 3 a day, the order above still works; just spread it out. Images (contact sheets, location sheets, keyframe stills, INS-9) may count against a separate allowance, so do the contact sheets first.
+Retakes are extra. Do the contact sheets first.
 
 ## Method for every clip (2 steps)
 1. **Keyframe still.** Grok image mode, attach the references listed for the clip, paste the **KEYFRAME** prompt. Keep the one where the face matches the contact sheet.

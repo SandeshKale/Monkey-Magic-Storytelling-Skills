@@ -1,8 +1,8 @@
-# AWAAZ Episode 1: clip prompts, adapted to the Grok free plan
+# AWAAZ Episode 1: clip prompts (6-second clips, about 400x736)
 
-**Free plan limits (as reported):** 6 seconds maximum per video, 400x736 resolution, only a few generations a day.
+**Output limits (paid Grok account, as reported):** videos still render at 6 seconds and about 400x736. Generations are no longer rationed.
 
-## What changed for the free plan
+## What changed for 6-second clips
 - **Every clip is generated at 6 seconds and trimmed to 5 in the edit.** The extra second absorbs timing drift (the first approved take had its spoken word about 0.3 s late).
 - **Clips 11 and 12 are now one 6-second generation.** The final freeze is made in post from its last frame. Episode 1 is **11 clips**, not 12.
 - **The stage-talk insert (INS-9) is a still image, not a video.** I put it on the laptop screen with a slow push-in.
@@ -10,8 +10,8 @@
 - **Low resolution:** every prompt asks for large faces and hands, simple backgrounds and no tiny details. I upscale to 1080x1920 in the edit (Lanczos with light sharpening and film grain). It will look soft on a big screen and fine on a phone.
 - **Clip 10 (the sprint) is reframed** as a medium tracking shot, because a wide shot falls apart at 400 pixels.
 
-## Generation budget (14 generations, plus images)
-| Day | Generations | What |
+## Order of work (14 generations, plus images)
+| Step | Generations | What |
 |---|---|---|
 | 1 | VS-A, VS-B, VS-C | The three voice sessions (audio only is used). |
 | 2 | Clip 02, clip 03, clip 04 | Clip 01 is already approved. |
@@ -19,7 +19,7 @@
 | 4 | Clip 08, clip 09, clip 10 | Clip 09 needs the INS-9 still first. |
 | 5 | Clip 11 | Then I assemble the episode. |
 
-Retakes are not counted. If you only get 2 or 3 a day, the order above still works; just spread it out. Images (contact sheets, location sheets, keyframe stills, INS-9) may count against a separate allowance, so do the contact sheets first.
+Retakes are extra. Do the contact sheets first.
 
 ## Method for every clip (2 steps)
 1. **Keyframe still.** Grok image mode, attach the references listed for the clip, paste the **KEYFRAME** prompt. Keep the one where the face matches the contact sheet.
@@ -122,7 +122,7 @@ AUDIO: Kitchen ambience only: exhaust fan hum, a distant pressure-cooker whistle
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -168,7 +168,7 @@ AUDIO: The same kitchen ambience, the thin phone voice, her breath.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -212,7 +212,7 @@ AUDIO: Office night ambience: air conditioning hum, distant rain, keyboard click
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -255,7 +255,7 @@ AUDIO: Fan hum, a clock tick, the phone voice, her fast breathing.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -299,7 +299,7 @@ AUDIO: Fan hum, a clock tick, her breathing, the phone voice.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -347,7 +347,7 @@ AUDIO: Office ambience, keyboard clicks, the phone buzz, footsteps.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -389,7 +389,7 @@ AUDIO: Fan hum, her breathing, the phone voice, a soft incoming-call chime.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -407,7 +407,7 @@ DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simpl
 
 ### KEYFRAME (image mode)
 ```
-Handheld two-shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. KABIR stands at his desk with a phone pressed to his ear, tense. RIYA stands beside him with a laptop tucked under her arm, frowning. Rain on the window behind them. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Handheld two-shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. KABIR stands at his desk with a phone pressed to his ear, tense. RIYA stands beside him with a laptop tucked under her arm, frowning. Rain on the window behind them. A yellow-and-black pencil lies on the desk. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
 ### ANIMATE (video mode, 6 s)
@@ -437,7 +437,7 @@ AUDIO: Office ambience, rain, the ring tone, a busy beep.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -451,7 +451,7 @@ DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simpl
 
 ### KEYFRAME (image mode)
 ```
-Over-the-shoulder shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. RIYA has placed an open laptop on the desk, turned toward KABIR, who leans over it. The laptop screen is a plain, blank, bright white-blue rectangle that lights Kabir's face; nothing is shown on it. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Over-the-shoulder shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. RIYA has placed an open laptop on the desk, turned toward KABIR, who leans over it. The laptop screen is a plain, blank, bright white-blue rectangle that lights Kabir's face; nothing is shown on it. A yellow-and-black pencil lies on the desk beside the keyboard. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
 ### ANIMATE (video mode, 6 s)
@@ -481,7 +481,7 @@ AUDIO: Office ambience, faint laptop fan, Riya's line, his whisper.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -506,7 +506,7 @@ Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts
 
 PEOPLE: Kabir: Indian man, 32, slim, oval face, tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over blue T-shirt, one yellow-and-black pencil.
 
-WHAT MOVES: 0.0 to 0.7 s: the chair spins and bangs the desk, and his pencil clatters to the floor. 0.7 to 3.8 s: he sprints along the aisle toward the glass door, jacket flying, phone at his ear; between 1.0 and 2.5 s he shouts one line into the phone, out of breath. 3.8 to 5.0 s: he hits the glass door with his shoulder and pushes through.
+WHAT MOVES: 0.0 to 0.7 s: as he stands, his arm knocks the yellow-and-black pencil off the desk (it lies there in the earlier shots) and it clatters to the floor; the chair spins and bangs the desk. 0.7 to 3.8 s: he sprints along the aisle toward the glass door, jacket flying, phone at his ear; between 1.0 and 2.5 s he shouts one line into the phone, out of breath. 3.8 to 5.0 s: he hits the glass door with his shoulder and pushes through.
 
 CAMERA: Handheld MEDIUM tracking shot from the side at his pace (his head and upper body fill the frame, not a wide shot), slightly low angle, with real camera shake.
 
@@ -525,12 +525,14 @@ AUDIO: Fast footsteps on the floor, panting, the chair bang, the pencil clatter,
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
 
 - Kabir @ 1.0 s: मम्मी, मत भेजना! / Mummy, mat bhejna! / Mummy, don't send it!
+
+**Post note:** Fallback if the sprint looks broken at this resolution: he stands, grabs his jacket from the chair and strides fast out of frame with the phone at his ear, same line, same timing. Add office ambience and footsteps in post.
 
 ## CLIP 11: FRICTION + BUTTON (0:50 to 0:56, then a freeze to 1:00 made in post)
 
@@ -566,7 +568,7 @@ AUDIO: Her shaky breath, a soft call-waiting chime repeating, a clock tick. Room
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
+DURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
