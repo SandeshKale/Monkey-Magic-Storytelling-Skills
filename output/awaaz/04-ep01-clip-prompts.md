@@ -1,61 +1,91 @@
-# AWAAZ Episode 1: the 12 clip prompts (5 seconds each) and one insert
+# AWAAZ Episode 1: clip prompts, adapted to the Grok free plan
 
-Total: 12 clips x 5 s = 60 s. Insert INS-9 is a prop shot for the laptop screen in clip 09 and is not counted.
+**Free plan limits (as reported):** 6 seconds maximum per video, 400x736 resolution, only a few generations a day.
+
+## What changed for the free plan
+- **Every clip is generated at 6 seconds and trimmed to 5 in the edit.** The extra second absorbs timing drift (the first approved take had its spoken word about 0.3 s late).
+- **Clips 11 and 12 are now one 6-second generation.** The final freeze is made in post from its last frame. Episode 1 is **11 clips**, not 12.
+- **The stage-talk insert (INS-9) is a still image, not a video.** I put it on the laptop screen with a slow push-in.
+- **The phone voice comes from 3 six-second voice sessions** (VS-A, VS-B, VS-C), one or two lines each. The last whispered word "मम्मी..." is cut from the start of VS-A, so no fourth session is needed.
+- **Low resolution:** every prompt asks for large faces and hands, simple backgrounds and no tiny details. I upscale to 1080x1920 in the edit (Lanczos with light sharpening and film grain). It will look soft on a big screen and fine on a phone.
+- **Clip 10 (the sprint) is reframed** as a medium tracking shot, because a wide shot falls apart at 400 pixels.
+
+## Generation budget (14 generations, plus images)
+| Day | Generations | What |
+|---|---|---|
+| 1 | VS-A, VS-B, VS-C | The three voice sessions (audio only is used). |
+| 2 | Clip 02, clip 03, clip 04 | Clip 01 is already approved. |
+| 3 | Clip 05, clip 06, clip 07 | |
+| 4 | Clip 08, clip 09, clip 10 | Clip 09 needs the INS-9 still first. |
+| 5 | Clip 11 | Then I assemble the episode. |
+
+Retakes are not counted. If you only get 2 or 3 a day, the order above still works; just spread it out. Images (contact sheets, location sheets, keyframe stills, INS-9) may count against a separate allowance, so do the contact sheets first.
 
 ## Method for every clip (2 steps)
-1. **Keyframe still.** In Grok image mode, attach the references listed for the clip (contact sheets and location sheet) and paste the **KEYFRAME** prompt. Generate a few, keep the one where the face matches the contact sheet. This is the clip's first frame.
-2. **Animate.** In Grok video mode, use the approved still as the start image, set **5 seconds** and **9:16**, and paste the **ANIMATE** prompt.
+1. **Keyframe still.** Grok image mode, attach the references listed for the clip, paste the **KEYFRAME** prompt. Keep the one where the face matches the contact sheet.
+2. **Animate.** Grok video mode, start image = the approved still, **6 seconds**, **9:16**, paste the **ANIMATE** prompt.
 
-If Grok only offers 10 or 15 seconds, set that, keep the prompt, and add this line at the end: "Finish everything above within the first 5 seconds, then hold the final frame still." I will trim to 5 seconds in the edit.
-
-Order of work: contact sheets and location sheets first (file `03-ep01-visual-prompts.md`), then INS-9, then clips 01 to 12 in order. Send me each clip as soon as it is made; I will check lip-sync, voices and faces before you spend more credits.
+Send each clip as soon as it is made so I can check lip-sync, voices and faces before you spend another generation.
 
 ## Shared checks for every clip
-Lips match the words. The two voices are clearly different (one man, one woman, or the phone voice and one person). The face matches the contact sheet. No readable text. No second pencil. No cuts or ghost images. Natural motion. The phone voice sounds like a phone.
+Lips match the words. The voices are clearly different. The face matches the contact sheet. No readable text. No cuts or ghost images. Natural motion. The phone is silent (its voice is mixed in post).
 
 ## The phone voice is made separately (new)
 Grok gave the phone voice to the person on screen, or not at all, so the cloned voice is **not** generated inside the Sushma clips any more. Instead:
 
 1. In each Sushma clip, the phone is silent and she reacts to it. Only her own lines are spoken.
-2. Generate the two **voice sessions** below: Kabir crying into a phone in a parked car. We use only the **audio**; the picture is thrown away. Start from the Kabir contact sheet face crop.
+2. Generate the three **voice sessions** below: Kabir crying into a phone in a parked car. We use only the **audio**; the picture is thrown away. Start from the Kabir contact sheet face crop.
 3. I cut each line from the sessions, filter it to sound like a cheap phone speaker (narrow band, slight distortion), and place it at the exact time shown on each clip.
 
 This also keeps the cloned voice close to the real Kabir's voice, which is the point of the story.
 
 
-### VS-A: Cloned voice, session A (lines 1, 3, 6)
+### VS-A: Cloned voice, session A (lines 1 and 3)
 
-Start image: crop of `CS-KABIR` (face). Video mode, 15 seconds, any aspect. Keep the best take.
+Start image: crop of `CS-KABIR` (face). Video mode, 6 seconds, any aspect. Keep the best take.
 
 ```
-Animate the start image as ONE continuous 15-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with about 2 seconds of ragged crying between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.
+Animate the start image as ONE continuous 6-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with a short ragged sob between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.
 
 DIALOGUE:
-1. at about 0.5 s: "मम्मी! मम्मी, मुझे बचा लो!" (pronounced: Mummy! Mummy, mujhe bacha lo!)
-2. at about 5.0 s: "एक्सीडेंट हो गया। पुलिस ने पकड़ लिया।" (pronounced: Accident ho gaya. Police ne pakad liya.)
-3. at about 9.5 s: "चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना।" (pronounced: Chaalis hazaar UPI karo. Abhi. Kisi ko mat batana.)
+1. at about 0.2 s: "मम्मी! मम्मी, मुझे बचा लो!" (pronounced: Mummy! Mummy, mujhe bacha lo!)
+2. at about 2.9 s: "एक्सीडेंट हो गया। पुलिस ने पकड़ लिया।" (pronounced: Accident ho gaya. Police ne pakad liya.)
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 15 seconds.
+DURATION: 6 seconds. Each line must be said fully and clearly inside its time window.
 ```
 
-### VS-B: Cloned voice, session B (lines 9, 13, 19, last word)
+### VS-B: Cloned voice, session B (lines 6 and 9)
 
-Start image: crop of `CS-KABIR` (face). Video mode, 15 seconds, any aspect. Keep the best take.
+Start image: crop of `CS-KABIR` (face). Video mode, 6 seconds, any aspect. Keep the best take.
 
 ```
-Animate the start image as ONE continuous 15-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with about 2 seconds of ragged crying between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.
+Animate the start image as ONE continuous 6-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with a short ragged sob between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.
 
 DIALOGUE:
-1. at about 0.5 s: "जल्दी करो, मम्मी!" (pronounced: Jaldi karo, Mummy!)
-2. at about 4.5 s: "वो पुलिस है! मत उठाओ, मम्मी!" (pronounced: Woh police hai! Mat uthao, Mummy!)
-3. at about 8.5 s: "मम्मी, मुझसे प्यार है तो भेजो!" (pronounced: Mummy, mujhse pyaar hai toh bhejo!)
-4. at about 12.5 s: "मम्मी..." (pronounced: Mummy...)
+1. at about 0.2 s: "चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना।" (pronounced: Chaalis hazaar UPI karo. Abhi. Kisi ko mat batana.)
+2. at about 4.3 s: "जल्दी करो, मम्मी!" (pronounced: Jaldi karo, Mummy!)
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 15 seconds.
+DURATION: 6 seconds. Each line must be said fully and clearly inside its time window.
+```
+
+### VS-C: Cloned voice, session C (lines 13 and 19)
+
+Start image: crop of `CS-KABIR` (face). Video mode, 6 seconds, any aspect. Keep the best take.
+
+```
+Animate the start image as ONE continuous 6-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with a short ragged sob between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.
+
+DIALOGUE:
+1. at about 0.2 s: "पुलिस है! मत उठाओ, मम्मी!" (pronounced: Police hai! Mat uthao, Mummy!)
+2. at about 3.0 s: "मम्मी, मुझसे प्यार है तो भेजो!" (pronounced: Mummy, mujhse pyaar hai toh bhejo!)
+
+STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
+
+DURATION: 6 seconds. Each line must be said fully and clearly inside its time window.
 ```
 
 ## CLIP 01: HOOK (0:00 to 0:05)
@@ -64,14 +94,14 @@ DURATION: 15 seconds.
 
 ### KEYFRAME (image mode)
 ```
-Close-up of SUSHMA in the kitchen of a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. A phone is pressed to her ear in her floury right hand, a little flour dusted on her cheek, her left hand flat on the steel counter beside a steel plate of dough. Reading glasses pushed up on her head. Her expression has only just begun to change from ordinary to alarmed. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Close-up of SUSHMA in the kitchen of a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. A phone is pressed to her ear in her floury right hand, a little flour dusted on her cheek, her left hand flat on the steel counter beside a steel plate of dough. Reading glasses pushed up on her head. Her expression has only just begun to change from ordinary to alarmed. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, flour on her hands. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
-PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
+PEOPLE: Sushma: Indian woman, 58, greying bun, small red bindi, reading glasses on her head, gold nose stud, sage-green saree over a deep teal blouse, floury hands.
 
 WHAT MOVES: 0.0 to 0.3 s: she is already on the call, the phone at her ear. 0.3 to 2.2 s: someone on the other end is crying and begging (you do not hear them in this clip); within about a second her face drains, her eyes widen, her breath catches, and her left hand grips the counter edge. 2.4 to 3.4 s: she says one soft word, lips matching. 3.4 to 5.0 s: she stares ahead, eyes filling, mouth slightly open.
 
@@ -92,7 +122,7 @@ AUDIO: Kitchen ambience only: exhaust fan hum, a distant pressure-cooker whistle
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -110,14 +140,14 @@ DURATION: 5 seconds.
 
 ### KEYFRAME (image mode)
 ```
-Medium close-up of SUSHMA at the kitchen counter in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, the phone pressed to her ear with her right hand, her left hand flat on the steel counter with white flour handprints around it. Her face is frozen in dawning panic. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Medium close-up of SUSHMA at the kitchen counter in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, the phone pressed to her ear with her right hand, her left hand flat on the steel counter with white flour handprints around it. Her face is frozen in dawning panic. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, flour on her hands. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
-PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
+PEOPLE: Sushma: Indian woman, 58, greying bun, small red bindi, reading glasses on her head, gold nose stud, sage-green saree over a deep teal blouse, floury hands.
 
 WHAT MOVES: 0.0 to 0.4 s: she stands rigid, listening. 0.4 to 2.8 s: the tinny crying voice from the phone speaks; her face crumples, her lips tremble, her left hand grips the counter edge and leaves white floury fingerprints on the steel. 3.0 to 4.4 s: she speaks, her voice cracking, lips matching. 4.4 to 5.0 s: she closes her eyes for a moment.
 
@@ -138,7 +168,7 @@ AUDIO: The same kitchen ambience, the thin phone voice, her breath.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -157,9 +187,9 @@ DURATION: 5 seconds.
 Medium close-up of KABIR at a lit desk in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. Headphones around his neck, a yellow-and-black pencil in his right hand, two monitors with blurred illegible code behind him. His phone lies face-up on the desk, its screen lit with a contact photo of a smiling older woman. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
 PEOPLE: Kabir: Indian man, 32, slim, oval face, tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over blue T-shirt, one yellow-and-black pencil.
 
@@ -182,7 +212,7 @@ AUDIO: Office night ambience: air conditioning hum, distant rain, keyboard click
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -197,14 +227,14 @@ DURATION: 5 seconds.
 
 ### KEYFRAME (image mode)
 ```
-Medium shot of SUSHMA seated at the small wooden dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. A phone lies on the table in front of her. A steel thali with half-eaten dinner is pushed aside. Her reading glasses are pushed up on her head, her hands are shaking, she stares at the phone. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Medium shot of SUSHMA seated at the small wooden dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. A phone lies on the table in front of her. A steel thali with half-eaten dinner is pushed aside. Her reading glasses are pushed up on her head, her hands are shaking, she stares at the phone. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, flour on her hands. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
-PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
+PEOPLE: Sushma: Indian woman, 58, greying bun, small red bindi, reading glasses on her head, gold nose stud, sage-green saree over a deep teal blouse, floury hands.
 
 WHAT MOVES: 0.0 to 3.0 s: she stares at the phone as a tinny, panicked young man's voice speaks quickly from its speaker; her shoulders tighten, and in the last half second she pulls her reading glasses down onto her nose. 3.2 to 4.5 s: she taps the phone screen with a shaking finger and says one short line, lips matching. 4.5 to 5.0 s: she keeps her eyes on the screen.
 
@@ -225,7 +255,7 @@ AUDIO: Fan hum, a clock tick, the phone voice, her fast breathing.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -241,14 +271,14 @@ DURATION: 5 seconds.
 
 ### KEYFRAME (image mode)
 ```
-Close-up of SUSHMA's face at the dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, lit from below by the glow of a phone screen held just below frame, reading glasses on her nose, her eyes moving along the screen, lips slightly parted. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Close-up of SUSHMA's face at the dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, lit from below by the glow of a phone screen held just below frame, reading glasses on her nose, her eyes moving along the screen, lips slightly parted. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, flour on her hands. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
-PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
+PEOPLE: Sushma: Indian woman, 58, greying bun, small red bindi, reading glasses on her head, gold nose stud, sage-green saree over a deep teal blouse, floury hands.
 
 WHAT MOVES: 0.0 to 1.2 s: she reads, eyes moving, lips moving silently. 1.2 s: she stops, her brow drawing together. 1.4 to 3.0 s: she says one slow line, lips matching, doubt in her voice. 3.2 to 4.2 s: a sharp, tinny young man's voice from the phone makes her flinch; her eyes flick up. 4.2 to 5.0 s: she looks back at the screen, undecided.
 
@@ -269,7 +299,7 @@ AUDIO: Fan hum, a clock tick, her breathing, the phone voice.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -290,9 +320,9 @@ DURATION: 5 seconds.
 Medium two-shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. KABIR sits at the lit desk on the right, typing. RIYA arrives from the left with a white mug, olive kurta, lanyard. Kabir's phone lies face-down on the desk between them. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
 PEOPLE: Kabir: Indian man, 32, slim, oval face, tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over blue T-shirt, one yellow-and-black pencil. Riya: Indian woman, 24, black low ponytail, olive kurta, jeans, lanyard.
 
@@ -317,7 +347,7 @@ AUDIO: Office ambience, keyboard clicks, the phone buzz, footsteps.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -331,14 +361,14 @@ DURATION: 5 seconds.
 
 ### KEYFRAME (image mode)
 ```
-Medium close-up of SUSHMA at the dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, a phone held at chest height in the foreground with its screen lit by an incoming-call banner (no readable text), her tearful face behind it, glasses on her nose. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Medium close-up of SUSHMA at the dining table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner, a phone held at chest height in the foreground with its screen lit by an incoming-call banner (no readable text), her tearful face behind it, glasses on her nose. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, flour on her hands. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
-PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
+PEOPLE: Sushma: Indian woman, 58, greying bun, small red bindi, reading glasses on her head, gold nose stud, sage-green saree over a deep teal blouse, floury hands.
 
 WHAT MOVES: 0.0 to 0.8 s: the banner slides down on the screen and she looks at it. 0.8 to 2.2 s: she says one puzzled line, looking from the screen to the speaker and back. 2.4 to 4.0 s: a panicked, tinny young man's voice from the speaker; her thumb trembles above the banner, she is torn. 4.0 to 5.0 s: she hesitates, lips pressed.
 
@@ -359,15 +389,15 @@ AUDIO: Fan hum, her breathing, the phone voice, a soft incoming-call chime.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
 
 - Sushma @ 0.9 s: तेरा फोन भी आ रहा है। / Tera phone bhi aa raha hai. / Your phone is calling too.
-- Cloned voice (phone) @ 2.4 s: वो पुलिस है! मत उठाओ, मम्मी! / Woh police hai! Mat uthao, Mummy! / That's the police! Don't answer, Mummy!
+- Cloned voice (phone) @ 2.4 s: पुलिस है! मत उठाओ, मम्मी! / Police hai! Mat uthao, Mummy! / It's the police! Don't answer, Mummy!
 
-**Phone voice (added in post, not generated in this clip):** "वो पुलिस है! मत उठाओ, मम्मी!" at 2.4 s. I take it from the voice session and filter it to sound like a phone.
+**Phone voice (added in post, not generated in this clip):** "पुलिस है! मत उठाओ, मम्मी!" at 2.4 s. I take it from the voice session and filter it to sound like a phone.
 
 **Post note:** Overlay the call banner: a photo of a young man with round glasses and the contact name.
 
@@ -380,9 +410,9 @@ DURATION: 5 seconds.
 Handheld two-shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. KABIR stands at his desk with a phone pressed to his ear, tense. RIYA stands beside him with a laptop tucked under her arm, frowning. Rain on the window behind them. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
 PEOPLE: Kabir: Indian man, 32, slim, oval face, tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over blue T-shirt, one yellow-and-black pencil. Riya: Indian woman, 24, black low ponytail, olive kurta, jeans, lanyard.
 
@@ -407,7 +437,7 @@ AUDIO: Office ambience, rain, the ring tone, a busy beep.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -424,9 +454,9 @@ DURATION: 5 seconds.
 Over-the-shoulder shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. RIYA has placed an open laptop on the desk, turned toward KABIR, who leans over it. The laptop screen is a plain, blank, bright white-blue rectangle that lights Kabir's face; nothing is shown on it. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
 PEOPLE: Kabir: Indian man, 32, slim, oval face, tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over blue T-shirt, one yellow-and-black pencil. Riya: Indian woman, 24, black low ponytail, olive kurta, jeans, lanyard.
 
@@ -451,7 +481,7 @@ AUDIO: Office ambience, faint laptop fan, Riya's line, his whisper.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
@@ -470,15 +500,15 @@ DURATION: 5 seconds.
 Side-on shot in an open-plan tech startup office in Bengaluru at night: cool blue light, a few lit desks, rain on tall windows, dark monitors. KABIR has just stood up from his desk, his chair mid-spin, a phone pressed to his ear, in the aisle between rows of desks, the aisle leading to a glass door at the end. Motion in his whole body. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
 PEOPLE: Kabir: Indian man, 32, slim, oval face, tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over blue T-shirt, one yellow-and-black pencil.
 
 WHAT MOVES: 0.0 to 0.7 s: the chair spins and bangs the desk, and his pencil clatters to the floor. 0.7 to 3.8 s: he sprints along the aisle toward the glass door, jacket flying, phone at his ear; between 1.0 and 2.5 s he shouts one line into the phone, out of breath. 3.8 to 5.0 s: he hits the glass door with his shoulder and pushes through.
 
-CAMERA: Handheld tracking shot from the side at his pace, slightly low angle, with real camera shake.
+CAMERA: Handheld MEDIUM tracking shot from the side at his pace (his head and upper body fill the frame, not a wide shot), slightly low angle, with real camera shake.
 
 PHYSICS: Running looks natural: weight shifts, arms drive, jacket and hair flow with the motion. The chair spins to a stop. The pencil bounces once.
 
@@ -495,33 +525,33 @@ AUDIO: Fast footsteps on the floor, panting, the chair bang, the pencil clatter,
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
 
 - Kabir @ 1.0 s: मम्मी, मत भेजना! / Mummy, mat bhejna! / Mummy, don't send it!
 
-## CLIP 11: FRICTION (0:50 to 0:55)
+## CLIP 11: FRICTION + BUTTON (0:50 to 0:56, then a freeze to 1:00 made in post)
 
 **References to attach for the keyframe:** CS-SUSHMA
 
 ### KEYFRAME (image mode)
 ```
-Extreme close-up of a phone in SUSHMA's trembling hands at the table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. The screen shows a payment screen with a big plain green button (no readable text) and an incoming-call banner at the top. Her thumb hovers above the green button. Her tearful face is soft behind the phone. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Extreme close-up of a phone in SUSHMA's trembling hands at the table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. The screen shows a payment screen with a big plain green button at the bottom and an incoming-call banner with a plain green button at the top (no readable text). Her thumb hovers above the lower button. Her tearful face is soft behind the phone. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, flour on her hands. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
+### ANIMATE (video mode, 6 s)
 ```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
+Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
 
-PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
+PEOPLE: Sushma: Indian woman, 58, greying bun, small red bindi, reading glasses on her head, gold nose stud, sage-green saree over a deep teal blouse, floury hands.
 
-WHAT MOVES: 0.0 to 1.0 s: her thumb hovers, trembling; the call banner flashes at the top. 1.0 to 3.0 s: a sobbing, tinny young man's voice from the speaker; tears run down her face. 3.2 to 4.4 s: she whispers one line, lips matching, barely audible. 4.4 to 5.0 s: she looks at the banner.
+WHAT MOVES: 0.0 to 1.0 s: her thumb hovers, trembling; the call banner flashes at the top. 1.0 to 3.0 s: she listens to a sobbing voice on the phone (not heard in this clip); tears run down her face. 3.0 to 4.0 s: she whispers one short line, lips matching, barely audible. 4.0 to 5.0 s: her thumb drifts slowly between the upper and lower buttons; a tear drops onto the back of her hand. 5.0 to 6.0 s: the thumb stops, hovering, completely still.
 
-CAMERA: Handheld extreme close-up on the phone and thumb, then a slow rack focus to her face.
+CAMERA: Handheld extreme close-up on the phone and thumb for the first 3 s, then a slow rack focus to her face, then back to the thumb. Faces and the thumb fill the frame.
 
-PHYSICS: A tear falls and lands on her hand. The thumb trembles. The banner flashes at a steady rate, no faster than twice a second.
+PHYSICS: A tear falls under gravity and lands on her hand. The thumb trembles and hovers a few millimetres above the glass, never touching it. The banner flashes no faster than twice a second.
 
 LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 1.0 s, and she stops her own speech while it plays.
 
@@ -529,71 +559,26 @@ VOICES (clearly different from each other):
 - SUSHMA: a woman in her late 50s, warm, mid-low pitch, breathy and shaky with fear.
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
-1. at about 3.2 s, SUSHMA: "कौन-सा कबीर?" (pronounced: Kaun-sa Kabir?)
+1. at about 3.1 s, SUSHMA: "कौन-सा कबीर?" (pronounced: Kaun-sa Kabir?)
 Each line must be clearly audible.
 
-AUDIO: Her shaky breath, the sobbing phone voice, the flashing call chime, a clock tick.
+AUDIO: Her shaky breath, a soft call-waiting chime repeating, a clock tick. Room sound drops away in the last 2 seconds.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
-DURATION: 5 seconds.
+DURATION: 6 seconds (the maximum on the free plan). Large faces and hands, simple background, no tiny details.
 ```
 
 **Dialogue for your check**
 
 - Cloned voice (phone) @ 1.0 s: मम्मी, मुझसे प्यार है तो भेजो! / Mummy, mujhse pyaar hai toh bhejo! / Mummy, if you love me, send it!
-- Sushma @ 3.2 s: कौन-सा कबीर? / Kaun-sa Kabir? / Which Kabir?
+- Sushma @ 3.1 s: कौन-सा कबीर? / Kaun-sa Kabir? / Which Kabir?
 
 **Phone voice (added in post, not generated in this clip):** "मम्मी, मुझसे प्यार है तो भेजो!" at 1.0 s. I take it from the voice session and filter it to sound like a phone.
 
-**Post note:** Overlay the PAY screen and the call banner.
+**Post note:** Hold the last frame (freeze) from 0:56 to 0:59.5, caption कौन-सा कबीर? and EP 2 →, cut to black at 0:59.5. Mix the faint last word 'मम्मी...' from voice session A over the freeze.
 
-## CLIP 12: BUTTON (0:55 to 1:00)
-
-**References to attach for the keyframe:** CS-SUSHMA
-
-### KEYFRAME (image mode)
-```
-Extreme close-up of a phone screen and SUSHMA's thumb at the table in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. Two plain green buttons: one on a call banner at the top, one at the bottom of a payment screen (no readable text). Her thumb hovers between them. Her tearful face is blurred behind. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
-```
-
-### ANIMATE (video mode, 5 s)
-```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
-
-PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
-
-WHAT MOVES: 0.0 to 3.0 s: her thumb trembles slowly, drifting between the upper and lower buttons; a tear drops onto the back of her hand. 3.0 to 5.0 s: the thumb stops, hovering, completely still.
-
-CAMERA: Locked-off extreme close-up on the thumb, very shallow depth of field.
-
-PHYSICS: A single tear falls under gravity. The thumb hovers a few millimetres above the glass, never touching it.
-
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 3.0 s, and she stops her own speech while it plays.
-
-VOICES (clearly different from each other):
-- none (no one on screen speaks)
-
-DIALOGUE in natural conversational Hindi, in this order, no overlap:
-none
-Each line must be clearly audible.
-
-AUDIO: Room sound drops away. A ringtone and a muffled, begging tinny voice overlap, both faint. Her breath.
-
-STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
-
-DURATION: 5 seconds.
-```
-
-**Dialogue for your check**
-
-- Cloned voice (phone) @ 3.0 s: मम्मी... / Mummy... / Mummy...
-
-**Phone voice (added in post, not generated in this clip):** "मम्मी..." at 3.0 s. I take it from the voice session and filter it to sound like a phone.
-
-**Post note:** Freeze at 0:57 and hold. Caption कौन-सा कबीर? and EP 2 → over the freeze. Cut to black at 0:59.5.
-
-## CLIP INS-9: PROP (insert for clip 09)
+## CLIP INS-9: PROP (still for clip 09)
 
 **References to attach for the keyframe:** PROP-STAGE, CS-KABIR
 
@@ -602,37 +587,12 @@ DURATION: 5 seconds.
 Photorealistic 16:9 still of KABIR RAO on a modern tech conference stage at a lectern, mid-sentence, one hand raised palm-up, a headset microphone at his cheek, a large screen behind him with an abstract waveform and no text, a dark blurred audience in the foreground. KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists). Photorealistic, 16:9, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
-### ANIMATE (video mode, 5 s)
-```
-Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.
-
-PEOPLE: Kabir: Indian man, 32, slim, oval face, tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over blue T-shirt, one yellow-and-black pencil.
-
-WHAT MOVES: 0.0 to 0.5 s: he steps up to the lectern mic. 0.5 to 3.5 s: he speaks one line to the audience, lips matching, with one hand raised, palm up, a small confident smile. 3.5 to 5.0 s: a ripple of audience murmur; he nods and keeps smiling.
-
-CAMERA: Locked-off medium close-up from the front of the stage, slow push-in.
-
-PHYSICS: Stage light casts a clean key on his face. The headset mic moves with his jaw.
-
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly.
-
-VOICES (clearly different from each other):
-- KABIR: a young man's voice, warm medium-low baritone, quick and dry, quieter when he avoids something.
-
-DIALOGUE in natural conversational Hindi, in this order, no overlap:
-1. at about 0.6 s, KABIR: "बस तीन सेकंड की आवाज़ चाहिए। और क्लोन तैयार।" (pronounced: Bas teen second ki aawaaz chahiye. Aur clone taiyaar.)
-Each line must be clearly audible.
-
-AUDIO: PA-quality voice with a small amount of room echo, a faint audience murmur and applause at the end.
-
-STYLE: Photorealistic live-action cinema, landscape 16:9, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
-
-DURATION: 5 seconds.
-```
+### ANIMATE
+None. Still only, see the post note.
 
 **Dialogue for your check**
 
 - Kabir @ 0.6 s: बस तीन सेकंड की आवाज़ चाहिए। और क्लोन तैयार। / Bas teen second ki aawaaz chahiye. Aur clone taiyaar. / I only need three seconds of voice. And the clone is ready.
 
-**Post note:** Landscape insert. Composite it onto the laptop screen in clip 09. Not counted in the 60 seconds.
+**Post note:** STILL ONLY on the free plan: do not make a video. Use the approved PROP-STAGE picture; I put it on the laptop screen in clip 09 with a slow push-in. Not counted in the 60 seconds.
 

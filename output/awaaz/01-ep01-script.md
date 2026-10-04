@@ -23,7 +23,7 @@ When **Kabir**, an AI engineer, wants to finish his deadline and tells himself h
 ## Characters
 | Character | Role | Look | Voice for Grok |
 |---|---|---|---|
-| **Sushma Rao**, 58 | Kabir's mother, widowed, lives alone in Pune. | Greying hair in a loose bun, reading glasses pushed up on her head, small gold nose stud, faded teal cotton saree, gold bangles, flour on her hands. | Woman in her late 50s, warm, mid-low, shaky with fear, a little breathless. |
+| **Sushma Rao**, 58 | Kabir's mother, lives alone in Pune. | Greying hair in a loose bun, small red bindi, reading glasses pushed up on her head, small gold nose stud, sage-green cotton saree over a deep teal blouse, gold bangles, flour on her hands. | Woman in her late 50s, warm, mid-low, shaky with fear, a little breathless. |
 | **Kabir Rao**, 32 | AI engineer in Bengaluru. | Approved sheet (`REF-K`): oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, mid-grey bomber over a muted-blue T-shirt, one yellow-and-black pencil. | Young man, warm medium-low baritone, quick, dry. |
 | **Riya Menon**, 24 | His colleague, observant. | Approved sheet (`REF-R`): shoulder-length black hair in a low ponytail, olive kurta over jeans, lanyard. | Young woman, clear mid-high, quick, steady. |
 | **The cloned voice** | Kabir's own voice, copied. | Never seen. Heard only through a phone speaker. | Kabir's voice, but thin, tinny, slightly too smooth, crying and panicked. |
@@ -78,7 +78,7 @@ Her thumb trembling between **Accept** and **Pay**. Cut on the question, not the
 10. RIYA: कबीर, तुम्हारी मम्मी तीसरी बार कर रही हैं।
 11. KABIR: मम्मी कभी तीन बार नहीं करतीं।
 12. SUSHMA: तेरा फोन भी आ रहा है।
-13. KABIR (PHONE): वो पुलिस है! मत उठाओ, मम्मी!
+13. KABIR (PHONE): पुलिस है! मत उठाओ, मम्मी!
 14. KABIR: बिज़ी जा रहा है।
 15. RIYA: तुमने क्लोनिंग का डेमो दिया था ना?
 16. RIYA: तीन सेकंड की आवाज़ काफ़ी होती है।
@@ -102,7 +102,7 @@ Her thumb trembling between **Accept** and **Pay**. Cut on the question, not the
 | 10 | कबीर, तुम्हारी मम्मी तीसरी बार कर रही हैं। | Kabir, tumhaari Mummy teesri baar kar rahi hain. | Kabir, your mother is calling a third time. |
 | 11 | मम्मी कभी तीन बार नहीं करतीं। | Mummy kabhi teen baar nahin kartin. | Mummy never calls three times. |
 | 12 | तेरा फोन भी आ रहा है। | Tera phone bhi aa raha hai. | Your phone is calling too. |
-| 13 | वो पुलिस है! मत उठाओ, मम्मी! | Woh police hai! Mat uthao, Mummy! | That's the police! Don't answer, Mummy! |
+| 13 | पुलिस है! मत उठाओ, मम्मी! | Police hai! Mat uthao, Mummy! | It's the police! Don't answer, Mummy! |
 | 14 | बिज़ी जा रहा है। | Busy ja raha hai. | It's going busy. |
 | 15 | तुमने क्लोनिंग का डेमो दिया था ना? | Tumne cloning ka demo diya tha na? | You gave that cloning demo, didn't you? |
 | 16 | तीन सेकंड की आवाज़ काफ़ी होती है। | Teen second ki aawaaz kaafi hoti hai. | Three seconds of voice is enough. |
