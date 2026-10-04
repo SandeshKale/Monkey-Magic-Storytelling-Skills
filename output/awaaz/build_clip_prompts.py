@@ -14,7 +14,7 @@ STYLE_VIDEO = ("Photorealistic live-action cinema, vertical 9:16, 24 fps, natura
                "or readable writing anywhere in the picture. No background music.")
 
 FULL = {
-    "S": "SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, flour on her hands.",
+    "S": "SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, a small round red bindi on her forehead, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, small gold earrings, a sage-green cotton saree with a thin printed border over a deep teal blouse, a thin gold bangle on each wrist, no necklace, flour on her hands.",
     "K": "KABIR RAO: Indian man, 32, slim, medium-brown skin, oval face with a soft jawline, thick black hair short at the sides and slightly tousled on top with a side parting, light stubble, thin round gunmetal wire-frame glasses with perfectly clear untinted lenses, mid-grey bomber jacket over a muted-blue crew-neck T-shirt, dark navy chinos, black smartwatch on his left wrist, ONE yellow-and-black mechanical pencil (only this one pencil exists).",
     "R": "RIYA MENON: Indian woman, 24, slim, round friendly face, large dark eyes, shoulder-length straight black hair in a low ponytail, small silver stud earrings, olive-green cotton kurta over blue jeans, company lanyard with a plain white card, no glasses.",
 }
@@ -59,13 +59,13 @@ CLIPS = [
   dia=[("K","बाद में, मम्मी।","Baad mein, Mummy.","Later, Mummy.",2.6)],
   refs="CS-KABIR, LOC-BLR", post="Place BENGALURU super."),
  dict(id="04", t="0:15 to 0:20", beat="FRICTION", loc="PUNE", chars=["S"],
-  kf=f"Medium shot of SUSHMA seated at the small wooden dining table in {PUNE}. A phone lies on the table in front of her. A steel thali with half-eaten dinner is pushed aside. Her reading glasses are pushed up on her head, her hands are shaking, she stares at the phone.",
-  act="0.0 to 3.0 s: she stares at the phone as a tinny, panicked young man's voice speaks quickly from its speaker; her shoulders tighten, and in the last half second she pulls her reading glasses down onto her nose. 3.2 to 4.5 s: she taps the phone screen with a shaking finger and says one short line, lips matching. 4.5 to 5.0 s: she keeps her eyes on the screen.",
-  cam="Handheld medium shot, slight push-in, eye level.",
+  kf=f"Medium close-up of SUSHMA seated at the small wooden dining table in {PUNE}. A phone lies flat on the table in front of her. A steel thali with half-eaten dinner is pushed aside. Her reading glasses are pushed up on her head. Her hands rest on the table beside the phone, lightly floury and trembling. Her face is tense and still, her mouth closed.",
+  act="0.0 to 3.0 s: she sits almost motionless, staring down at the phone with her mouth CLOSED. She makes no sound and says no words: only her chest rising and falling and her hands trembling slightly. There is no sobbing, no whimpering and no muttering. 2.6 to 3.1 s: with one hand she pulls her reading glasses down onto her nose. 3.3 to 4.5 s: she taps the phone screen with a shaking finger and says one short line, lips matching, voice small and shaky. 4.5 to 5.0 s: she keeps her eyes on the screen. NO large gestures: no hand to her head, no slapping the table.",
+  cam="Handheld medium close-up, slight push-in, eye level.",
   phys="The glasses slide down her head and land on her nose naturally. The thali rattles slightly as the table shakes under her trembling hands.",
-  aud="Fan hum, a clock tick, the phone voice, her fast breathing.",
+  aud="Fan hum, a clock tick, her fast breathing. She is silent until her one line.",
   dia=[("C","चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना।","Chaalis hazaar UPI karo. Abhi. Kisi ko mat batana.","Send forty thousand on UPI. Now. Don't tell anyone.",0.1),("S","भेज रही हूँ, बेटा।","Bhej rahi hoon, beta.","I'm sending it, son.",3.4)],
-  refs="CS-SUSHMA, LOC-PUNE", post=""),
+  refs="CS-SUSHMA, LOC-PUNE", post="RETAKE of the rejected take 1, which had Sushma vocalising during the phone-voice window and slapping her head."),
  dict(id="05", t="0:20 to 0:25", beat="FRICTION", loc="PUNE", chars=["S"],
   kf=f"Close-up of SUSHMA's face at the dining table in {PUNE}, lit from below by the glow of a phone screen held just below frame, reading glasses on her nose, her eyes moving along the screen, lips slightly parted.",
   act="0.0 to 1.2 s: she reads, eyes moving, lips moving silently. 1.2 s: she stops, her brow drawing together. 1.4 to 3.0 s: she says one slow line, lips matching, doubt in her voice. 3.2 to 4.2 s: a sharp, tinny young man's voice from the phone makes her flinch; her eyes flick up. 4.2 to 5.0 s: she looks back at the screen, undecided.",
@@ -148,7 +148,7 @@ VOICE_SESSIONS = [
 def voice_session(tag, title, lines):
     dl = "\n".join(f'{i + 1}. at about {at:.1f} s: "{hi}" (pronounced: {ro})' for i, (at, hi, ro) in enumerate(lines))
     return (f"Animate the start image as ONE continuous 6-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. "
-            f"He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with a short ragged sob between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.\n\nDIALOGUE:\n{dl}\n\n"
+            f"He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with a short ragged sob between lines. His normal LOW chest voice, a grown man's hoarse, cracking baritone, as if crying through a clenched throat: NOT high-pitched, NOT falsetto, NOT a boy's voice. The same low voice he uses in normal conversation, only broken by sobs and shaking. Lips match every word exactly. Nobody else speaks. No music, no text.\n\nDIALOGUE:\n{dl}\n\n"
             f"STYLE: {STYLE_VIDEO}\n\nDURATION: 6 seconds. Each line must be said fully and clearly inside its time window.")
 
 
