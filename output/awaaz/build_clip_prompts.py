@@ -129,7 +129,7 @@ CLIPS = [
   phys="Stage light casts a clean key on his face. The headset mic moves with his jaw.",
   aud="PA-quality voice with a small amount of room echo, a faint audience murmur and applause at the end.",
   dia=[("K","बस तीन सेकंड की आवाज़ चाहिए। और क्लोन तैयार।","Bas teen second ki aawaaz chahiye. Aur clone taiyaar.","I only need three seconds of voice. And the clone is ready.",0.6)],
-  refs="PROP-STAGE, CS-KABIR", still_only=True, post="STILL ONLY on the free plan: do not make a video. Use the approved PROP-STAGE picture; I put it on the laptop screen in clip 09 with a slow push-in. Not counted in the 60 seconds."),
+  refs="PROP-STAGE, CS-KABIR", still_only=True, post="STILL ONLY: do not make a video. Use the approved PROP-STAGE picture; I put it on the laptop screen in clip 09 with a slow push-in. Not counted in the 60 seconds."),
 ]
 
 VOICE_SESSIONS = [

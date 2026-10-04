@@ -596,5 +596,5 @@ None. Still only, see the post note.
 
 - Kabir @ 0.6 s: बस तीन सेकंड की आवाज़ चाहिए। और क्लोन तैयार। / Bas teen second ki aawaaz chahiye. Aur clone taiyaar. / I only need three seconds of voice. And the clone is ready.
 
-**Post note:** STILL ONLY on the free plan: do not make a video. Use the approved PROP-STAGE picture; I put it on the laptop screen in clip 09 with a slow push-in. Not counted in the 60 seconds.
+**Post note:** STILL ONLY: do not make a video. Use the approved PROP-STAGE picture; I put it on the laptop screen in clip 09 with a slow push-in. Not counted in the 60 seconds.
 
