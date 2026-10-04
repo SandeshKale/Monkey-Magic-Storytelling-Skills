@@ -8,3 +8,10 @@
 6. **Standing rule 2, performance:** subtle, restrained, naturalistic. Fail on wide-open mouths, bulging eyes, flailing, slapping, theatrical gestures.
 7. **Continuity:** one pencil; props where the last clip left them; wardrobe unchanged.
 8. **Spec:** 6 s, about 400 px; trim to 5 s; upscale in the edit.
+
+## Continuity rule: Sushma's reading glasses
+- C01, C02, C03-cutaways: **pushed up on her head.**
+- C04: she pulls them **down onto her nose** at about 2.6 to 3.1 s. This is the only switch, and it is intended.
+- C05, C07, C11 (and any shot of her face after C04): **on her nose.**
+- C12 is a POV hands-only insert, no glasses visible.
+Any clip after C04 that shows them on her head is a continuity error.
