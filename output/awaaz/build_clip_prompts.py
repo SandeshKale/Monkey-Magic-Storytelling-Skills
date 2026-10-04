@@ -35,12 +35,12 @@ BLR = "an open-plan tech startup office in Bengaluru at night: cool blue light, 
 # id, time, beat, loc, chars, keyframe, action, camera, physics, audio, dialogue[(who, hindi, roman, english, at_s)], refs, post
 CLIPS = [
  dict(id="01", t="0:00 to 0:05", beat="HOOK", loc="PUNE", chars=["S"],
-  kf=f"Close-up of SUSHMA at the kitchen counter in {PUNE}. Her hands are white with flour, resting on a steel plate of dough. A phone lies face-up beside the plate with its screen lit. Ordinary, calm expression, a moment before the phone rings.",
-  act="0.0 to 1.0 s: the phone buzzes and vibrates on the steel counter; she looks down. 1.0 to 1.8 s: she wipes both hands on her saree pallu, picks up the phone and lifts it to her ear. 1.8 to 3.3 s: a thin, tinny, crying young man's voice comes out of the phone's speaker; her face drains, her breath catches, her eyes widen. 3.3 to 4.5 s: she says one soft word, lips matching; her free hand grips the counter edge. 4.5 to 5.0 s: she holds, frozen.",
-  cam="Handheld close-up at eye level with a slow push-in.",
-  phys="Flour dust falls from her fingers. The phone vibrates against steel with a real buzz. Her hands shake with fear, not stylised.",
-  aud="Kitchen ambience: exhaust fan hum, a distant pressure-cooker whistle, a wall clock ticking, the phone buzz. The cloned voice sounds like a phone speaker.",
-  dia=[("C","मम्मी! मम्मी, मुझे बचा लो!","Mummy! Mummy, mujhe bacha lo!","Mummy! Mummy, save me!",1.8),("S","कबीर?","Kabir?","Kabir?",3.4)],
+  kf=f"Close-up of SUSHMA in the kitchen of {PUNE}. A phone is pressed to her ear in her floury right hand, a little flour dusted on her cheek, her left hand flat on the steel counter beside a steel plate of dough. Reading glasses pushed up on her head. Her expression has only just begun to change from ordinary to alarmed.",
+  act="0.0 to 0.3 s: she is already on the call, the phone at her ear. 0.3 to 2.2 s: someone on the other end is crying and begging (you do not hear them in this clip); within about a second her face drains, her eyes widen, her breath catches, and her left hand grips the counter edge. 2.4 to 3.4 s: she says one soft word, lips matching. 3.4 to 5.0 s: she stares ahead, eyes filling, mouth slightly open.",
+  cam="Handheld CLOSE-UP, her face fills the frame with shoulders just visible, eye level, slow push-in.",
+  phys="Flour dust falls from her fingers. Her hand shakes with real fear. The phone rests against her cheek and presses her hair slightly.",
+  aud="Kitchen ambience only: exhaust fan hum, a distant pressure-cooker whistle, a wall clock ticking, her breath. No phone ringing.",
+  dia=[("C","मम्मी! मम्मी, मुझे बचा लो!","Mummy! Mummy, mujhe bacha lo!","Mummy! Mummy, save me!",0.3),("S","कबीर?","Kabir?","Kabir?",2.5)],
   refs="CS-SUSHMA, LOC-PUNE", post="Title card AWAAZ · EP 1 and the word PUNE in the first second."),
  dict(id="02", t="0:05 to 0:10", beat="FRICTION", loc="PUNE", chars=["S"],
   kf=f"Medium close-up of SUSHMA at the kitchen counter in {PUNE}, the phone pressed to her ear with her right hand, her left hand flat on the steel counter with white flour handprints around it. Her face is frozen in dawning panic.",
@@ -140,6 +140,25 @@ CLIPS = [
   refs="PROP-STAGE, CS-KABIR", post="Landscape insert. Composite it onto the laptop screen in clip 09. Not counted in the 60 seconds."),
 ]
 
+VOICE_SESSIONS = [
+ ("VS-A", "Cloned voice, session A (lines 1, 3, 6)", [
+   (0.5,"मम्मी! मम्मी, मुझे बचा लो!","Mummy! Mummy, mujhe bacha lo!"),
+   (5.0,"एक्सीडेंट हो गया। पुलिस ने पकड़ लिया।","Accident ho gaya. Police ne pakad liya."),
+   (9.5,"चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना।","Chaalis hazaar UPI karo. Abhi. Kisi ko mat batana.")]),
+ ("VS-B", "Cloned voice, session B (lines 9, 13, 19, last word)", [
+   (0.5,"जल्दी करो, मम्मी!","Jaldi karo, Mummy!"),
+   (4.5,"वो पुलिस है! मत उठाओ, मम्मी!","Woh police hai! Mat uthao, Mummy!"),
+   (8.5,"मम्मी, मुझसे प्यार है तो भेजो!","Mummy, mujhse pyaar hai toh bhejo!"),
+   (12.5,"मम्मी...","Mummy...")]),
+]
+
+
+def voice_session(tag, title, lines):
+    dl = "\n".join(f'{i + 1}. at about {at:.1f} s: "{hi}" (pronounced: {ro})' for i, (at, hi, ro) in enumerate(lines))
+    return (f"Animate the start image as ONE continuous 15-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. "
+            f"He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with about 2 seconds of ragged crying between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.\n\nDIALOGUE:\n{dl}\n\n"
+            f"STYLE: {STYLE_VIDEO}\n\nDURATION: 15 seconds.")
+
 
 def keyframe(c):
     who = " ".join(FULL[k] for k in c["chars"])
@@ -149,17 +168,21 @@ def keyframe(c):
 
 def animate(c):
     who = " ".join(SHORT[k] for k in c["chars"])
+    own = [d for d in c["dia"] if d[0] != "C"]
+    clone = [d for d in c["dia"] if d[0] == "C"]
     speakers = []
-    for who_, *_ in c["dia"]:
+    for who_, *_ in own:
         if who_ not in speakers:
             speakers.append(who_)
-    voices = "\n".join("- " + VOICE[s] for s in speakers)
+    voices = "\n".join("- " + VOICE[s] for s in speakers) or "- none (no one on screen speaks)"
     dl = "\n".join(
-        f'{i + 1}. at about {at:.1f} s, {({"C": "THE CLONED VOICE", "S": "SUSHMA", "K": "KABIR", "R": "RIYA"}[w])}: "{hi}" (pronounced: {ro})'
-        for i, (w, hi, ro, en, at) in enumerate(c["dia"]))
-    lips = ("Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: "
-            "nobody on screen moves their lips for it." if any(w == "C" for w, *_ in c["dia"]) else
-            "Only the person who is speaking moves their lips, and every word matches their lips exactly.")
+        f'{i + 1}. at about {at:.1f} s, {({"S": "SUSHMA", "K": "KABIR", "R": "RIYA"}[w])}: "{hi}" (pronounced: {ro})'
+        for i, (w, hi, ro, en, at) in enumerate(own)) or "none"
+    lips = "Only the person who is speaking moves their lips, and every word matches their lips exactly."
+    if clone:
+        times = ", ".join(f"{d[4]:.1f} s" for d in clone)
+        lips += (f" IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. "
+                 f"Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about {times}, and she stops her own speech while it plays.")
     aspect = "landscape 16:9" if c["id"] == "INS-9" else "vertical 9:16"
     style = STYLE_VIDEO.replace("vertical 9:16", aspect)
     return (f"Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.\n\n"
@@ -185,6 +208,20 @@ Order of work: contact sheets and location sheets first (file `03-ep01-visual-pr
 ## Shared checks for every clip
 Lips match the words. The two voices are clearly different (one man, one woman, or the phone voice and one person). The face matches the contact sheet. No readable text. No second pencil. No cuts or ghost images. Natural motion. The phone voice sounds like a phone.
 """)
+    w("""## The phone voice is made separately (new)
+Grok gave the phone voice to the person on screen, or not at all, so the cloned voice is **not** generated inside the Sushma clips any more. Instead:
+
+1. In each Sushma clip, the phone is silent and she reacts to it. Only her own lines are spoken.
+2. Generate the two **voice sessions** below: Kabir crying into a phone in a parked car. We use only the **audio**; the picture is thrown away. Start from the Kabir contact sheet face crop.
+3. I cut each line from the sessions, filter it to sound like a cheap phone speaker (narrow band, slight distortion), and place it at the exact time shown on each clip.
+
+This also keeps the cloned voice close to the real Kabir's voice, which is the point of the story.
+
+""")
+    for tag, title, lines in VOICE_SESSIONS:
+        w(f"### {tag}: {title}\n")
+        w("Start image: crop of `CS-KABIR` (face). Video mode, 15 seconds, any aspect. Keep the best take.\n")
+        w("```\n" + voice_session(tag, title, lines) + "\n```\n")
     for c in CLIPS:
         w(f"## CLIP {c['id']}: {c['beat']} ({c['t']})\n")
         w(f"**References to attach for the keyframe:** {c['refs']}\n")
@@ -195,6 +232,9 @@ Lips match the words. The two voices are clearly different (one man, one woman, 
             nm = {"C": "Cloned voice (phone)", "S": "Sushma", "K": "Kabir", "R": "Riya"}[who_]
             w(f"- {nm} @ {at:.1f} s: {hi} / {ro} / {en}")
         w("")
+        cl = [d for d in c["dia"] if d[0] == "C"]
+        if cl:
+            w("**Phone voice (added in post, not generated in this clip):** " + "; ".join(f'"{d[1]}" at {d[4]:.1f} s' for d in cl) + ". I take it from the voice session and filter it to sound like a phone.\n")
         if c["post"]:
             w(f"**Post note:** {c['post']}\n")
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "04-ep01-clip-prompts.md")

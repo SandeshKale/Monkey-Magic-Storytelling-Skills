@@ -13,13 +13,58 @@ Order of work: contact sheets and location sheets first (file `03-ep01-visual-pr
 ## Shared checks for every clip
 Lips match the words. The two voices are clearly different (one man, one woman, or the phone voice and one person). The face matches the contact sheet. No readable text. No second pencil. No cuts or ghost images. Natural motion. The phone voice sounds like a phone.
 
+## The phone voice is made separately (new)
+Grok gave the phone voice to the person on screen, or not at all, so the cloned voice is **not** generated inside the Sushma clips any more. Instead:
+
+1. In each Sushma clip, the phone is silent and she reacts to it. Only her own lines are spoken.
+2. Generate the two **voice sessions** below: Kabir crying into a phone in a parked car. We use only the **audio**; the picture is thrown away. Start from the Kabir contact sheet face crop.
+3. I cut each line from the sessions, filter it to sound like a cheap phone speaker (narrow band, slight distortion), and place it at the exact time shown on each clip.
+
+This also keeps the cloned voice close to the real Kabir's voice, which is the point of the story.
+
+
+### VS-A: Cloned voice, session A (lines 1, 3, 6)
+
+Start image: crop of `CS-KABIR` (face). Video mode, 15 seconds, any aspect. Keep the best take.
+
+```
+Animate the start image as ONE continuous 15-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with about 2 seconds of ragged crying between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.
+
+DIALOGUE:
+1. at about 0.5 s: "मम्मी! मम्मी, मुझे बचा लो!" (pronounced: Mummy! Mummy, mujhe bacha lo!)
+2. at about 5.0 s: "एक्सीडेंट हो गया। पुलिस ने पकड़ लिया।" (pronounced: Accident ho gaya. Police ne pakad liya.)
+3. at about 9.5 s: "चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना।" (pronounced: Chaalis hazaar UPI karo. Abhi. Kisi ko mat batana.)
+
+STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
+
+DURATION: 15 seconds.
+```
+
+### VS-B: Cloned voice, session B (lines 9, 13, 19, last word)
+
+Start image: crop of `CS-KABIR` (face). Video mode, 15 seconds, any aspect. Keep the best take.
+
+```
+Animate the start image as ONE continuous 15-second shot, no cuts. Close-up of KABIR RAO, an Indian man, 32, oval face, thick tousled black hair, light stubble, thin round gunmetal glasses with clear lenses, sitting in the dark driver's seat of a parked car at night, his face lit only by a phone held close to his mouth, crying and panicked, out of breath. He speaks the lines below into the phone in natural conversational Hindi, sobbing, his voice cracking, with about 2 seconds of ragged crying between lines. His own warm young male baritone, quick and trembling. Lips match every word exactly. Nobody else speaks. No music, no text.
+
+DIALOGUE:
+1. at about 0.5 s: "जल्दी करो, मम्मी!" (pronounced: Jaldi karo, Mummy!)
+2. at about 4.5 s: "वो पुलिस है! मत उठाओ, मम्मी!" (pronounced: Woh police hai! Mat uthao, Mummy!)
+3. at about 8.5 s: "मम्मी, मुझसे प्यार है तो भेजो!" (pronounced: Mummy, mujhse pyaar hai toh bhejo!)
+4. at about 12.5 s: "मम्मी..." (pronounced: Mummy...)
+
+STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
+
+DURATION: 15 seconds.
+```
+
 ## CLIP 01: HOOK (0:00 to 0:05)
 
 **References to attach for the keyframe:** CS-SUSHMA, LOC-PUNE
 
 ### KEYFRAME (image mode)
 ```
-Close-up of SUSHMA at the kitchen counter in a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. Her hands are white with flour, resting on a steel plate of dough. A phone lies face-up beside the plate with its screen lit. Ordinary, calm expression, a moment before the phone rings. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
+Close-up of SUSHMA in the kitchen of a small middle-class Indian flat in Pune at night: warm tungsten light, steel kitchen counter and containers, a wooden dining table with a plastic runner. A phone is pressed to her ear in her floury right hand, a little flour dusted on her cheek, her left hand flat on the steel counter beside a steel plate of dough. Reading glasses pushed up on her head. Her expression has only just begun to change from ordinary to alarmed. SUSHMA RAO: Indian woman, 58, 155 cm, medium build, wheatish skin with deep smile lines, greying black hair in a loose low bun with silver streaks, round tortoiseshell reading glasses (pushed up on her head unless stated), small gold nose stud, a faded teal cotton saree with a thin printed border, plain blouse, a thin gold bangle on each wrist, flour on her hands, worn slippers. Photorealistic, vertical 9:16, natural skin with pores and fine detail, real fabric texture, shallow depth of field, teal shadows with warm practical light, handheld documentary realism. No text, no captions, no watermarks, no logos, no readable writing on any screen or sign.
 ```
 
 ### ANIMATE (video mode, 5 s)
@@ -28,24 +73,22 @@ Animate the supplied start image as ONE continuous 5-second shot, no cuts. Keep 
 
 PEOPLE: Sushma: Indian woman, 58, greying bun, reading glasses, gold nose stud, faded teal saree, floury hands.
 
-WHAT MOVES: 0.0 to 1.0 s: the phone buzzes and vibrates on the steel counter; she looks down. 1.0 to 1.8 s: she wipes both hands on her saree pallu, picks up the phone and lifts it to her ear. 1.8 to 3.3 s: a thin, tinny, crying young man's voice comes out of the phone's speaker; her face drains, her breath catches, her eyes widen. 3.3 to 4.5 s: she says one soft word, lips matching; her free hand grips the counter edge. 4.5 to 5.0 s: she holds, frozen.
+WHAT MOVES: 0.0 to 0.3 s: she is already on the call, the phone at her ear. 0.3 to 2.2 s: someone on the other end is crying and begging (you do not hear them in this clip); within about a second her face drains, her eyes widen, her breath catches, and her left hand grips the counter edge. 2.4 to 3.4 s: she says one soft word, lips matching. 3.4 to 5.0 s: she stares ahead, eyes filling, mouth slightly open.
 
-CAMERA: Handheld close-up at eye level with a slow push-in.
+CAMERA: Handheld CLOSE-UP, her face fills the frame with shoulders just visible, eye level, slow push-in.
 
-PHYSICS: Flour dust falls from her fingers. The phone vibrates against steel with a real buzz. Her hands shake with fear, not stylised.
+PHYSICS: Flour dust falls from her fingers. Her hand shakes with real fear. The phone rests against her cheek and presses her hair slightly.
 
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: nobody on screen moves their lips for it.
+LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 0.3 s, and she stops her own speech while it plays.
 
 VOICES (clearly different from each other):
-- THE CLONED VOICE: Kabir's own young male voice but thin, tinny and slightly too smooth, as heard through a cheap phone speaker, crying and panicked. It comes only from the phone; nobody on screen moves their lips for it.
 - SUSHMA: a woman in her late 50s, warm, mid-low pitch, breathy and shaky with fear.
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
-1. at about 1.8 s, THE CLONED VOICE: "मम्मी! मम्मी, मुझे बचा लो!" (pronounced: Mummy! Mummy, mujhe bacha lo!)
-2. at about 3.4 s, SUSHMA: "कबीर?" (pronounced: Kabir?)
+1. at about 2.5 s, SUSHMA: "कबीर?" (pronounced: Kabir?)
 Each line must be clearly audible.
 
-AUDIO: Kitchen ambience: exhaust fan hum, a distant pressure-cooker whistle, a wall clock ticking, the phone buzz. The cloned voice sounds like a phone speaker.
+AUDIO: Kitchen ambience only: exhaust fan hum, a distant pressure-cooker whistle, a wall clock ticking, her breath. No phone ringing.
 
 STYLE: Photorealistic live-action cinema, vertical 9:16, 24 fps, natural motion blur, real skin texture, strict real-world physics (gravity, momentum, cloth, hair, liquid all behave naturally). Instant hard cuts only, no dissolves. No text, subtitles, logos or readable writing anywhere in the picture. No background music.
 
@@ -54,8 +97,10 @@ DURATION: 5 seconds.
 
 **Dialogue for your check**
 
-- Cloned voice (phone) @ 1.8 s: मम्मी! मम्मी, मुझे बचा लो! / Mummy! Mummy, mujhe bacha lo! / Mummy! Mummy, save me!
-- Sushma @ 3.4 s: कबीर? / Kabir? / Kabir?
+- Cloned voice (phone) @ 0.3 s: मम्मी! मम्मी, मुझे बचा लो! / Mummy! Mummy, mujhe bacha lo! / Mummy! Mummy, save me!
+- Sushma @ 2.5 s: कबीर? / Kabir? / Kabir?
+
+**Phone voice (added in post, not generated in this clip):** "मम्मी! मम्मी, मुझे बचा लो!" at 0.3 s. I take it from the voice session and filter it to sound like a phone.
 
 **Post note:** Title card AWAAZ · EP 1 and the word PUNE in the first second.
 
@@ -80,15 +125,13 @@ CAMERA: Handheld medium close-up, a little lower than eye level, slow push-in.
 
 PHYSICS: Flour smears naturally under her fingers. Her saree pallu slips a few centimetres off her shoulder as she grips.
 
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: nobody on screen moves their lips for it.
+LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 0.5 s, and she stops her own speech while it plays.
 
 VOICES (clearly different from each other):
-- THE CLONED VOICE: Kabir's own young male voice but thin, tinny and slightly too smooth, as heard through a cheap phone speaker, crying and panicked. It comes only from the phone; nobody on screen moves their lips for it.
 - SUSHMA: a woman in her late 50s, warm, mid-low pitch, breathy and shaky with fear.
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
-1. at about 0.5 s, THE CLONED VOICE: "एक्सीडेंट हो गया। पुलिस ने पकड़ लिया।" (pronounced: Accident ho gaya. Police ne pakad liya.)
-2. at about 3.0 s, SUSHMA: "हे भगवान! तू ठीक है?" (pronounced: Hey Bhagwan! Tu theek hai?)
+1. at about 3.0 s, SUSHMA: "हे भगवान! तू ठीक है?" (pronounced: Hey Bhagwan! Tu theek hai?)
 Each line must be clearly audible.
 
 AUDIO: The same kitchen ambience, the thin phone voice, her breath.
@@ -102,6 +145,8 @@ DURATION: 5 seconds.
 
 - Cloned voice (phone) @ 0.5 s: एक्सीडेंट हो गया। पुलिस ने पकड़ लिया। / Accident ho gaya. Police ne pakad liya. / There's been an accident. The police have me.
 - Sushma @ 3.0 s: हे भगवान! तू ठीक है? / Hey Bhagwan! Tu theek hai? / Oh God! Are you okay?
+
+**Phone voice (added in post, not generated in this clip):** "एक्सीडेंट हो गया। पुलिस ने पकड़ लिया।" at 0.5 s. I take it from the voice session and filter it to sound like a phone.
 
 ## CLIP 03: FRICTION (0:10 to 0:15)
 
@@ -167,15 +212,13 @@ CAMERA: Handheld medium shot, slight push-in, eye level.
 
 PHYSICS: The glasses slide down her head and land on her nose naturally. The thali rattles slightly as the table shakes under her trembling hands.
 
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: nobody on screen moves their lips for it.
+LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 0.1 s, and she stops her own speech while it plays.
 
 VOICES (clearly different from each other):
-- THE CLONED VOICE: Kabir's own young male voice but thin, tinny and slightly too smooth, as heard through a cheap phone speaker, crying and panicked. It comes only from the phone; nobody on screen moves their lips for it.
 - SUSHMA: a woman in her late 50s, warm, mid-low pitch, breathy and shaky with fear.
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
-1. at about 0.1 s, THE CLONED VOICE: "चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना।" (pronounced: Chaalis hazaar UPI karo. Abhi. Kisi ko mat batana.)
-2. at about 3.4 s, SUSHMA: "भेज रही हूँ, बेटा।" (pronounced: Bhej rahi hoon, beta.)
+1. at about 3.4 s, SUSHMA: "भेज रही हूँ, बेटा।" (pronounced: Bhej rahi hoon, beta.)
 Each line must be clearly audible.
 
 AUDIO: Fan hum, a clock tick, the phone voice, her fast breathing.
@@ -189,6 +232,8 @@ DURATION: 5 seconds.
 
 - Cloned voice (phone) @ 0.1 s: चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना। / Chaalis hazaar UPI karo. Abhi. Kisi ko mat batana. / Send forty thousand on UPI. Now. Don't tell anyone.
 - Sushma @ 3.4 s: भेज रही हूँ, बेटा। / Bhej rahi hoon, beta. / I'm sending it, son.
+
+**Phone voice (added in post, not generated in this clip):** "चालीस हज़ार यूपीआई करो। अभी। किसी को मत बताना।" at 0.1 s. I take it from the voice session and filter it to sound like a phone.
 
 ## CLIP 05: FRICTION (0:20 to 0:25)
 
@@ -211,15 +256,13 @@ CAMERA: Handheld close-up with a slow push-in; the phone glow lights her face.
 
 PHYSICS: Phone light flickers on her glasses lenses. Her flinch moves her whole head a few centimetres back.
 
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: nobody on screen moves their lips for it.
+LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 3.2 s, and she stops her own speech while it plays.
 
 VOICES (clearly different from each other):
 - SUSHMA: a woman in her late 50s, warm, mid-low pitch, breathy and shaky with fear.
-- THE CLONED VOICE: Kabir's own young male voice but thin, tinny and slightly too smooth, as heard through a cheap phone speaker, crying and panicked. It comes only from the phone; nobody on screen moves their lips for it.
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
 1. at about 1.4 s, SUSHMA: "ये नाम तो राहुल का है?" (pronounced: Ye naam toh Rahul ka hai?)
-2. at about 3.2 s, THE CLONED VOICE: "जल्दी करो, मम्मी!" (pronounced: Jaldi karo, Mummy!)
 Each line must be clearly audible.
 
 AUDIO: Fan hum, a clock tick, her breathing, the phone voice.
@@ -233,6 +276,8 @@ DURATION: 5 seconds.
 
 - Sushma @ 1.4 s: ये नाम तो राहुल का है? / Ye naam toh Rahul ka hai? / This name is Rahul's?
 - Cloned voice (phone) @ 3.2 s: जल्दी करो, मम्मी! / Jaldi karo, Mummy! / Hurry, Mummy!
+
+**Phone voice (added in post, not generated in this clip):** "जल्दी करो, मम्मी!" at 3.2 s. I take it from the voice session and filter it to sound like a phone.
 
 **Post note:** Add the UPI receiver-name overlay (a made-up name) if you want the viewer to read what she reads.
 
@@ -301,15 +346,13 @@ CAMERA: Handheld medium close-up, slow push-in, the phone's glow on her face.
 
 PHYSICS: Her thumb trembles, not smooth. The phone light shifts as the banner changes.
 
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: nobody on screen moves their lips for it.
+LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 2.4 s, and she stops her own speech while it plays.
 
 VOICES (clearly different from each other):
 - SUSHMA: a woman in her late 50s, warm, mid-low pitch, breathy and shaky with fear.
-- THE CLONED VOICE: Kabir's own young male voice but thin, tinny and slightly too smooth, as heard through a cheap phone speaker, crying and panicked. It comes only from the phone; nobody on screen moves their lips for it.
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
 1. at about 0.9 s, SUSHMA: "तेरा फोन भी आ रहा है।" (pronounced: Tera phone bhi aa raha hai.)
-2. at about 2.4 s, THE CLONED VOICE: "वो पुलिस है! मत उठाओ, मम्मी!" (pronounced: Woh police hai! Mat uthao, Mummy!)
 Each line must be clearly audible.
 
 AUDIO: Fan hum, her breathing, the phone voice, a soft incoming-call chime.
@@ -323,6 +366,8 @@ DURATION: 5 seconds.
 
 - Sushma @ 0.9 s: तेरा फोन भी आ रहा है। / Tera phone bhi aa raha hai. / Your phone is calling too.
 - Cloned voice (phone) @ 2.4 s: वो पुलिस है! मत उठाओ, मम्मी! / Woh police hai! Mat uthao, Mummy! / That's the police! Don't answer, Mummy!
+
+**Phone voice (added in post, not generated in this clip):** "वो पुलिस है! मत उठाओ, मम्मी!" at 2.4 s. I take it from the voice session and filter it to sound like a phone.
 
 **Post note:** Overlay the call banner: a photo of a young man with round glasses and the contact name.
 
@@ -478,15 +523,13 @@ CAMERA: Handheld extreme close-up on the phone and thumb, then a slow rack focus
 
 PHYSICS: A tear falls and lands on her hand. The thumb trembles. The banner flashes at a steady rate, no faster than twice a second.
 
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: nobody on screen moves their lips for it.
+LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 1.0 s, and she stops her own speech while it plays.
 
 VOICES (clearly different from each other):
-- THE CLONED VOICE: Kabir's own young male voice but thin, tinny and slightly too smooth, as heard through a cheap phone speaker, crying and panicked. It comes only from the phone; nobody on screen moves their lips for it.
 - SUSHMA: a woman in her late 50s, warm, mid-low pitch, breathy and shaky with fear.
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
-1. at about 1.0 s, THE CLONED VOICE: "मम्मी, मुझसे प्यार है तो भेजो!" (pronounced: Mummy, mujhse pyaar hai toh bhejo!)
-2. at about 3.2 s, SUSHMA: "कौन-सा कबीर?" (pronounced: Kaun-sa Kabir?)
+1. at about 3.2 s, SUSHMA: "कौन-सा कबीर?" (pronounced: Kaun-sa Kabir?)
 Each line must be clearly audible.
 
 AUDIO: Her shaky breath, the sobbing phone voice, the flashing call chime, a clock tick.
@@ -500,6 +543,8 @@ DURATION: 5 seconds.
 
 - Cloned voice (phone) @ 1.0 s: मम्मी, मुझसे प्यार है तो भेजो! / Mummy, mujhse pyaar hai toh bhejo! / Mummy, if you love me, send it!
 - Sushma @ 3.2 s: कौन-सा कबीर? / Kaun-sa Kabir? / Which Kabir?
+
+**Phone voice (added in post, not generated in this clip):** "मम्मी, मुझसे प्यार है तो भेजो!" at 1.0 s. I take it from the voice session and filter it to sound like a phone.
 
 **Post note:** Overlay the PAY screen and the call banner.
 
@@ -524,13 +569,13 @@ CAMERA: Locked-off extreme close-up on the thumb, very shallow depth of field.
 
 PHYSICS: A single tear falls under gravity. The thumb hovers a few millimetres above the glass, never touching it.
 
-LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. The cloned voice comes only from the phone: nobody on screen moves their lips for it.
+LIP SYNC: Only the person who is speaking moves their lips, and every word matches their lips exactly. IMPORTANT: the phone is completely silent in this clip. Nobody but the people listed under DIALOGUE speaks. Sushma reacts as if she is hearing a crying, panicked voice on the phone starting at about 3.0 s, and she stops her own speech while it plays.
 
 VOICES (clearly different from each other):
-- THE CLONED VOICE: Kabir's own young male voice but thin, tinny and slightly too smooth, as heard through a cheap phone speaker, crying and panicked. It comes only from the phone; nobody on screen moves their lips for it.
+- none (no one on screen speaks)
 
 DIALOGUE in natural conversational Hindi, in this order, no overlap:
-1. at about 3.0 s, THE CLONED VOICE: "मम्मी..." (pronounced: Mummy...)
+none
 Each line must be clearly audible.
 
 AUDIO: Room sound drops away. A ringtone and a muffled, begging tinny voice overlap, both faint. Her breath.
@@ -543,6 +588,8 @@ DURATION: 5 seconds.
 **Dialogue for your check**
 
 - Cloned voice (phone) @ 3.0 s: मम्मी... / Mummy... / Mummy...
+
+**Phone voice (added in post, not generated in this clip):** "मम्मी..." at 3.0 s. I take it from the voice session and filter it to sound like a phone.
 
 **Post note:** Freeze at 0:57 and hold. Caption कौन-सा कबीर? and EP 2 → over the freeze. Cut to black at 0:59.5.
 
