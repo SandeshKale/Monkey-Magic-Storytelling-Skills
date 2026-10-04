@@ -36,7 +36,7 @@ BLR = "an open-plan tech startup office in Bengaluru at night: cool blue light, 
 CLIPS = [
  dict(id="01", t="0:00 to 0:05", beat="HOOK", loc="PUNE", chars=["S"],
   kf=f"Close-up of SUSHMA in the kitchen of {PUNE}. A phone is pressed to her ear in her floury right hand, a little flour dusted on her cheek, her left hand flat on the steel counter beside a steel plate of dough. Reading glasses pushed up on her head. Her expression has only just begun to change from ordinary to alarmed.",
-  act="0.0 to 0.3 s: she is already on the call, the phone at her ear. 0.3 to 2.2 s: someone on the other end is crying and begging (you do not hear them in this clip); within about a second her face drains, her eyes widen, her breath catches, and her left hand grips the counter edge. 2.4 to 3.4 s: she says one soft word, lips matching. 3.4 to 5.0 s: she stares ahead, eyes filling, mouth slightly open.",
+  act="0.0 to 0.3 s: she is already on the call, the phone at her ear. 0.3 to 2.2 s: someone on the other end is crying and begging (you do not hear them in this clip); within about a second her face tightens, her eyes widen slightly and her breath catches, and her left hand rests firmly on the counter edge; her mouth stays closed or barely parted. 2.4 to 3.4 s: she says one soft word, lips matching. 3.4 to 5.0 s: she stares ahead, very still, her eyes glistening and filling slowly; no gasping, no wide eyes.",
   cam="Handheld CLOSE-UP, her face fills the frame with shoulders just visible, eye level, slow push-in.",
   phys="Flour dust falls from her fingers. Her hand shakes with real fear. The phone rests against her cheek and presses her hair slightly.",
   aud="Kitchen ambience only: exhaust fan hum, a distant pressure-cooker whistle, a wall clock ticking, her breath. No phone ringing.",
@@ -44,7 +44,7 @@ CLIPS = [
   refs="CS-SUSHMA, LOC-PUNE", post="Title card AWAAZ · EP 1 and the word PUNE in the first second."),
  dict(id="02", t="0:05 to 0:10", beat="FRICTION", loc="PUNE", chars=["S"],
   kf=f"Medium close-up of SUSHMA at the kitchen counter in {PUNE}, the phone pressed to her ear with her right hand, her left hand flat on the steel counter with white flour handprints around it. Her face is frozen in dawning panic.",
-  act="0.0 to 0.4 s: she stands rigid, listening. 0.4 to 2.8 s: the tinny crying voice from the phone speaks; her face crumples, her lips tremble, her left hand grips the counter edge and leaves white floury fingerprints on the steel. 3.0 to 4.4 s: she speaks, her voice cracking, lips matching. 4.4 to 5.0 s: she closes her eyes for a moment.",
+  act="0.0 to 0.4 s: she stands rigid, listening. 0.4 to 2.8 s: the tinny crying voice from the phone speaks; her face tightens, her lips tremble slightly and her eyes glisten; her left hand presses on the counter edge and leaves white floury fingerprints on the steel; no sobbing, no open-mouthed crying. 3.0 to 4.4 s: she speaks, her voice cracking, lips matching. 4.4 to 5.0 s: she closes her eyes for a moment and breathes in slowly.",
   cam="Handheld medium close-up, a little lower than eye level, slow push-in.",
   phys="Flour smears naturally under her fingers. Her saree pallu slips a few centimetres off her shoulder as she grips.",
   aud="The same kitchen ambience, the thin phone voice, her breath.",
@@ -68,7 +68,7 @@ CLIPS = [
   refs="CS-SUSHMA, LOC-PUNE", post="RETAKE of the rejected take 1, which had Sushma vocalising during the phone-voice window and slapping her head."),
  dict(id="05", t="0:20 to 0:25", beat="FRICTION", loc="PUNE", chars=["S"],
   kf=f"Close-up of SUSHMA's face at the dining table in {PUNE}, lit from below by the glow of a phone screen held just below frame, reading glasses on her nose, her eyes moving along the screen, lips slightly parted.",
-  act="0.0 to 1.2 s: she reads, eyes moving, lips moving silently. 1.2 s: she stops, her brow drawing together. 1.4 to 3.0 s: she says one slow line, lips matching, doubt in her voice. 3.2 to 4.2 s: a sharp, tinny young man's voice from the phone makes her flinch; her eyes flick up. 4.2 to 5.0 s: she looks back at the screen, undecided.",
+  act="0.0 to 1.2 s: she reads, eyes moving, lips moving silently. 1.2 s: she stops, her brow drawing together. 1.4 to 3.0 s: she says one slow line quietly, lips matching, doubt in her voice, mouth only slightly open. 3.2 to 4.2 s: a sharp voice on the phone (not heard in this clip) makes her give a small start: her shoulders tighten and her eyes flick up; no big flinch. 4.2 to 5.0 s: she looks back at the screen, undecided.",
   cam="Handheld close-up with a slow push-in; the phone glow lights her face.",
   phys="Phone light flickers on her glasses lenses. Her flinch moves her whole head a few centimetres back.",
   aud="Fan hum, a clock tick, her breathing, the phone voice.",
@@ -152,10 +152,14 @@ def voice_session(tag, title, lines):
             f"STYLE: {STYLE_VIDEO}\n\nDURATION: 6 seconds. Each line must be said fully and clearly inside its time window.")
 
 
+RULES = 'STANDING RULES. (1) Objects are handled as a real person would: real hand grips, correct anatomy (five fingers, natural joints), a phone held to the ear with its microphone near the mouth on calls, screens facing the person who reads them, a laptop open facing its user, strict physics for weight, contact and motion. (2) Performances are subtle, restrained and naturalistic, never exaggerated: show feeling through small changes in the eyes, brow, breath and hands; no wide-open mouths, no bulging eyes, no flailing, no theatrical gestures.'
+RULES_KF = 'Objects held correctly with real hand grips and correct anatomy (five fingers, natural joints); a phone at the ear on calls; screens facing the person using them. Expression subtle and naturalistic, not exaggerated.'
+
+
 def keyframe(c):
     who = " ".join(FULL[k] for k in c["chars"])
     aspect = "16:9" if c["id"] == "INS-9" else "vertical 9:16"
-    return f"{c['kf']} {who} {STYLE_STILL.replace('vertical 9:16', aspect)}"
+    return f"{c['kf']} {who} {RULES_KF} {STYLE_STILL.replace('vertical 9:16', aspect)}"
 
 
 def animate(c):
@@ -179,7 +183,7 @@ def animate(c):
     style = STYLE_VIDEO.replace("vertical 9:16", aspect)
     return (f"Animate the supplied start image as ONE continuous shot, 6 seconds long, no cuts. All of the action below happens in the first 5 seconds; after that, hold the final pose almost still. Keep the people, the place, the clothes and the light EXACTLY as in the start image; do not change any face.\n\n"
             f"PEOPLE: {who}\n\nWHAT MOVES: {c['act']}\n\nCAMERA: {c['cam']}\n\nPHYSICS: {c['phys']}\n\n"
-            f"LIP SYNC: {lips}\n\nVOICES (clearly different from each other):\n{voices}\n\n"
+            f"STANDING RULES: {RULES}\n\nLIP SYNC: {lips}\n\nVOICES (clearly different from each other):\n{voices}\n\n"
             f"DIALOGUE in natural conversational Hindi, in this order, no overlap:\n{dl}\nEach line must be clearly audible.\n\n"
             f"AUDIO: {c['aud']}\n\nSTYLE: {style}\n\nDURATION: 6 seconds (the maximum the tool gives). Large faces and hands, simple background, no tiny details.")
 
@@ -215,8 +219,14 @@ Retakes are extra. Do the contact sheets first.
 
 Send each clip as soon as it is made so I can check lip-sync, voices and faces before you spend another generation.
 
+## Standing rules from Sandesh (apply to every prompt and every review)
+1. **Objects are handled as a real person would:** real hand grips, correct anatomy (five fingers, natural joints), screens facing the user, a phone held at the ear on calls, strict physics (weight, contact, motion).
+2. **Performances are subtle, restrained and naturalistic, never exaggerated:** feeling shows in the eyes, brow, breath and hands. No wide-open mouths, bulging eyes, flailing or theatrical gestures.
+
+These rules are inside every KEYFRAME and ANIMATE prompt below, and in the review checklist.
+
 ## Shared checks for every clip
-Lips match the words. The voices are clearly different. The face matches the contact sheet. No readable text. No cuts or ghost images. Natural motion. The phone is silent (its voice is mixed in post).
+Lips match the words. Objects are handled correctly (grips, anatomy, screens facing the user, phone at the ear, physics). The performance is restrained. The voices are clearly different. The face matches the contact sheet. No readable text. No cuts or ghost images. Natural motion. The phone is silent (its voice is mixed in post).
 """)
     w("""## The phone voice is made separately (new)
 Grok gave the phone voice to the person on screen, or not at all, so the cloned voice is **not** generated inside the Sushma clips any more. Instead:
